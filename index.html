@@ -29,10 +29,10 @@
                 <div class="lenguage-select__item">EU</div>
               </div>
             </div>
-            <div class="header-panel__block d-flex">
-              <div class="notices-button">
+            <div class="header-panel__block d-flex align-items-center">
+              <div class="notice-button">
                 <img src="images/notices.svg" alt="">
-                <span class="notice-count"></span>
+                <span class="notice-count">1</span>
               </div>
               <div class="header-panel__contacts d-flex">
                 <div class="header-panel__contacts-active">
@@ -74,7 +74,7 @@
                   </div>
                 </div>
               </div>
-              <div class="header-panel__social-links">
+              <div class="header-panel__social-links d-flex">
                 <a href="#"><img src="images/telegram.svg" alt=""></a>
                 <a href="#"><img src="images/instagram.svg" alt=""></a>
                 <a href="#"><img src="images/facebook.svg" alt=""></a>
@@ -84,9 +84,26 @@
         </div>
         <div class="header-main">
           <div class="container d-flex justify-content-between">
-            <img src="images/logo.png" alt="">
-            <div class="catalog-main"></div>
-            <div class="search-main"></div>
+            <a href="/" class="header-logo d-flex align-items-center"><img class="contain" src="images/logo.png" alt=""></a>
+            <div class="catalog-main d-flex align-items-center">
+              <img src="images/catalog-bars.svg" alt="">
+              Каталог
+            </div>
+            <div class="search-main d-flex align-items-center">
+              <div class="search-main__select">
+                <div class="search-main__select-head d-flex align-items-center">
+                  <img src="images/1688.svg" alt="">
+                  <img src="images/1688-arrow.svg" alt="">
+                </div>
+                <div class="search-main__select-dropdown"></div>
+              </div>
+              <img src="images/header-search.svg" alt="">
+              <input type="text" class="search-input" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
+              <div class="search-photo d-flex align-items-center">
+                Поиск по фото
+                <img src="images/search-photo.svg" alt="">
+              </div>
+            </div>
             <div class="header-buttons d-flex">
               <div class="header-buttons__item d-flex flex-column align-items-center">
                 <img src="images/header-cart.svg" alt="">
@@ -104,6 +121,21 @@
           </div>
         </div>
       </header>
+      <main class="main">
+        <div class="container swiper-container">
+          <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/swiper-main-img.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="images/swiper-main-img.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="images/swiper-main-img.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="images/swiper-main-img.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </main>
     </div>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/swiper-bundle.min.js" type="text/javascript"></script>

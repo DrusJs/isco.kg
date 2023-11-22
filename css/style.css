@@ -39,6 +39,9 @@ body {
 a {
     text-decoration: none;
 }
+img.contain {
+    object-fit: contain;
+}
 
 .wrapper {
     width: 100%;
@@ -57,10 +60,29 @@ a {
     color: var(--color-white);
 }
 .header-panel__block {
-    
+    gap: 32px;
+}
+.notice-button {
+    position: relative;
+}
+.notice-count {
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 4px;
+    min-width: 16px;
+    text-align: center;
+    position: absolute;
+    top: -2px;
+    right: -2px;
 }
 .header-panel__contacts {
     
+}
+.header-panel__social-links {
+    gap: 16px;
 }
 .header-panel__contacts-active a {
     color: var(--color-white);
@@ -70,4 +92,102 @@ a {
 }
 .header-main {
     padding: 12px 0;
+}
+.header-main .container {
+    max-height: 48px;
+}
+.header-logo, .search-main {
+    margin-right: 32px;
+}
+.catalog-main {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px;
+    gap: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+.search-main {
+    border: 1px solid var(--color-gray);
+    padding: 8px 12px;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    gap: 8px;
+    width: 100%;
+}
+.search-main.focus {
+    border: 1px solid var(--color-primary);
+}
+.search-main__select-head {
+    background-color: var(--color-bg);
+    border-radius: 4px;
+    gap: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+.search-input {
+    flex-basis: 70%;
+    outline: none;
+    border: none;
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+}
+.search-input:focus::placeholder {
+    opacity: 0;
+}
+.search-input::placeholder {
+    color: var(--color-gray);
+}
+.search-photo {
+    white-space: nowrap;
+    gap: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color: var(--color-bg);
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.header-buttons {
+    gap: 24px;
+}
+.header-buttons__item {
+    cursor: pointer;
+}
+
+.swiper-container {
+    position: relative;
+    padding-bottom: 30px;
+}
+.main-swiper {
+    border-radius: 12px;
+}
+.main-swiper .swiper-button-next::after, .main-swiper .swiper-button-prev::after {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+.swiper-button-next::after {
+    margin-left: 4px;
+}
+.swiper-button-prev::after {
+    margin-right: 4px;
+}
+.main-swiper .swiper-button-next, .main-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-white);
+    border-radius: 100%;
+}
+.swiper-container .swiper-pagination-bullet {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-gray);
+    opacity: 1;
+    border-radius: 4px;
+}
+.swiper-container .swiper-pagination-bullet-active {
+    background-color: var(--color-primary);
 }
