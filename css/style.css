@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Manrope-Regular";
+    src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Manrope-Medium";
+    src: url(../fonts/Manrope-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Manrope-Bold";
+    src: url(../fonts/Manrope-Bold.ttf);
+}
+
+:root {
+    --font-regular: "Manrope-Regular";
+    --font-medium: "Manrope-Medium";
+    --font-bold: "Manrope-Bold";
+    --color-primary: #EB4C27;
+    --color-dark: #1E1E2A;
+    --color-gray-dark: #626C7A;
+    --color-gray: #90969F;
+    --color-gray-light: #E6E6E6;
+    --color-bg: #F2F2F2;
+    --color-white: #FFFFFF;
+    --color-red: #E2342B;
+    --color-yellow: #FFE102;
+    --color-green: #6BC132;
+    --color-primary-light: #FEE8D3;
+    --color-blue: #FEE8D3;
+    --box-shadow-primary: 0px 2px 8px 0 rgba(0, 0, 0, .14)
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-regular);
+}
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+
+.header {
+
+}
+
+.header-panel {
+    background-color: var(--color-dark);
+    padding: 6px 0;
+}
+.lenguage-select__active {
+    color: var(--color-white);
+}
+.header-panel__block {
+    
+}
+.header-panel__contacts {
+    
+}
+.header-panel__contacts-active a {
+    color: var(--color-white);
+}
+.lenguage-select__dropdown, .header-panel__contacts-dropdown {
+    display: none;
+}
+.header-main {
+    padding: 12px 0;
+}
