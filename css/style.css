@@ -52,6 +52,9 @@ img.contain {
     padding-left: 0;
     padding-right: 0;
 }
+.container.margin-top {
+    margin-top: 60px;
+}
 .header {
 
 }
@@ -204,22 +207,38 @@ h2.title {
     line-height: 40px;
     letter-spacing: -0.64px; 
 }
-.popular-grid {
+.main-grid {
     display: grid;
     gap: 32px 20px;
     margin-top: 24px;
     grid-template-columns: repeat(7, 1fr);
 }
-.popular-gird__item {
+.main-grid__item {
     max-width: 168px;
+    position: relative;
 }
 
-.popular-gird__item img{
+.main-grid__item img{
     border-radius: 8px;
     margin-bottom: 8px;
 }
+.main-grid .discount {
+    font-size: 14px;
+    font-family: var(--font-medium);
+    line-height: 20px;
+    background-color: var(--color-yellow);
+    border-radius: 4px;
+    padding: 0 3px;
+    position: absolute;
+    display: none;
+    top: 8px;
+    left: 8px;
+}
+.main-grid .discount.active {
+    display: block;
+}
 
-.popular-gird__item .text {
+.main-grid__item .text {
     font-size: 14px;
     font-family: var(--font-medium);
     line-height: 20px;
@@ -227,13 +246,13 @@ h2.title {
     margin-bottom: 8px;
 }
 
-.popular-gird__item .price {
+.main-grid__item .price {
     font-size: 16px;
     font-family: var(--font-bold);
     line-height: 24px;
 }
 
-.popular-gird__item .prev-price {
+.main-grid__item .prev-price {
     font-family: var(--font-regular);
     color: var(--color-gray-dark);
     text-decoration: line-through;
