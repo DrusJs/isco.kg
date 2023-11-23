@@ -11,8 +11,8 @@ inputElement.addEventListener('blur', function() {
 var mainSwiper = new Swiper(".main-swiper", {
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.js-main",
+      prevEl: ".swiper-button-prev.js-main",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -24,10 +24,7 @@ var mainBrandSwiper = new Swiper(".brand-swiper", {
   slidesPerView: "auto",
   spaceBetween: 24,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-      el: ".swiper-pagination",
+    nextEl: ".swiper-button-next.js-brand",
+    prevEl: ".swiper-button-prev.js-brand",
   },
 });
