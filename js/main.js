@@ -17,4 +17,17 @@ var mainSwiper = new Swiper(".main-swiper", {
     pagination: {
         el: ".swiper-pagination",
     },
-  });
+});
+
+var mainBrandSwiper = new Swiper(".brand-swiper", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+      el: ".swiper-pagination",
+  },
+});
