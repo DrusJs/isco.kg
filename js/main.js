@@ -1,5 +1,6 @@
 //input search action
 const inputElement = document.querySelector('#search-input')
+const clearInputElement = document.querySelector('#clear-search')
 
 inputElement.addEventListener('focus', function() {
   this.parentElement.classList.add('focus')
@@ -9,36 +10,48 @@ inputElement.addEventListener('blur', function() {
   this.parentElement.classList.remove('focus')
 })
 
+clearInputElement.addEventListener('click', function() {
+  inputElement.value = ''
+  this.style.display = 'none'
+})
+
+inputElement.addEventListener('input', function(event) {
+  console.log('Значение изменено:', event.target.value);
+  if (event.target.value) {
+    clearInputElement.style.display = 'block'
+  }
+});
+
 //contacts dropdown action
 const contactsDropdownElement = document.querySelector('#contacts-dropdown')
 
 function closeDropdownsElements() {
   if (document.querySelector(".js-dropdown-element.active")) {document.querySelector(".js-dropdown-element.active").classList.remove("active")}
 }
-// contactsDropdownElement.addEventListener('click', function() {
-//   this.parentElement.classList.toggle('active')
-// })
-
-contactsDropdownElement.addEventListener('touchend', function() {
+contactsDropdownElement.addEventListener('click', function() {
   this.parentElement.classList.toggle('active')
 })
 
-contactsDropdownElement.addEventListener('mouseenter', function() {
-  //closeDropdownsElements()
-  this.parentElement.classList.add('active')
-})
+// contactsDropdownElement.addEventListener('touchend', function() {
+//   this.parentElement.classList.toggle('active')
+// })
 
-contactsDropdownElement.addEventListener('mouseleave', function(event) {
-  if (!event.relatedTarget.classList.contains("contacts-dropdown__item")) {
-    this.parentElement.classList.remove('active')
-  }
-})
+// contactsDropdownElement.addEventListener('mouseenter', function() {
+//   //closeDropdownsElements()
+//   this.parentElement.classList.add('active')
+// })
 
-contactsDropdownElement.nextElementSibling.addEventListener('mouseleave', function(event) {
-  if (!event.relatedTarget.classList.contains("js-dropdown-element")) {
-    this.parentElement.classList.remove('active')
-  }
-})
+// contactsDropdownElement.addEventListener('mouseleave', function(event) {
+//   if (!event.relatedTarget.classList.contains("contacts-dropdown__item")) {
+//     this.parentElement.classList.remove('active')
+//   }
+// })
+
+// contactsDropdownElement.nextElementSibling.addEventListener('mouseleave', function(event) {
+//   if (!event.relatedTarget.classList.contains("js-dropdown-element")) {
+//     this.parentElement.classList.remove('active')
+//   }
+// })
 
 //search main dropdown action
 const searchDropdownElement = document.querySelector('#search-main-dropdown')

@@ -259,6 +259,10 @@ img.contain {
 .search-main__select {
     position: relative;
 }
+.search-main-clear {
+    display: none;
+    cursor: pointer;
+}
 .search-main__select-head {
     background-color: var(--color-bg);
     border-radius: 4px;
@@ -330,11 +334,12 @@ img.contain {
 .header-buttons {
     gap: 24px;
 }
-.header-buttons__item {
+.header-buttons__item, a.header-buttons__item {
     cursor: pointer;
     font-size: 14px;
     font-family: var(--font-medium);
     position: relative;
+    color: var(--color-dark);
 }
 
 .header-buttons__item-head {
