@@ -1,16 +1,22 @@
 @font-face {
     font-family: "Manrope-Regular";
     src: url(../fonts/Manrope-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
 }
 
 @font-face {
     font-family: "Manrope-Medium";
     src: url(../fonts/Manrope-Medium.ttf);
+    font-weight: 500;
 }
 
 @font-face {
     font-family: "Manrope-Bold";
     src: url(../fonts/Manrope-Bold.ttf);
+    font-weight: 700;
 }
 
 :root {
@@ -74,7 +80,7 @@ img.contain {
 .header-panel__block {
     gap: 32px;
 }
-.notice-button {
+.header-panel-notice {
     position: relative;
 }
 .notice-count {
@@ -90,18 +96,137 @@ img.contain {
     top: -2px;
     right: -2px;
 }
+
+.header-panel-notice.active .header-panel-notice-dropdown {
+    display: block;
+}
+.header-panel-notice-head {
+    cursor: pointer;
+}
+.header-panel-notice-dropdown {
+    border-radius: 8px;
+    background-color: var(--color-white);
+    padding: 12px 16px 0;
+    position: absolute;
+    display: none;
+    width: 393px;
+    right: 0;
+    top: 32px;
+    z-index: 11;
+    box-shadow: var(--box-shadow-primary);
+}
+.notice-dropdown-nav__item {
+    font-family: var(--font-bold);
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-gray);
+    padding-bottom: 6px;
+    border-bottom: 1px solid transparent;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.notice-dropdown-list {
+    margin-top: 24px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-height: 388px;
+}
+.notice-dropdown-list::-webkit-scrollbar {
+    display: none;
+}
+.notice-dropdown-list__item {
+    margin-bottom: 12px;
+    padding: 12px 16px 12px 16px;
+    border: 1px solid var(--color-gray-light);
+    background-color: var(--color-white);
+    border-radius: 8px;
+    position: relative;
+    display: block;
+}
+.notice-dropdown-list__item.read {
+    background-color: var(--color-gray-light);
+}
+.notice-dropdown-list__item .title {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-bold);
+    font-size: 16px;
+    line-height: 24px;
+}
+.notice-dropdown-list__item .image {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+.notice-dropdown-list__item .date {
+    font-family: var(--font-regular);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-gray-dark);
+    margin-top: 12px;
+}
+
+
+.notice-dropdown-nav__item.active {
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+}
+
 .header-panel__contacts {
-    
+    position: relative;
+}
+.header-panel__contacts.active .header-panel__contacts-dropdown{
+    display: flex;
+}
+.header-panel__contacts-dropdown {
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    padding: 0 30px;
+    position: absolute;
+    width: 460px;
+    right: 0;
+    top: 26px;
+    z-index: 11;
+    box-shadow: var(--box-shadow-primary);
+}
+.contacts-dropdown__item {
+    border-top: 1px solid var(--color-gray-light);
+    padding: 12px 0;
+}
+.contacts-dropdown__item img {
+    width: 32px;
+    float: left;
+    margin: 0 10px 0 -10px;
+}
+.contacts-dropdown__item .title {
+    font-family: var(--font-regular);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-gray-dark);
+}
+.contacts-dropdown__item .text {
+    font-family: var(--font-regular);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dark);
+    margin-left: 30px;
+    display: block;
+}
+.header-panel__contacts-dropdown .contacts-dropdown__item:nth-child(1) {
+    border-top: none;
 }
 .header-panel__social-links {
     gap: 16px;
 }
-.header-panel__contacts-active a {
+.header-panel__contacts-head a {
     color: var(--color-white);
 }
 .lenguage-select__dropdown, .header-panel__contacts-dropdown {
     display: none;
 }
+
 .header-main {
     padding: 12px 0;
 }
@@ -131,12 +256,52 @@ img.contain {
 .search-main.focus {
     border: 1px solid var(--color-primary);
 }
+.search-main__select {
+    position: relative;
+}
 .search-main__select-head {
     background-color: var(--color-bg);
     border-radius: 4px;
     gap: 4px;
     padding: 4px 8px;
     cursor: pointer;
+    width: 84px;
+    height: 32px;
+}
+.search-main__select.active .search-main__select-dropdown {
+    display: flex;
+}
+.search-main__select-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 212px;
+    padding: 0 16px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-primary);
+    z-index: 11;
+}
+.select-dropdown__item {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.select-dropdown__item img {
+    max-width: 44px;
+}
+.select-dropdown__item::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-size: cover;
+}
+.select-dropdown__item.active::after {
+    background-image: url(../images/1688-accept.svg);
 }
 .search-input {
     flex-basis: 70%;
@@ -169,6 +334,47 @@ img.contain {
     cursor: pointer;
     font-size: 14px;
     font-family: var(--font-medium);
+    position: relative;
+}
+
+.header-buttons__item-head {
+
+}
+
+.header-buttons__item-dropdown {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    top: 44px;
+    right: 20px;
+    width: 220px;
+    flex-direction: column;
+    display: none;
+    padding: 0 6px 0 12px;
+    z-index: 11;
+    position: absolute;
+}
+.header-buttons__item-dropdown a {
+    color: var(--color-gray-dark);
+}
+
+.header-buttons__item.active .header-buttons__item-dropdown {
+    display: flex;
+}
+
+.header-buttons__item-dropdown__item {
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+.header-buttons__item-dropdown__item .notice-count {
+    position: static;
+    margin-left: 8px;
+}
+.header-buttons__item-dropdown img {
+    margin-right: 8px;
 }
 
 .swiper-container {

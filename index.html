@@ -16,7 +16,7 @@
       <header class="header">
         <div class="header-panel d-flex justify-content-between">
           <div class="container d-flex justify-content-between">
-            <div class="lenguage-select">
+            <div class="lenguage-select js-dropdown-element">
               <div class="lenguage-select__active">
                 <span class="js-select-field">RU</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,12 +30,64 @@
               </div>
             </div>
             <div class="header-panel__block d-flex align-items-center">
-              <div class="notice-button">
-                <img src="images/notices.svg" alt="">
-                <span class="notice-count">1</span>
+              <div class="header-panel-notice js-dropdown-element">
+                <div class="header-panel-notice-head" id="notice-dropdown">
+                  <img src="images/notices.svg" alt="">
+                  <span class="notice-count">1</span>
+                </div>
+                <div class="header-panel-notice-dropdown">
+                  <div class="notice-dropdown-nav d-flex align-items-center justify-content-between">
+                    <div class="notice-dropdown-nav__item active" data-style="all">
+                      Все
+                    </div>
+                    <div class="notice-dropdown-nav__item" data-style="read">
+                      Прочитанные
+                    </div>
+                    <div class="notice-dropdown-nav__item" data-style="unread">
+                      Непрочтанные
+                    </div>
+                  </div>
+                  <div class="notice-dropdown-list">
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="header-panel__contacts d-flex">
-                <div class="header-panel__contacts-active">
+              <div class="header-panel__contacts d-flex js-dropdown-element">
+                <div class="header-panel__contacts-head" id="contacts-dropdown">
                   <img src="images/phone.svg" alt="">
                   <!-- tel:+996770009933 -->
                   <a href="#">+996 770009933</a>
@@ -47,17 +99,17 @@
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
                     <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933">+996 770009933</a>
+                    <a href="tel:+996770009933" class="text">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
                     <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933">+996 770009933</a>
+                    <a href="tel:+996770009933" class="text">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-whatsapp.svg" alt="">
                     <div class="title">Whatsapp</div>
-                    <a href="tel:+996770009933">+996 770009933</a>
+                    <a href="tel:+996770009933" class="text">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-worktime.svg" alt="">
@@ -91,12 +143,16 @@
               Каталог
             </div>
             <div class="search-main d-flex align-items-center">
-              <div class="search-main__select">
-                <div class="search-main__select-head d-flex align-items-center">
+              <div class="search-main__select js-dropdown-element">
+                <div class="search-main__select-head d-flex align-items-center justify-content-between" id="search-main-dropdown">
                   <img src="images/1688.svg" alt="">
                   <img src="images/1688-arrow.svg" alt="">
                 </div>
-                <div class="search-main__select-dropdown"></div>
+                <div class="search-main__select-dropdown">
+                  <div class="select-dropdown__item active"><img src="images/1688.svg" alt=""></div>
+                  <div class="select-dropdown__item"><img src="images/taobaoLogo.svg" alt=""></div>
+                  <div class="select-dropdown__item"><img src="images/trendyolLogo.svg" alt=""></div>
+                </div>
               </div>
               <img src="images/header-search.svg" alt="">
               <input type="text" class="search-input" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
@@ -114,9 +170,57 @@
                 <img src="images/header-like.svg" alt="">
                 <span class="title">Избранное</span>
               </div>
-              <div class="header-buttons__item d-flex flex-column align-items-center">
-                <img src="images/header-profile.svg" alt="">
-                <span class="title">Профиль</span>
+              <div class="header-buttons__item js-dropdown-element">
+                <div class="header-buttons__item-head d-flex flex-column align-items-center" id="main-menu">
+                  <img src="images/header-profile.svg" alt="">
+                  <span class="title">Профиль</span>
+                </div>
+                <div class="header-buttons__item-dropdown">
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-home.svg" alt="">
+                    Главная
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-profile.svg" alt="">
+                    Профиль
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-zakaz.svg" alt="">
+                    Мои заказы
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-wallet.svg" alt="">
+                    Счет
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-adress.svg" alt="">
+                    Адреса складов ISCO
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-sklad.svg" alt="">
+                    Мои посылки
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-notice.svg" alt="">
+                    Уведомления
+                    <span class="notice-count">8</span>
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-help.svg" alt="">
+                    Служба поддержки
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-find.svg" alt="">
+                    Отследить посылку
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    <img src="images/menu-setting.svg" alt="">
+                    Настройки
+                  </a>
+                  <a class="header-buttons__item-dropdown__item">
+                    Выйти
+                  </a>
+                </div>
               </div>
             </div>
           </div>
