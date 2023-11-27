@@ -50,7 +50,7 @@ if (catalogElement) {
     item.addEventListener('click', function() {
       setLoaderDisplay(1960)
       setTimeout(()=>{
-        window.location.href = 'blog.html';
+        window.location.href = 'subcatalog.html';
       },2000)
     })
   }
