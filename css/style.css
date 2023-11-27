@@ -31,6 +31,8 @@
     --color-bg: #F2F2F2;
     --color-white: #FFFFFF;
     --color-red: #E2342B;
+    --color-btn-hover: #CA301C;
+    --color-btn-press: #A91913;
     --color-yellow: #FFE102;
     --color-green: #6BC132;
     --color-primary-light: #FEE8D3;
@@ -410,6 +412,13 @@ img.contain {
     border-radius: 8px;
     cursor: pointer;
     margin-right: 16px;
+    transition: 260ms ease-in-out;
+}
+.catalog-main:hover {
+    background-color: var(--color-btn-hover);
+}
+.catalog-main:active {
+    background-color: var(--color-btn-press);
 }
 .search-main {
     border: 1px solid var(--color-gray);
@@ -911,7 +920,7 @@ h4.blog-title {
 }
 .subcatalog-search {
     border: 1px solid var(--color-gray);
-    padding: 8px 12px;
+    padding: 10px 12px;
     background-color: var(--color-white);
     border-radius: 8px;
     gap: 8px;
@@ -922,4 +931,89 @@ h4.blog-title {
 }
 .subcatalog-container {
     margin-top: 32px;
+}
+.subcatalog-filter {
+    gap: 32px;
+    max-width: 244px;
+}
+.subcatalog-filter-accordion-head {
+    margin-bottom: 16px;
+}
+.subcatalog-filter-accordion-head img {
+    transform: rotate(0);
+    margin-top: 0px;
+}
+.subcatalog-filter-accordion.active .subcatalog-filter-accordion-head img {
+    transform: rotate(180deg);
+    margin-top: -2px;
+}
+.subcatalog-filter-accordion-dropdown {
+    gap: 16px;
+    max-height: 0;
+    display: none;
+}
+.subcatalog-filter-accordion.active .subcatalog-filter-accordion-dropdown {
+    max-height: 100%;
+    display: flex;
+}
+
+.checkbox-primary {
+    position: relative;
+    user-select: none;
+    padding-left: 32px;
+    cursor: pointer;
+}
+.checkbox-primary input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+}
+
+.checkbox-primary input:checked ~ .checkmark {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-image: url(../images/checkbox-active.svg);
+    background-size: 12px 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.noUi-target {
+    box-shadow: none;
+    border-radius: 4px;
+    border: 0;
+    background: var(--color-gray-light);
+    height: 2px;
+}
+.noUi-connect {
+    background: var(--color-primary);
+}
+.noUi-origin {
+
+}
+.noUi-horizontal .noUi-handle {
+    width: 12px;
+    height: 12px;
+    right: -6px;
+    top: -5px;
+    border-radius: 100%;
+    background: var(--color-primary);
+    border: none;
+    box-shadow: none;
+}
+.noUi-handle::after, .noUi-handle::before {
+    display: none;
 }

@@ -187,6 +187,33 @@ if (noticeDropdownElement) {
 }
 
 
+//subcatalog filter dropdown
+const subcatalogFilterDropdownElements = document.querySelectorAll(".subcatalog-filter-accordion-head")
+if (subcatalogFilterDropdownElements) {
+  for (let item of subcatalogFilterDropdownElements) {
+    item.addEventListener('click', function() {
+      item.parentElement.classList.toggle('active')
+    })
+  }
+
+  var sliderFilter = document.getElementById('noUiSlider');
+
+  noUiSlider.create(sliderFilter, {
+      start: [500, 1000],
+      connect: true,    
+      behaviour: 'snap',
+      step: 10,
+      range: {
+          'min': 0,
+          'max': 6000
+      }
+  });
+  sliderFilter.noUiSlider.on('update', function () { 
+    console.log(sliderFilter.noUiSlider.get(true))
+  });
+}
+
+
 //Swiper.js
 if (document.querySelector(".brand-swiper")){
   var mainSwiper = new Swiper('.main-swiper', {
