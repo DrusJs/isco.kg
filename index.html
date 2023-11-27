@@ -13,6 +13,19 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="loader" id="loader">
+        <div class="loader-container d-flex flex-column align-items-center">
+          <div class="loader-animate">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="text">Идет загрузка, подождите</div>
+        </div>
+      </div>
+      <div class="catalog" id="catalog">
+        
+      </div>
       <header class="header">
         <div class="header-panel d-flex justify-content-between">
           <div class="container d-flex justify-content-between">
@@ -160,6 +173,14 @@
               <div class="search-photo d-flex align-items-center">
                 Поиск по фото
                 <img src="images/search-photo.svg" alt="">
+              </div>
+              <div class="search-main-result" id="search-input-result">
+                <a href="#" class="search-main-result__item memory">
+                  Велосипед
+                </a>
+                <a href="#" class="search-main-result__item">
+                  <b>Велос</b>ипед
+                </a>
               </div>
             </div>
             <div class="header-buttons d-flex">

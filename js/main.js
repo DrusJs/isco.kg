@@ -1,22 +1,42 @@
+//loader element
+
+const loaderElement = document.querySelector('#loader')
+
+function setLoaderDisplay(time = 2000) {
+  loaderElement.classList.add('active')
+  document.body.classList.add('no-scroll')
+  setTimeout(()=>{
+    document.body.classList.remove('no-scroll')
+    loaderElement.classList.remove('active')
+  }, time)
+}
+
 //input search action
 const inputElement = document.querySelector('#search-input')
 const clearInputElement = document.querySelector('#clear-search')
+const inputResultElement = document.querySelector('#search-input-result')
 
-inputElement.addEventListener('focus', function() {
+inputElement.addEventListener('focus', function(event) {
   this.parentElement.classList.add('focus')
+  inputResultElement.classList.add('active')
+  if (event.target.value) {
+    clearInputElement.style.display = 'block'
+  }
+})
+
+clearInputElement.addEventListener('click', function() {
+  inputResultElement.classList.remove('active')
+  inputElement.value = ''
+  inputElement.parentElement.classList.remove('focus')
+  this.style.display = 'none'
 })
 
 inputElement.addEventListener('blur', function() {
   this.parentElement.classList.remove('focus')
-})
-
-clearInputElement.addEventListener('click', function() {
-  inputElement.value = ''
-  this.style.display = 'none'
+  inputResultElement.classList.remove('active')
 })
 
 inputElement.addEventListener('input', function(event) {
-  console.log('Значение изменено:', event.target.value);
   if (event.target.value) {
     clearInputElement.style.display = 'block'
   }
@@ -26,7 +46,7 @@ inputElement.addEventListener('input', function(event) {
 const contactsDropdownElement = document.querySelector('#contacts-dropdown')
 
 function closeDropdownsElements() {
-  if (document.querySelector(".js-dropdown-element.active")) {document.querySelector(".js-dropdown-element.active").classList.remove("active")}
+  if (document.querySelector('.js-dropdown-element.active')) {document.querySelector('.js-dropdown-element.active').classList.remove('active')}
 }
 contactsDropdownElement.addEventListener('click', function() {
   this.parentElement.classList.toggle('active')
@@ -42,13 +62,13 @@ contactsDropdownElement.addEventListener('click', function() {
 // })
 
 // contactsDropdownElement.addEventListener('mouseleave', function(event) {
-//   if (!event.relatedTarget.classList.contains("contacts-dropdown__item")) {
+//   if (!event.relatedTarget.classList.contains('contacts-dropdown__item')) {
 //     this.parentElement.classList.remove('active')
 //   }
 // })
 
 // contactsDropdownElement.nextElementSibling.addEventListener('mouseleave', function(event) {
-//   if (!event.relatedTarget.classList.contains("js-dropdown-element")) {
+//   if (!event.relatedTarget.classList.contains('js-dropdown-element')) {
 //     this.parentElement.classList.remove('active')
 //   }
 // })
@@ -95,37 +115,37 @@ noticeDropdownElement.nextElementSibling.addEventListener('click', function(even
     event.target.classList.add('active')
     if (event.target.dataset.style == 'all') {
       noticeDropdownElement.nextElementSibling.querySelectorAll('.notice-dropdown-list__item').forEach((el)=>{
-        el.style.display = "block"
+        el.style.display = 'block'
       })
     } else {
       noticeDropdownElement.nextElementSibling.querySelectorAll('.notice-dropdown-list__item').forEach((el)=>{
-        el.style.display = "none"
+        el.style.display = 'none'
       })
       noticeDropdownElement.nextElementSibling.querySelectorAll(`.notice-dropdown-list__item.${event.target.dataset.style}`).forEach((el)=>{
-        el.style.display = "block"
+        el.style.display = 'block'
       })
     }
   }
 })
 
 //Swiper.js
-var mainSwiper = new Swiper(".main-swiper", {
+var mainSwiper = new Swiper('.main-swiper', {
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next.js-main",
-      prevEl: ".swiper-button-prev.js-main",
+      nextEl: '.swiper-button-next.js-main',
+      prevEl: '.swiper-button-prev.js-main',
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
     },
 })
 
-var mainBrandSwiper = new Swiper(".brand-swiper", {
+var mainBrandSwiper = new Swiper('.brand-swiper', {
   loop: true,
-  slidesPerView: "auto",
+  slidesPerView: 'auto',
   spaceBetween: 24,
   navigation: {
-    nextEl: ".swiper-button-next.js-brand",
-    prevEl: ".swiper-button-prev.js-brand",
+    nextEl: '.swiper-button-next.js-brand',
+    prevEl: '.swiper-button-prev.js-brand',
   },
 })
