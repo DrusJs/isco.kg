@@ -125,6 +125,101 @@ img.contain {
 .loader .text {
     width: fit-content;
 }
+.catalog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-bg), var(--color-bg) 49%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5));
+    display: none;
+    z-index: 20;
+}
+.catalog.active {
+    display: flex;
+}
+.catalog-bg {
+    background-color: var(--color-bg);
+}
+.catalog-nav {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--color-bg);
+}
+.catalog-nav-select {
+    display: flex;
+    gap: 24px;
+}
+.catalog-nav-select__item {
+    opacity: 0.5;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.catalog-nav-select__item img {
+    width: 59px;
+}
+.catalog-nav-select__item.active {
+    border-bottom: 1px solid var(--color-dark);
+    opacity: 1;
+}
+.catalog-nav-list {
+    width: 320px;
+}
+.catalog-nav-list__item {
+    padding: 12px 0;
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    letter-spacing: -0.32px;
+}
+.catalog-grid-wrappper {
+    background-color: var(--color-white);
+    padding: 32px 24px;
+    display: none;
+}
+.catalog-grid-wrappper.active {
+    display: block;
+}
+.catalog-close {
+    cursor: pointer;
+    width: 24px;
+}
+.catalog-grid {
+    display: grid;
+    gap: 24px 24px;
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 85vh;
+    overflow-y: auto;
+    margin-top: 24px;
+    padding: 0 12px 0 0;
+    scrollbar-color: var(--color-gray) var(--color-bg);
+    scrollbar-width: thin;
+}
+
+.catalog-grid::-webkit-scrollbar {
+    width: 6px;
+}
+.catalog-grid::-webkit-scrollbar-track {
+    background-color: var(--color-bg);
+}
+.catalog-grid::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 6px;
+}
+
+.catalog-grid__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+}
+.catalog-grid__item .link {
+    color: var(--color-dark);
+    padding: 12px 0;
+}
 .container {
     padding-left: 0;
     padding-right: 0;
@@ -688,6 +783,13 @@ h2.title {
     letter-spacing: -0.32px; 
     margin-top: 12px;
     max-width: 880px;
+}
+h4.title {
+    font-family: var(--font-bold);
+    color: var(--color-dark);
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.4px;
 }
 h4.blog-title {
     font-family: var(--font-bold);
