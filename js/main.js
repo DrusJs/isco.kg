@@ -48,10 +48,10 @@ if (catalogElement) {
 
   for (let item of catalogLinkListElements) {
     item.addEventListener('click', function() {
-      setLoaderDisplay(1960)
+      setLoaderDisplay(1160)
       setTimeout(()=>{
         window.location.href = 'subcatalog.html';
-      },2000)
+      },1200)
     })
   }
 }

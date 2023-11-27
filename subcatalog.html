@@ -161,6 +161,16 @@
                     </div>
                   </div>
                   <div class="notice-dropdown-list">
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date">2023-09-18 14:04:29</div>
+                    </div>
                     <div class="notice-dropdown-list__item read">
                       <div class="title">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
@@ -171,27 +181,17 @@
                       <img class="image" src="images/Flag.svg" alt="">
                       <div class="date">2023-09-18 14:04:29</div>
                     </div>
-                    <div class="notice-dropdown-list__item unread">
+                    <div class="notice-dropdown-list__item read">
                       <div class="title">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
                       <div class="date">2023-09-18 14:04:29</div>
                     </div>
-                    <div class="notice-dropdown-list__item unread">
+                    <div class="notice-dropdown-list__item read">
                       <div class="title">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
                       <div class="date">2023-09-18 14:04:29</div>
                     </div>
-                    <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
-                      <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
-                    </div>
-                    <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
-                      <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
-                    </div>
-                    <div class="notice-dropdown-list__item unread">
+                    <div class="notice-dropdown-list__item read">
                       <div class="title">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
                       <div class="date">2023-09-18 14:04:29</div>
@@ -360,8 +360,19 @@
                 <h1 class="title">Горные велосипеды<span class="product-count">124 товара</span></h1>
                 <div class="subcatalog-sorting d-flex align-items-center">Санчала популярные <img src="images/sorting-icon.svg" alt=""></div>
             </div>
-            <div class="subcatalog-search"></div>
+            <div class="subcatalog-search d-flex align-items-center">
+                <img src="images/header-search.svg" alt="">
+                <input type="text" class="search-input" id="search-subcatalog-input" placeholder="Поиск...">
+            </div>
+            <div class="subcatalog-container">
+                <div class="subcatalog-filter">
 
+                </div>
+                <div class="subcatalog-products">
+                    <div class="subcatalog-products-grid"></div>
+                    <div class="subcatalog-products-pagination"></div>
+                </div>
+            </div>
         </div>
       </main>
       <footer class="footer">
@@ -385,7 +396,7 @@
             <li class="footer-list__item header">Компания</li>
             <li class="footer-list__item"><a href="#">О нас</a></li>
             <li class="footer-list__item"><a href="#">Вакансии</a></li>
-            <li class="footer-list__item"><a href="#">Контакты</a></li>
+            <li class="footer-list__item"><a href="contacts.html">Контакты</a></li>
             <li class="footer-list__item"><a href="#">Пункты выдачи заказов</a></li>
           </ul>
           <div class="app-buttons d-flex">
