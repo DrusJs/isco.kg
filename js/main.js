@@ -13,37 +13,47 @@ function setLoaderDisplay(time = 2000) {
 //catalog actions
 const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
-const catalogOpenElement = document.querySelector('#catalog-open')
-const catalogCloseElement = document.querySelector('#catalog-close')
-const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
-const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
-let catalogActiveSelectElement = document.querySelector('.catalog-nav-select__item.active')
+  const catalogOpenElement = document.querySelector('#catalog-open')
+  const catalogCloseElement = document.querySelector('#catalog-close')
+  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
+  const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
+  const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
+  let catalogActiveSelectElement = document.querySelector('.catalog-nav-select__item.active')
 
-catalogOpenElement.addEventListener('click', function() {
-  catalogElement.classList.add('active')
-  document.body.classList.add('no-scroll')
-})
-
-catalogCloseElement.addEventListener('click', function() {
-  catalogElement.classList.remove('active')
-  document.body.classList.remove('no-scroll')
-})
-
-for (let item of catalogSelectElements) {
-  item.addEventListener('click', function() {
-    if (!item.classList.contains('active')) {
-      item.classList.add('active')
-      catalogActiveSelectElement.classList.remove('active')
-      catalogActiveSelectElement = item
-    }
+  catalogOpenElement.addEventListener('click', function() {
+    catalogElement.classList.add('active')
+    document.body.classList.add('no-scroll')
   })
-}
 
-// for (let item of catalogListElements) {
-//   item.addEventListener('click', function() {
-//     catalogGridElement.classList.add('active')
-//   })
-// }
+  catalogCloseElement.addEventListener('click', function() {
+    catalogElement.classList.remove('active')
+    document.body.classList.remove('no-scroll')
+  })
+
+  // for (let item of catalogSelectElements) {
+  //   item.addEventListener('click', function() {
+  //     if (!item.classList.contains('active')) {
+  //       item.classList.add('active')
+  //       catalogActiveSelectElement.classList.remove('active')
+  //       catalogActiveSelectElement = item
+  //     }
+  //   })
+  // }
+
+  // for (let item of catalogListElements) {
+  //   item.addEventListener('click', function() {
+
+  //   })
+  // }
+
+  for (let item of catalogLinkListElements) {
+    item.addEventListener('click', function() {
+      setLoaderDisplay(1960)
+      setTimeout(()=>{
+        window.location.href = 'blog.html';
+      },2000)
+    })
+  }
 }
 
 
