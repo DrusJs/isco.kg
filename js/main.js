@@ -234,6 +234,10 @@ const productImageContainerElements = document.querySelectorAll('.product-view-i
 if (productImageContainerElements.length) {
   const productBlockContainerElements = document.querySelectorAll('.product-view-block-list')
   const productInfoNavElements = document.querySelectorAll('.product-info-nav__item')
+  const counterIncrementElements = document.querySelectorAll('.plus')
+  const counterDecrementElements = document.querySelectorAll('.minus')
+  const addBasketElement = document.querySelector('.product-basket-button.add')
+  const orderBasketElement = document.querySelector('.product-basket-button.order')
   for (let item of productImageContainerElements) {
     Array.from(item.children).forEach((el)=>{
       el.addEventListener('click', function() {
@@ -263,6 +267,27 @@ if (productImageContainerElements.length) {
           item.classList.add('active')
         }
       })
+  }
+  
+  for(let item of counterIncrementElements) {
+    item.addEventListener('click', function() {
+      if (+item.previousElementSibling.innerHTML==0) {
+        addBasketElement.classList.remove('disabled')
+        orderBasketElement.classList.remove('disabled')
+      }
+      item.previousElementSibling.innerHTML = +item.previousElementSibling.innerHTML + 1;
+    })
+  }
+  for(let item of counterDecrementElements) {
+    item.addEventListener('click', function() {
+      if (+item.nextElementSibling.innerHTML==1) {
+        addBasketElement.classList.add('disabled')
+        orderBasketElement.classList.add('disabled')
+      }
+      if (+item.nextElementSibling.innerHTML>=1){
+        item.nextElementSibling.innerHTML = +item.nextElementSibling.innerHTML - 1;
+      } 
+    })
   }
 }
 
