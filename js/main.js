@@ -229,6 +229,43 @@ function sliderUpdate(element, value, isFirst) {
   element.parentElement.nextElementSibling.noUiSlider.set([isFirst?value:null, isFirst?null:value]);
 }
 
+//product page actions
+const productImageContainerElements = document.querySelectorAll('.product-view-img-list')
+if (productImageContainerElements.length) {
+  const productBlockContainerElements = document.querySelectorAll('.product-view-block-list')
+  const productInfoNavElements = document.querySelectorAll('.product-info-nav__item')
+  for (let item of productImageContainerElements) {
+    Array.from(item.children).forEach((el)=>{
+      el.addEventListener('click', function() {
+        if (!el.classList.contains('active')){
+          item.querySelector('.active').classList.remove('active')
+          el.classList.add('active')
+        }
+      })
+    })
+  }
+
+  for (let item of productBlockContainerElements) {
+    Array.from(item.children).forEach((el)=>{
+      el.addEventListener('click', function() {
+        if (!el.classList.contains('active')){
+          item.querySelector('.active').classList.remove('active')
+          el.classList.add('active')
+        }
+      })
+    })
+  }
+
+  for (let item of productInfoNavElements) {
+      item.addEventListener('click', function() {
+        if (!item.classList.contains('active')){
+          document.querySelector('.product-info-nav__item.active').classList.remove('active')
+          item.classList.add('active')
+        }
+      })
+  }
+}
+
 
 //Swiper.js
 if (document.querySelector('.brand-swiper')){
