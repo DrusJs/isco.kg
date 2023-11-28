@@ -690,6 +690,7 @@ h2.title {
     margin-top: 24px;
     grid-template-columns: repeat(7, 1fr);
 }
+
 .main-grid__item {
     max-width: 168px;
     position: relative;
@@ -698,6 +699,7 @@ h2.title {
 .main-grid__item img{
     border-radius: 8px;
     margin-bottom: 8px;
+    width: 100%;
 }
 .main-grid .discount {
     font-size: 14px;
@@ -931,12 +933,25 @@ h4.blog-title {
 }
 .subcatalog-container {
     margin-top: 32px;
+    padding-bottom: 64px;
+}
+.subcatalog-products .main-grid {
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 0;
+    gap: 32px;
+}
+.subcatalog-products .main-grid__item {
+    max-width: 180px;
 }
 .subcatalog-filter {
     gap: 32px;
     max-width: 244px;
 }
 .subcatalog-filter-accordion-head {
+    font-family: var(--font-bold);
+    color: var(--color-dark);
+}
+.subcatalog-filter-accordion.active .subcatalog-filter-accordion-head {
     margin-bottom: 16px;
 }
 .subcatalog-filter-accordion-head img {
@@ -956,6 +971,41 @@ h4.blog-title {
     max-height: 100%;
     display: flex;
 }
+.subcatalog-filter-accordion-dropdown .overflow-container {
+    gap: 16px;
+    overflow-y: hidden;
+    max-height: 185px;
+    scrollbar-color: var(--color-gray) var(--color-bg);
+    scrollbar-width: thin;
+    border-bottom: 2px solid transparent;
+}
+
+.subcatalog-filter-accordion-dropdown .overflow-container::-webkit-scrollbar {
+    width: 8px;
+}
+.subcatalog-filter-accordion-dropdown .overflow-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.subcatalog-filter-accordion-dropdown .overflow-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 6px;
+}
+.subcatalog-filter-accordion-dropdown .overflow-container.active {
+    overflow-y: scroll;
+    max-height: 300px;
+    border-bottom: 2px solid var(--color-gray-light);
+}
+.overflow-container-show::after {
+    content: 'Раскрыть все';
+    font-family: var(--font-medium);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-primary);
+    padding: 4px;
+}
+.overflow-container-show.active::after {
+    content: 'Скрыть';
+}
 
 .checkbox-primary {
     position: relative;
@@ -970,7 +1020,6 @@ h4.blog-title {
     height: 0;
     width: 0;
 }
-
 .checkmark {
     position: absolute;
     top: 2px;
@@ -981,7 +1030,6 @@ h4.blog-title {
     border: 1px solid var(--color-gray);
     border-radius: 4px;
 }
-
 .checkbox-primary input:checked ~ .checkmark {
     background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
@@ -990,7 +1038,31 @@ h4.blog-title {
     background-position: center center;
     background-repeat: no-repeat;
 }
+.subcatalog-filter-input {
+    padding: 12px;
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dark);
+    border: 1px solid var(--color-gray);
+    max-width: 110px;
+    border-radius: 8px;
+    outline: none;
+}
+.subcatalog-filter-input:focus::placeholder {
+    opacity: 0;
+}
+.subcatalog-filter-input::placeholder {
+    color: var(--color-gray-dark);
+}
+.subcatalog-filter-accordion-dropdown .line {
+    width: 16px;
+    height: 1px;
+    background-color: var(--color-gray-dark);
+    border-radius: 2px;
+    margin: 0 4px;
 
+}
 .noUi-target {
     box-shadow: none;
     border-radius: 4px;
@@ -1000,9 +1072,6 @@ h4.blog-title {
 }
 .noUi-connect {
     background: var(--color-primary);
-}
-.noUi-origin {
-
 }
 .noUi-horizontal .noUi-handle {
     width: 12px;
@@ -1016,4 +1085,55 @@ h4.blog-title {
 }
 .noUi-handle::after, .noUi-handle::before {
     display: none;
+}
+
+.subcatalog-products-pagination {
+    padding: 12px 16px;
+    margin-top: 32px;
+}
+.pagination-arrow {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+.pagination-arrow img {
+    width: 100%;
+}
+.pagination-arrow.left {
+    transform: rotate(90deg);
+    margin-right: 24px;
+}
+.pagination-arrow.right {
+    transform: rotate(-90deg);
+    margin-left: 24px;
+}
+.pagination-arrow.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.pagination-dots {
+    width: 24px;
+    height: 24px;
+    font-family: var(--font-regular);
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+.pagination-dots.disabled {
+    display: none;
+}
+.pagination-item {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    font-family: var(--font-regular);
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-dark);
+}
+.pagination-item.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }

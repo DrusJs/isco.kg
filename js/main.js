@@ -188,8 +188,8 @@ if (noticeDropdownElement) {
 
 
 //subcatalog filter dropdown
-const subcatalogFilterDropdownElements = document.querySelectorAll(".subcatalog-filter-accordion-head")
-if (subcatalogFilterDropdownElements) {
+const subcatalogFilterDropdownElements = document.querySelectorAll('.subcatalog-filter-accordion-head')
+if (subcatalogFilterDropdownElements.length) {
   for (let item of subcatalogFilterDropdownElements) {
     item.addEventListener('click', function() {
       item.parentElement.classList.toggle('active')
@@ -199,23 +199,39 @@ if (subcatalogFilterDropdownElements) {
   var sliderFilter = document.getElementById('noUiSlider');
 
   noUiSlider.create(sliderFilter, {
-      start: [500, 1000],
+      start: [0, 90000],
       connect: true,    
       behaviour: 'snap',
-      step: 10,
+      step: 1,
       range: {
           'min': 0,
-          'max': 6000
+          'max': 90000
       }
   });
   sliderFilter.noUiSlider.on('update', function () { 
-    console.log(sliderFilter.noUiSlider.get(true))
+    sliderFilter.previousElementSibling.firstElementChild.value = Math.floor(sliderFilter.noUiSlider.get(true)[0])
+    sliderFilter.previousElementSibling.lastElementChild.value = Math.floor(sliderFilter.noUiSlider.get(true)[1])
   });
+  const subcatalogFilterOverflowElements = document.querySelectorAll('.overflow-container-show')
+  for (let item of subcatalogFilterOverflowElements) {
+    item.addEventListener('click', function() {
+      item.classList.toggle('active')
+      item.previousElementSibling.classList.toggle('active')
+    })
+  }
+
+}
+
+function validInputNumber(event) {
+  return(event.charCode >= 48 && event.charCode <= 57 && /^\d{0,3}$/.test(this.value))
+}
+function sliderUpdate(element, value, isFirst) {
+  element.parentElement.nextElementSibling.noUiSlider.set([isFirst?value:null, isFirst?null:value]);
 }
 
 
 //Swiper.js
-if (document.querySelector(".brand-swiper")){
+if (document.querySelector('.brand-swiper')){
   var mainSwiper = new Swiper('.main-swiper', {
       loop: true,
       navigation: {

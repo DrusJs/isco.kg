@@ -365,7 +365,7 @@
                 <img src="images/header-search.svg" alt="">
                 <input type="text" class="search-input" id="search-subcatalog-input" placeholder="Поиск...">
             </div>
-            <div class="subcatalog-container">
+            <div class="subcatalog-container d-flex justify-content-between">
                 <div class="subcatalog-filter d-flex flex-column">
                     <div class="subcatalog-filter-accordion">
                         <div class="subcatalog-filter-accordion-head d-flex align-items-center justify-content-between">
@@ -404,6 +404,11 @@
                             Title<img src="images/1688-arrow.svg" alt="">
                         </div>
                         <div class="subcatalog-filter-accordion-dropdown flex-column">
+                            <div class="d-flex align-items-center">
+                                <input type="text" class="subcatalog-filter-input" placeholder="От" onkeypress="validInputNumber(event)" onblur="sliderUpdate(this, this.value, true)">
+                                <div class="line"></div>
+                                <input type="text" class="subcatalog-filter-input" placeholder="До" onkeypress="validInputNumber(event)" onblur="sliderUpdate(this, this.value, false)">
+                            </div>
                             <div id="noUiSlider"></div>
                         </div>
                     </div>
@@ -439,10 +444,252 @@
                             </label>
                         </div>
                     </div>
+                    <div class="subcatalog-filter-accordion active">
+                        <div class="subcatalog-filter-accordion-head d-flex align-items-center justify-content-between">
+                            Title<img src="images/1688-arrow.svg" alt="">
+                        </div>
+                        <div class="subcatalog-filter-accordion-dropdown flex-column">
+                            <div class="overflow-container d-flex flex-column active">
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-primary">
+                                    Title
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="overflow-container-show active"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="subcatalog-products">
-                    <div class="subcatalog-products-grid"></div>
-                    <div class="subcatalog-products-pagination"></div>
+                    <div class="main-grid">
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                            <img src="images/popular-preview.jpg" alt="">
+                            <div class="discount"></div>
+                            <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                            <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                          <img src="images/popular-preview.jpg" alt="">
+                          <div class="discount"></div>
+                          <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                          <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                        <div class="main-grid__item">
+                            <img src="images/popular-preview.jpg" alt="">
+                            <div class="discount"></div>
+                            <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                            <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                        </div>
+                      </div>
+                    <div class="subcatalog-products-pagination d-flex align-items-center justify-content-end">
+                        <div class="pagination-arrow left disabled"><img src="images/1688-arrow.svg" alt=""></div>
+                        <div class="pagination-item active">1</div>
+                        <div class="pagination-dots left disabled">...</div>
+                        <div class="pagination-item">2</div>
+                        <div class="pagination-item">3</div>
+                        <div class="pagination-item">4</div>
+                        <div class="pagination-item">5</div>
+                        <div class="pagination-dots right">...</div>
+                        <div class="pagination-item">12</div>
+                        <div class="pagination-arrow right"><img src="images/1688-arrow.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
