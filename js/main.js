@@ -157,7 +157,7 @@ const menuDropdownElement = document.querySelector('#main-menu')
 if (menuDropdownElement) {
   menuDropdownElement.addEventListener('click', function() {
     //closeDropdownsElements()
-    if (this.classList.contains('js-authentication')) {
+    if (this.parentElement.classList.contains('js-authentication')) {
       this.parentElement.classList.toggle('active')
     } else {
       openModal('#modal-registration')
