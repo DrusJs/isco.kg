@@ -15,10 +15,10 @@ const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
   const catalogOpenElement = document.querySelector('#catalog-open')
   const catalogCloseElement = document.querySelector('#catalog-close')
-  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
-  const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
+//  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
+//  const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
   const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
-  let catalogActiveSelectElement = document.querySelector('.catalog-nav-select__item.active')
+//  let catalogActiveSelectElement = document.querySelector('.catalog-nav-select__item.active')
 
   catalogOpenElement.addEventListener('click', function() {
     catalogElement.classList.add('active')

@@ -553,6 +553,9 @@ a.search-main-result__item.memory {
 .header-buttons {
     gap: 24px;
 }
+.header-buttons__item.mobile {
+    display: none;
+}
 .header-buttons__item, a.header-buttons__item {
     cursor: pointer;
     font-size: 14px;
@@ -602,6 +605,7 @@ a.search-main-result__item.memory {
 }
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 30px;
     margin-bottom: 16px;
@@ -1520,7 +1524,20 @@ h2.title.price .subprice {
 
 
 @media (max-width: 1399.98px) {
-    
+    .main-grid::-webkit-scrollbar,
+    .blog-container::-webkit-scrollbar {
+        display: none;
+    }
+    .blog-container {
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .main-grid {
+        grid-template-columns: repeat(6, 1fr);
+        overflow-y: hidden;
+        max-height: 520px;
+    }
 }
 
 @media (max-width: 1199.98px) {
@@ -1540,14 +1557,14 @@ h2.title.price .subprice {
         font-size: 0px;
         padding: 0;
     }
+    .header-logo {
+        margin-right: 16px;
+    }
     .header-buttons {
         gap: 10px;
     }
     .search-input {
         max-width: 210px;
-    }
-    .catalog-main {
-        font-size: 0px;
     }
     .search-main {
         margin-right: 12px;
@@ -1566,6 +1583,27 @@ h2.title.price .subprice {
     .header-buttons__item .title {
         display: none;
     }
+    .catalog-main {
+        background-color: var(--color-white);
+        border: 2px solid var(--color-gray-light);
+        min-width: 48px;
+        height: 48px;
+        background-image: url(../images/catalog-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        font-size: 0;
+        transition: none;
+    }
+    .catalog-main:hover {
+        background-color: var(--color-white);
+    }
+    .catalog-main:active {
+        background-color: var(--color-white);
+    }
+    .catalog-main img {
+        display: none;
+    }
     .container.margin-top {
         margin-top: 36px;
     }
@@ -1581,10 +1619,72 @@ h2.title.price .subprice {
     .about-container img {
         display: none;
     }
-
+    .header-panel {
+        display: none !important;
+    }
     .container {
         max-width: 100%;
         padding: 0 16px;
+    }
+    header.header {
+        border-bottom: 2px solid var(--color-gray-light);
+    }
+    .header-main .container {
+        flex-wrap: wrap;
+        max-height: none;
+        gap: 12px;
+        justify-content: flex-start !important;
+    }
+    .header-logo {
+        margin-right: 0;
+    }
+    .header-buttons {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        gap: 24px;
+        height: 32px;
+        align-items: center;
+    }
+    .catalog-main {
+        min-width: 32px;
+        height: 32px;
+        order: -1;
+        margin-right: 0;
+    }
+    .search-main {
+        order: 1;
+        margin-right: 0;
+        transition: 200ms;
+    }
+    .search-input {
+        max-width: 100%;
+        flex-basis: auto;
+        width: 100%;
+    }
+    .search-main.focus {
+        margin-top: -46px;
+    }
+    .search-main-result {
+        width: calc(100% + 32px);
+        height: 100%;
+        left: -16px;
+        right: auto;
+        box-shadow: none;
+        top: 62px;
+        height: 100vh;
+    }
+    .header-buttons__item img {
+        width: 24px;
+    }
+    .header-buttons__item.mobile {
+        display: flex;
+    }
+    .swiper-container {
+        margin-bottom: 34px;
+    }
+    .swiper-pagination {
+        bottom: -24px !important;
     }
     .main-swiper .swiper-button-next, .main-swiper .swiper-button-prev,
     .main-brand-swiper .swiper-button-next, .main-brand-swiper .swiper-button-prev {
@@ -1599,20 +1699,15 @@ h2.title.price .subprice {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-    .main-grid::-webkit-scrollbar,
-    .blog-container::-webkit-scrollbar {
-        display: none;
-    }
     .main-grid__item {
         min-width: 140px;
     }
     .main-grid__item .prev-price {
         display: none;
     }
-    .blog-container {
-        overflow-x: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+
+    .blog-container__item, .blog-container__item img {
+        max-width: 296px;
     }
     .footer .container {
         flex-wrap: nowrap;
@@ -1630,5 +1725,11 @@ h2.title.price .subprice {
 @media (max-width: 575.98px) {
     .container.margin-top {
         margin-top: 12px;
+    }
+}
+
+@media (max-width: 370px) {
+    .header-buttons {
+        gap: 16px;
     }
 }
