@@ -186,6 +186,15 @@ if (noticeDropdownElement) {
   })
 }
 
+const footerDropdownElements = document.querySelectorAll('.footer-list__item.header')
+if (footerDropdownElements.length) {
+  for (let item of footerDropdownElements) {
+    item.addEventListener('click', function() {
+      item.parentElement.classList.toggle('active')
+    })
+  }
+}
+
 
 //subcatalog filter dropdown
 const subcatalogFilterDropdownElements = document.querySelectorAll('.subcatalog-filter-accordion-head')
