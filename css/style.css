@@ -389,6 +389,7 @@ img.contain {
     margin-left: 32px;
     display: block;
 }
+
 .dark .contacts-dropdown__item img {
     margin-left: 0;
 }
@@ -1572,6 +1573,19 @@ h2.title.price .subprice {
 }
 
 @media (max-width: 991.98px) {
+    h1.title {
+        font-family: var(--font-bold);
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.64px; 
+    }
+    
+    h2.title {
+        font-family: var(--font-bold);
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px; 
+    }
     .search-photo {
         background-color: transparent;
         font-size: 0px;
@@ -1636,6 +1650,12 @@ h2.title.price .subprice {
 }
 
 @media (max-width: 767.98px) {
+    h1.title {
+        font-family: var(--font-bold);
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px; 
+    }
     .about-container img {
         display: none;
     }
@@ -1665,6 +1685,21 @@ h2.title.price .subprice {
         gap: 24px;
         height: 32px;
         align-items: center;
+    }
+    .contacts-dropdown{
+        background-color: transparent;
+        width: 100%;
+        max-width: 452px;
+        margin-top: 12px;
+        padding-left: 0px;
+    }
+    .contacts-dropdown__item img {
+        margin-left: 0;
+    }
+    .contacts-dropdown__item .text {
+        font-family: var(--font-medium);
+        letter-spacing: -0.32px; 
+        margin-left: 44px;
     }
     .catalog-main {
         min-width: 32px;
@@ -1780,6 +1815,11 @@ h2.title.price .subprice {
     }
     .copyright {
         margin-top: 32px;
+    }
+    .blog-banner-img {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        border-radius: 0;
     }
 }
 
