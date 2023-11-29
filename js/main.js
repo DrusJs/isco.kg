@@ -9,7 +9,12 @@ function setLoaderDisplay(time = 2000) {
     loaderElement.classList.remove('active')
   }, time)
 }
-
+function closeModal(element) {
+  element.closest('.modal-wrapper').classList.remove('active')
+}
+function openModal(id) {
+  document.querySelector(id).classList.add('active')
+}
 //catalog actions
 const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
@@ -48,10 +53,10 @@ if (catalogElement) {
 
   for (let item of catalogLinkListElements) {
     item.addEventListener('click', function() {
-      setLoaderDisplay(1160)
-      setTimeout(()=>{
-        window.location.href = 'subcatalog.html';
-      },1200)
+      setLoaderDisplay(100160)
+      // setTimeout(()=>{
+      //   window.location.href = 'subcatalog.html';
+      // },1000200)
     })
   }
 }
@@ -152,7 +157,12 @@ const menuDropdownElement = document.querySelector('#main-menu')
 if (menuDropdownElement) {
   menuDropdownElement.addEventListener('click', function() {
     //closeDropdownsElements()
-    this.parentElement.classList.toggle('active')
+    if (this.classList.contains('js-authentication')) {
+      this.parentElement.classList.toggle('active')
+    } else {
+      openModal('#modal-registration')
+    }
+
   })
 }
 
