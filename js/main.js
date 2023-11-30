@@ -13,8 +13,14 @@ function closeModal(element) {
   element.closest('.modal-wrapper').classList.remove('active')
 }
 function openModal(id) {
+  let previous = document.querySelector('.modal-wrapper.active')
+  if (previous) {
+    previous.classList.remove('active')
+  }
   document.querySelector(id).classList.add('active')
 }
+
+
 //catalog actions
 const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
@@ -162,7 +168,6 @@ if (menuDropdownElement) {
     } else {
       openModal('#modal-registration')
     }
-
   })
 }
 
@@ -205,6 +210,70 @@ if (footerDropdownElements.length) {
   }
 }
 
+//modal-wrapper
+const modalContainerElements = document.querySelectorAll('.modal-wrapper')
+if (modalContainerElements.length) {
+  for (let item of modalContainerElements) {
+    item.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal-wrapper')){
+        this.classList.remove('active')
+      }
+    })
+  }
+}
+//modal login
+const modalLoginMethodElements = document.querySelectorAll('.modal-auth-method__item')
+if (modalLoginMethodElements.length) {
+  for (let item of modalLoginMethodElements) {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('active')) {
+        document.querySelector('.modal-auth-method__item.active').classList.remove('active')
+        item.classList.add('active')
+
+        if (item.dataset.method=='phone') {
+          item.parentElement.nextElementSibling.classList.add('phone')
+        } else {
+          item.parentElement.nextElementSibling.classList.remove('phone')
+        }
+      }
+    })
+  }
+}
+
+//inputs text
+
+const inputTextElements = document.querySelectorAll('.input .field')
+
+if (inputTextElements.length) {
+  for (let item of inputTextElements) {
+    let input = item.firstElementChild.nextElementSibling
+    let container = item.parentElement
+    let showPass = item.querySelector('.show-password')
+
+    item.addEventListener('click', function() {
+      container.classList.add('focus')
+      input.focus()
+    })
+    input.addEventListener('focusout', function() {
+      container.classList.remove('focus')
+    })
+    input.addEventListener('input', function() {
+      if (input.value && !container.classList.contains('filled')) {
+        container.classList.add('filled')
+      }
+      if (!input.value) { container.classList.remove('filled') }
+    })
+    if (showPass) {
+      showPass.addEventListener('click', function() {
+        if (input.type === "password") {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      })
+    }
+  }
+}
 
 //subcatalog filter dropdown
 const subcatalogFilterDropdownElements = document.querySelectorAll('.subcatalog-filter-accordion-head')
