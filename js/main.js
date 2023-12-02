@@ -33,10 +33,9 @@ const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
   const catalogOpenElement = document.querySelector('#catalog-open')
   const catalogCloseElement = document.querySelector('#catalog-close')
-//  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
-//  const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
+  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
+//const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
   const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
-//  let catalogActiveSelectElement = document.querySelector('.catalog-nav-select__item.active')
 
   catalogOpenElement.addEventListener('click', function() {
     catalogElement.classList.add('active')
@@ -48,15 +47,14 @@ if (catalogElement) {
     document.body.classList.remove('no-scroll')
   })
 
-  // for (let item of catalogSelectElements) {
-  //   item.addEventListener('click', function() {
-  //     if (!item.classList.contains('active')) {
-  //       item.classList.add('active')
-  //       catalogActiveSelectElement.classList.remove('active')
-  //       catalogActiveSelectElement = item
-  //     }
-  //   })
-  // }
+  for (let item of catalogSelectElements) {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('active')) {
+          document.querySelector('.catalog-nav-select__item.active').classList.remove('active')
+        item.classList.add('active')
+      }
+    })
+  }
 
   // for (let item of catalogListElements) {
   //   item.addEventListener('click', function() {
@@ -66,10 +64,10 @@ if (catalogElement) {
 
   for (let item of catalogLinkListElements) {
     item.addEventListener('click', function() {
-      setLoaderDisplay(100160)
-      // setTimeout(()=>{
-      //   window.location.href = 'subcatalog.html';
-      // },1000200)
+      setLoaderDisplay(1990)
+      setTimeout(()=>{
+        window.location.href = 'subcatalog.html';
+      }, 2000)
     })
   }
 }

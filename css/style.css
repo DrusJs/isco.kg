@@ -1951,6 +1951,7 @@ h2.title.price .subprice {
 .empty-container .title {
     color: var(--color-gray-dark);
 }
+
 .favorites-container {
     margin-top: 16px;
     min-height: 430px;
@@ -1978,6 +1979,15 @@ h2.title.price .subprice {
 }
 .favorites-block .main-grid.active {
     display: grid;
+}
+
+.title .basket-total {
+    font-family: var(--font-medium);
+    color: var(--color-gray);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    margin: 0 0 8px 4px;
 }
 /********Responsive**********/
 
@@ -2022,6 +2032,11 @@ h2.title.price .subprice {
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.48px; 
+    }
+    .title .basket-total {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0 0 4px 4px;
     }
     .search-photo {
         background-color: transparent;
@@ -2195,9 +2210,11 @@ h2.title.price .subprice {
         order: -1;
     }
     .header-buttons__item.mobile,
-    .footer-list.mobile,
     .title.mobile {
         display: flex;
+    }
+    .footer-list.mobile {
+        display: block;
     }
     .select-dropdown__item {
         border: 1px solid var(--color-gray-light);
