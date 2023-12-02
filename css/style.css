@@ -1026,6 +1026,9 @@ h4.blog-title {
 .modal .product-basket .product-basket-button {
     flex-basis: 48%;
 }
+.modal .product-basket-block {
+    margin-top: 20px;
+}
 .modal form {
     display: flex;
     flex-direction: column; 
@@ -1033,6 +1036,7 @@ h4.blog-title {
 }
 .close-modal {
     width: 24px;
+    min-width: 24px;
     height: 24px;
     background-image: url(../images/search-clear.svg);
     background-position: center center;
@@ -1940,11 +1944,11 @@ h2.title.price .subprice {
     max-height: 100%;
 }
 
-.empty-favorites {
+.empty-container {
     gap: 32px;
     padding: 100px 0 200px;
 }
-.empty-favorites .title {
+.empty-container .title {
     color: var(--color-gray-dark);
 }
 .favorites-container {
