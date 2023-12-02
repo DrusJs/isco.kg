@@ -262,6 +262,10 @@
                   <img src="images/1688-arrow.svg" alt="">
                 </div>
                 <div class="search-main__select-dropdown">
+                  <h2 class="title align-items-center justify-content-between mobile">
+                    Поиск по порталу
+                    <div class="close-modal" onclick="closeElement(this)"></div>
+                  </h2>
                   <div class="select-dropdown__item active"><img src="images/1688.svg" alt=""></div>
                   <div class="select-dropdown__item"><img src="images/taobaoLogo.svg" alt=""></div>
                   <div class="select-dropdown__item"><img src="images/trendyolLogo.svg" alt=""></div>
@@ -717,17 +721,17 @@
               <label for='checkbox-1'></label>
             </div>
             <label class="checkbox-primary caption">
-              Я принимаю <a href="#">Условия пользовательского соглашения</a>
+              Я принимаю <div class="agreement" onclick="openModal('#modal-user-agreement', false)">Условия пользовательского соглашения</div>
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-            <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-user-agreement')">
+            <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-registration-code')">
           </form>
           <button class="change-modal" onclick="openModal('#modal-login')">Войти</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-user-agreement">
-        <div class="modal">
+        <div class="modal mobile-fill-none">
           <h2 class="title d-flex align-items-center justify-content-between">
             Пользовательское соглашение
             <div class="close-modal" onclick="closeModal(this)"></div>
@@ -754,8 +758,29 @@
             Услуги – Услуги сайтом, Услуги доставки, Услуги поставки.
             Регистрация — процедура, в ходе которой Заказчик посредством Сайта предоставляет Исполнителю информацию, необходимую для оказания Услуг сайтом. Регистрация считается завершенной только в случае успешного прохождения всех ее этапов в соответствии с опубликованными на Сайте инструкциями. По итогам Регистрации создается учетная запись Пользователя, лицевой счет и личный кабинет. Сообщенная при регистрации информация может быть впоследствии изменена Пользователем.
             Личный кабинет — персональный и не доступный третьим лицам раздел Сайта, доступ к которому осуществляется Заказчиком путем ввода личных логина — имени доступа и пароля — кода доступа, и который содержит информацию о заказах Заказчика, их оплате, исполнении и состоянии лицевого счета, а также предоставляет функциональную возможность удаленного взаимодействия Сторон при исполнении своих обязательств.            
-            <div class="primary-button fill fit" onclick="openModal('#modal-registration-complete')">Ознакомлен</div>
+            <div class="primary-button fill fit" onclick="openModal('#modal-registration-code')">Ознакомлен</div>
           </div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-registration-code">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Подтверждение
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-phone-number">
+            Код отправлен на номер<br>
+            +996 (505) 396-999 <span class="change-number">Изменить</span>
+          </div>
+          <div class="modal-code">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+          </div>
+          <div class="modal-error">Неверный код</div>
+          <div class="primary-button fill disabled" onclick="openModal('#modal-registration-complete')">Продолжить</div>
+          <div class="code-timer"> 00:59 </div>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-registration-complete">
@@ -850,6 +875,261 @@
             </div>
             <input class="primary-button fill" type="button" value="Продолжить">
           </form>
+        </div>
+      </div>
+      <div class="modal-wrapper overflow" id="modal-preview">
+        <div class="modal auto container">
+          <h2 class="title d-flex justify-content-between">
+            Bmw, горный велосипед, внедорожный гоночный автомобиль, детский велосипед, регулировка скорости
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="product-buttons d-flex align-items-center">
+            <div class="product-buttons__item d-flex align-items-center" onclick="this.classList.toggle('active')">
+                В избранное
+                <svg class="favorite" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33325 5.09091C1.33325 8.33287 4.01287 10.0604 5.97441 11.6068C6.66658 12.1524 7.33325 12.6662 7.99992 12.6662C8.66658 12.6662 9.33325 12.1524 10.0254 11.6068C11.987 10.0604 14.6666 8.33287 14.6666 5.09091C14.6666 1.84895 10.9998 -0.450179 7.99992 2.6666C5.00003 -0.450179 1.33325 1.84895 1.33325 5.09091Z" fill="none"/>
+                    <path d="M5.97441 11.6068L6.43872 11.0178L6.43872 11.0178L5.97441 11.6068ZM7.99992 2.6666L7.45955 3.1867C7.60094 3.3336 7.79604 3.4166 7.99992 3.4166C8.2038 3.4166 8.3989 3.3336 8.54028 3.1867L7.99992 2.6666ZM10.0254 11.6068L9.56112 11.0178L9.56112 11.0178L10.0254 11.6068ZM6.43872 11.0178C5.41345 10.2095 4.33627 9.45196 3.47904 8.48669C2.64752 7.55036 2.08325 6.47782 2.08325 5.09091H0.583252C0.583252 6.94595 1.3588 8.35818 2.35747 9.48272C3.33043 10.5783 4.57383 11.4577 5.51009 12.1958L6.43872 11.0178ZM2.08325 5.09091C2.08325 3.75053 2.84027 2.63946 3.85342 2.17635C4.81929 1.73484 6.15155 1.82774 7.45955 3.1867L8.54028 2.1465C6.84839 0.388684 4.84732 0.0727546 3.22983 0.812113C1.65962 1.52986 0.583252 3.18933 0.583252 5.09091H2.08325ZM5.51009 12.1958C5.84928 12.4631 6.22932 12.7613 6.61834 12.9886C7.00711 13.2158 7.47619 13.4162 7.99992 13.4162V11.9162C7.85698 11.9162 7.65939 11.8597 7.37512 11.6935C7.0911 11.5276 6.79171 11.296 6.43872 11.0178L5.51009 12.1958ZM10.4897 12.1958C11.426 11.4577 12.6694 10.5783 13.6424 9.48272C14.641 8.35818 15.4166 6.94595 15.4166 5.09091H13.9166C13.9166 6.47782 13.3523 7.55036 12.5208 8.48669C11.6636 9.45196 10.5864 10.2095 9.56112 11.0178L10.4897 12.1958ZM15.4166 5.09091C15.4166 3.18933 14.3402 1.52986 12.77 0.812113C11.1525 0.0727546 9.15145 0.388684 7.45955 2.1465L8.54028 3.1867C9.84828 1.82774 11.1805 1.73484 12.1464 2.17635C13.1596 2.63946 13.9166 3.75053 13.9166 5.09091H15.4166ZM9.56112 11.0178C9.20813 11.296 8.90874 11.5276 8.62471 11.6935C8.34044 11.8597 8.14285 11.9162 7.99992 11.9162V13.4162C8.52365 13.4162 8.99273 13.2158 9.3815 12.9886C9.77052 12.7613 10.1506 12.4631 10.4897 12.1958L9.56112 11.0178Z" fill="#626C7A"/>
+                </svg>
+            </div>
+            <div class="product-buttons__item d-flex align-items-center">
+                Ссылка на источник
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.6976 11.333C7.69363 10.3251 7.78406 8.60026 8.89959 7.4804L12.1314 4.23609C13.2469 3.11623 14.9651 3.02544 15.9691 4.03332C16.973 5.04119 16.8826 6.76605 15.7671 7.88591L14.1512 9.50807" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M11.3023 8.66699C12.3063 9.67487 12.2159 11.3997 11.1003 12.5196L9.48445 14.1417L7.86858 15.7639C6.75304 16.8838 5.03483 16.9746 4.03085 15.9667C3.02688 14.9588 3.11731 13.2339 4.23284 12.1141L5.84874 10.4919" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="product-wrapper d-flex">
+            <div class="product-container">
+                <div class="product-view d-flex">
+                    <div class="product-view-img">
+                        <div class="product-view-img-main">
+                            <div class="discount active">50%</div>
+                            <img src="images/product-image.jpg" alt="">
+                        </div>
+                        <div class="product-view-img-list">
+                            <div class="product-view-img-list__item active">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-view-config">
+                        <div class="product-view-config-header d-flex">
+                            Цвет
+                            <span class="color" id="product-view-config-color">Белый</span>
+                        </div>
+                        <div class="product-view-img-list">
+                            <div class="product-view-img-list__item active">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                            <div class="product-view-img-list__item">
+                                <img src="images/product-image.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-view-config-header margin-top">
+                            Вращание:
+                        </div>
+                        <div class="product-view-block-list d-flex">
+                            <div class="product-view-block-list__item active">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                            <div class="product-view-block-list__item">21 скорость</div>
+                        </div>
+                        <div class="product-view-config-row d-flex">
+                            <div class="title">Состояние</div>
+                            <div class="value">Новый</div>
+                        </div>
+                        <div class="product-view-config-row d-flex">
+                            <div class="title">В наличии</div>
+                            <div class="value">50 шт.</div>
+                        </div>
+                        <div class="product-view-config-row d-flex">
+                            <div class="title">Примерный вес</div>
+                            <div class="value">0.000 кг</div>
+                        </div>
+                        <div class="product-view-config-row d-flex">
+                            <div class="title">Объем продаж за 30 дней</div>
+                            <div class="value">14</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-info-nav d-flex">
+                        <h4 class="title product-info-nav__item active">Характеристики</h4>
+                        <h4 class="title product-info-nav__item">Описание</h4>
+                    </div>
+                    <div class="product-info-config">
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Прощание</div>
+                            <div class="value">21 скорость; 24 скорости; 27 скорость; 30 скоростей</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Цвет</div>
+                            <div class="value">Топ с дисковые тормоза - спицы колеса - белый; Топ с дисковые тормоза - спицы колеса - черный; Топ с дисковые тормоза -три режущий диск - белый; Топ с дисковые тормоза -три режущий диск - черный; Топ с дисковые тормоза -шесть режущий диск - белый; Топ с дисковые тормоза -шесть режущий диск - черный; Топ с тормозная жидкость - спицы колеса - белый; Топ с тормозная жидкость - спицы колеса - черный; Топ с тормозная жидкость -три режущий диск - белый; Топ с тормозная жидкость -три режущий диск - черный; Топ с тормозная жидкость -шесть режущий диск - белый; Топ с тормозная жидкость -шесть режущий диск - черный; Стандарт дисковые тормоза - спицы колеса - белый; Стандарт дисковые тормоза - спицы колеса - черный; Стандарт дисковые тормоза -три режущий диск - белый; Стандарт дисковые тормоза -три режущий диск - черный</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Диаметр колеса размер</div>
+                            <div class="value">24 дюймовый; 26 дюймовый</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Марка</div>
+                            <div class="value">Чи ми</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Размер</div>
+                            <div class="value">26 дюймовый x17 дюймовый</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Применимый пол</div>
+                            <div class="value">Подходит для мужчин и женщин</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Система динамическая система Объединенный</div>
+                            <div class="value">Давление масла дисковые тормоза ( давление масла тормозных колодок ); Нить притяжение дисковые тормоза ( палец мощность тормоз); Двойной дискового тормоза</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Рамка тип</div>
+                            <div class="value">Жесткий рамка</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Вилка тип</div>
+                            <div class="value">Весна крест( низкий без влажный )</div>
+                        </div>
+                        <div class="product-info-config-row d-flex">
+                            <div class="title">Горный велосипед тип</div>
+                            <div class="value">Enduro горный велосипед</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-basket-container d-flex flex-column">
+                <div class="product-basket d-flex flex-column">
+                    <h2 class="title price">500 сом<span class="subprice">1 000 сом</span></h2>
+                    <div class="product-basket-notice">
+                        <img src="images/basket-notice.svg" alt="">
+                        <span>Цена с учетом доставки внутри Китая до склада компании ISCO</span>
+                        <a href="">Адреса складов</a>
+                    </div>
+                    <div class="product-basket-properties">
+                        <div class="product-basket-properties__header">Выбранные параметры</div>
+                        <div class="product-basket-properties__item">
+                            <div class="name">Цвет</div>
+                            <div class="value">Белый</div>
+                        </div>
+                        <div class="product-basket-properties__item">
+                            <div class="name">Вращание</div>
+                            <div class="value">21 скорость</div>
+                        </div>
+                        <div class="product-basket-properties__item">
+                          <div class="name">Количество<br><span class="total">В наличии: 2200 шт.</span></div>
+                          <div class="counter">
+                            <div class="minus"></div>
+                            <div class="value">1</div>
+                            <div class="plus"></div>
+                          </div>
+                      </div>
+                    </div>
+                    <button class="product-basket-button add">В корзину</button>
+                    <button class="product-basket-button order">Заказать сейчас</button>
+                </div>
+                <div class="product-basket-block">
+                    <div class="product-basket-block__header">Условия доставки</div>
+                    <img class="left" src="images/basket-delivery.svg" alt="">
+                    <div class="text light">Ожидаемая дата прибытия</div>
+                    <div class="text date">18 - 26 октября 2023</div>
+                </div>
+                <div class="product-basket-block">
+                    <div class="product-basket-block__header d-flex align-items-center justify-content-between">
+                        О продавце
+                        <div class="product-buttons__item d-flex align-items-center" onclick="this.classList.toggle('active')">
+                            В избранное
+                            <svg class="favorite" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.33325 5.09091C1.33325 8.33287 4.01287 10.0604 5.97441 11.6068C6.66658 12.1524 7.33325 12.6662 7.99992 12.6662C8.66658 12.6662 9.33325 12.1524 10.0254 11.6068C11.987 10.0604 14.6666 8.33287 14.6666 5.09091C14.6666 1.84895 10.9998 -0.450179 7.99992 2.6666C5.00003 -0.450179 1.33325 1.84895 1.33325 5.09091Z" fill="none"></path>
+                                <path d="M5.97441 11.6068L6.43872 11.0178L6.43872 11.0178L5.97441 11.6068ZM7.99992 2.6666L7.45955 3.1867C7.60094 3.3336 7.79604 3.4166 7.99992 3.4166C8.2038 3.4166 8.3989 3.3336 8.54028 3.1867L7.99992 2.6666ZM10.0254 11.6068L9.56112 11.0178L9.56112 11.0178L10.0254 11.6068ZM6.43872 11.0178C5.41345 10.2095 4.33627 9.45196 3.47904 8.48669C2.64752 7.55036 2.08325 6.47782 2.08325 5.09091H0.583252C0.583252 6.94595 1.3588 8.35818 2.35747 9.48272C3.33043 10.5783 4.57383 11.4577 5.51009 12.1958L6.43872 11.0178ZM2.08325 5.09091C2.08325 3.75053 2.84027 2.63946 3.85342 2.17635C4.81929 1.73484 6.15155 1.82774 7.45955 3.1867L8.54028 2.1465C6.84839 0.388684 4.84732 0.0727546 3.22983 0.812113C1.65962 1.52986 0.583252 3.18933 0.583252 5.09091H2.08325ZM5.51009 12.1958C5.84928 12.4631 6.22932 12.7613 6.61834 12.9886C7.00711 13.2158 7.47619 13.4162 7.99992 13.4162V11.9162C7.85698 11.9162 7.65939 11.8597 7.37512 11.6935C7.0911 11.5276 6.79171 11.296 6.43872 11.0178L5.51009 12.1958ZM10.4897 12.1958C11.426 11.4577 12.6694 10.5783 13.6424 9.48272C14.641 8.35818 15.4166 6.94595 15.4166 5.09091H13.9166C13.9166 6.47782 13.3523 7.55036 12.5208 8.48669C11.6636 9.45196 10.5864 10.2095 9.56112 11.0178L10.4897 12.1958ZM15.4166 5.09091C15.4166 3.18933 14.3402 1.52986 12.77 0.812113C11.1525 0.0727546 9.15145 0.388684 7.45955 2.1465L8.54028 3.1867C9.84828 1.82774 11.1805 1.73484 12.1464 2.17635C13.1596 2.63946 13.9166 3.75053 13.9166 5.09091H15.4166ZM9.56112 11.0178C9.20813 11.296 8.90874 11.5276 8.62471 11.6935C8.34044 11.8597 8.14285 11.9162 7.99992 11.9162V13.4162C8.52365 13.4162 8.99273 13.2158 9.3815 12.9886C9.77052 12.7613 10.1506 12.4631 10.4897 12.1958L9.56112 11.0178Z" fill="#626C7A"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-basket-block-row d-flex">
+                      <div class="title">Имя</div>
+                      <div class="value">tb9862905392</div>
+                    </div>
+                    <div class="product-basket-block-row d-flex">
+                      <div class="title">Магазин</div>
+                      <div class="value">宝马中心</div>
+                    </div>
+                    <div class="product-basket-block-row d-flex">
+                      <div class="title">Оценка доставки</div>
+                      <div class="value">4.69</div>
+                    </div>
+                    <div class="product-basket-block-row d-flex">
+                      <div class="title">Оценка товара</div>
+                      <div class="value">4.56</div>
+                    </div>
+                    <div class="product-basket-block-row d-flex">
+                      <div class="title">Оценка услуг</div>
+                      <div class="value">4.64</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>

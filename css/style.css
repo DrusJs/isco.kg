@@ -575,7 +575,8 @@ a.search-main-result__item.memory {
     gap: 24px;
 }
 .header-buttons__item.mobile,
-.footer-list.mobile {
+.footer-list.mobile,
+.title.mobile {
     display: none;
 }
 .header-buttons__item, a.header-buttons__item {
@@ -963,8 +964,12 @@ h4.blog-title {
     height: 100%;
     display: none;
     justify-content: center;
-    padding-top: 124px;
+    padding-top: 10vh;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-wrapper {
+    max-height: 100%;
+    overflow-y: scroll;
 }
 .modal-wrapper.active {
     display: flex;
@@ -1055,18 +1060,20 @@ h4.blog-title {
 }
 .input.focus .field input,
 .input.filled .field input {
+    background-color: var(--color-whites);
+    color: var(--color-dark);
     display: block;
+}
+.input .field input:-webkit-autofill {
+    background-color: var(--color-whites);
+    color: var(--color-dark);
 }
 .show-password {
     position: absolute;
     top: 12px;
     right: 12px;
     cursor: pointer;
-    /* pointer-events: none; */
 }
-/* .input.focus .field .show-password {
-    pointer-events: auto;
-} */
 .modal-auth-method {
     gap: 16px;
 }
@@ -1108,7 +1115,7 @@ h4.blog-title {
 .checkbox-primary.caption .checkmark {
     top: -3px;
 }
-.checkbox-primary.caption a {
+.checkbox-primary.caption .agreement {
     color: var(--color-primary);
     text-decoration: underline;
 }
@@ -1123,6 +1130,87 @@ h4.blog-title {
     outline: none;
     width: fit-content;
     margin: 0 auto;
+}
+.modal-phone-number {
+    text-align: center;
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-gray-dark);
+    letter-spacing: -0.32px;
+}
+.modal-phone-number .change-number{
+    color: var(--color-primary);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.modal-code {
+    display: flex;
+    justify-content: space-between;
+    max-width: 304px;
+    width: 100%;
+}
+.error .modal-code__item {
+    border: 1px solid var(--color-red);
+}
+.modal-code__item {
+    width: 52px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray);
+    font-family: var(--font-bold);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.48px; 
+    outline: 0;
+    text-align: center;
+}
+.modal-error {
+    font-family: var(--font-regular);
+    color: var(--color-red);
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0;
+}
+.error .modal-error {
+    opacity: 1;
+}
+.modal .code-timer {
+    font-family: var(--font-regular);
+    color: var(--color-gray-dark);
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .code-timer::before {
+    content: 'Получить новый пароль можно через ';
+    margin-right: 5px;
+}
+.modal .code-timer.reset {
+    pointer-events: auto;
+    font-family: var(--font-medium);
+    color: var(--color-dark);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+}
+.modal .code-timer.reset::before {
+    content: 'Отправить код еще раз ';
+}
+.modal .code-timer.reset::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/reset-code.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 input[type="checkbox"].switch {
     display: none; 
@@ -1172,7 +1260,7 @@ input[type="checkbox"].switch:checked + label:before {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    max-height: 596px;
+    max-height: 70vh;
     max-width: 914px;
     text-align: center;
     overflow-y: scroll;
@@ -1718,6 +1806,7 @@ h2.title.price .subprice {
     line-height: 24px;
     padding: 12px 24px;
     border-radius: 8px;
+    text-align: center;
     outline: none;
     cursor: pointer;
     transition: 260ms ease-in-out;
@@ -1809,12 +1898,7 @@ h2.title.price .subprice {
     max-height: 100%;
 }
 
-
-
-
 /********Responsive**********/
-
-
 
 @media (max-width: 1399.98px) {
     .main-grid::-webkit-scrollbar,
@@ -1989,14 +2073,21 @@ h2.title.price .subprice {
         order: 1;
         margin-right: 0;
         transition: 200ms;
-        /* position: static; */
+        position: static;
         background-color: var(--color-white);
     }
     .search-main__select-dropdown {
         right: auto;
+        top: auto;
+        padding: 16px 16px 32px;
+        border-radius: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5);
     }
     .search-main__select {
-        /* position: static; */
+        position: static;
     }
     .search-input {
         max-width: 100%;
@@ -2023,14 +2114,21 @@ h2.title.price .subprice {
         order: -1;
     }
     .header-buttons__item.mobile,
-    .footer-list.mobile {
-        display: block;
+    .footer-list.mobile,
+    .title.mobile {
+        display: flex;
+    }
+    .select-dropdown__item {
+        border: 1px solid var(--color-gray-light);
+        border-radius: 8px;
+        padding: 15px 16px;
+        margin-top: 16px;
     }
     .swiper-container {
         margin-bottom: 30px;
     }
     .main-swiper, .main-swiper .swiper-slide img {
-        max-height: 140px;
+        max-height: 190px;
     }
     .main-brand-swiper {
         max-height: 100px;        
@@ -2134,6 +2232,9 @@ h2.title.price .subprice {
 @media (max-width: 575.98px) {
     .container.margin-top {
         margin-top: 24px;
+    }
+    .main-swiper, .main-swiper .swiper-slide img {
+        max-height: 140px;
     }
 }
 

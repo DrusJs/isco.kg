@@ -9,12 +9,19 @@ function setLoaderDisplay(time = 2000) {
     loaderElement.classList.remove('active')
   }, time)
 }
+
+function closeElement(element) {
+  document.body.classList.remove('no-scroll')
+  element.closest('.active').classList.remove('active')
+}
 function closeModal(element) {
+  document.body.classList.remove('no-scroll')
   element.closest('.modal-wrapper').classList.remove('active')
 }
-function openModal(id) {
+function openModal(id, isClose = true) {
+  document.body.classList.add('no-scroll')
   let previous = document.querySelector('.modal-wrapper.active')
-  if (previous) {
+  if (previous && isClose) {
     previous.classList.remove('active')
   }
   document.querySelector(id).classList.add('active')
@@ -138,7 +145,7 @@ if (contactsDropdownElement) {
 //search main dropdown action
 const searchDropdownElement = document.querySelector('#search-main-dropdown')
 if (searchDropdownElement) {
-  const searchDropdownElementItems = Array.from(searchDropdownElement.nextElementSibling.children)
+  const searchDropdownElementItems = searchDropdownElement.parentElement.querySelectorAll('.select-dropdown__item')
 
   searchDropdownElement.addEventListener('click', function() {
     //closeDropdownsElements()
@@ -242,8 +249,47 @@ if (modalLoginMethodElements.length) {
 
 //inputs text
 const inputTextElements = document.querySelectorAll('.input .field')
-
-
+const inputCodeElements = document.querySelectorAll('.modal-code')
+function inputBlurEvent(event, element) {
+  let isBlur = !element.contains(event.target)
+  if (isBlur) {
+    element.classList.remove('focus')
+    document.onclick = null
+  }
+}
+if (inputCodeElements.length) {
+  for (let item of inputCodeElements) {
+    item.addEventListener('click', function() {
+      let input = item.firstElementChild
+      let empty = input.value?null:input
+      if (empty) {
+        input.focus()
+      } else {
+        while (input.value) {
+          let next = input.nextElementSibling
+          if (next) {
+          input = input.nextElementSibling
+          } else {
+            break
+          }
+        }
+      }
+    })
+    item.querySelectorAll('.modal-code__item').forEach((el)=> {
+      el.addEventListener('keypress', function(event) {
+        if (el.value) {
+          el.value = ""
+        }
+        if (el.nextElementSibling) {
+          el.nextElementSibling.focus()
+        } else {
+          el.blur()
+          el.closest('.modal').querySelector('.primary-button').classList.remove('disabled')
+        }
+      })
+    })
+  }
+}
 if (inputTextElements.length) {
   for (let item of inputTextElements) {
     let input = item.firstElementChild.nextElementSibling
@@ -254,6 +300,10 @@ if (inputTextElements.length) {
       if (!container.classList.contains('focus')) {
         if (document.querySelector('.input.focus')) {document.querySelector('.input.focus').classList.remove('focus')}
         container.classList.add('focus')
+        document.onclick = null
+        document.onclick = function(event) {
+          inputBlurEvent(event, container)
+        }
       }
       input.focus()
     })
