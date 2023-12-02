@@ -241,8 +241,8 @@ if (modalLoginMethodElements.length) {
 }
 
 //inputs text
-
 const inputTextElements = document.querySelectorAll('.input .field')
+
 
 if (inputTextElements.length) {
   for (let item of inputTextElements) {
@@ -251,11 +251,11 @@ if (inputTextElements.length) {
     let showPass = item.querySelector('.show-password')
 
     item.addEventListener('click', function() {
-      container.classList.add('focus')
+      if (!container.classList.contains('focus')) {
+        if (document.querySelector('.input.focus')) {document.querySelector('.input.focus').classList.remove('focus')}
+        container.classList.add('focus')
+      }
       input.focus()
-    })
-    input.addEventListener('focusout', function() {
-      container.classList.remove('focus')
     })
     input.addEventListener('input', function() {
       if (input.value && !container.classList.contains('filled')) {
@@ -270,6 +270,7 @@ if (inputTextElements.length) {
         } else {
           input.type = "password";
         }
+        input.focus()
       })
     }
   }

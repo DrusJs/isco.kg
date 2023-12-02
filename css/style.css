@@ -1017,7 +1017,6 @@ h4.blog-title {
     position: relative;
     height: 48px;
     cursor: text;
-    transition: border 400ms;
 }
 .input.focus .field {
     border: 1px solid var(--color-primary);
@@ -1029,7 +1028,7 @@ h4.blog-title {
     color: var(--color-gray-dark);
     letter-spacing: -0.32px; 
     margin-top: 6px;
-    transition: font-size 300ms;
+    transition: font-size 160ms;
 }
 .input.focus .field .title,
 .input.filled .field .title {
