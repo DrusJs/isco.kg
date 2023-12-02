@@ -262,6 +262,10 @@
                   <img src="images/1688-arrow.svg" alt="">
                 </div>
                 <div class="search-main__select-dropdown">
+                  <h2 class="title align-items-center justify-content-between mobile">
+                    Поиск по порталу
+                    <div class="close-modal" onclick="closeElement(this)"></div>
+                  </h2>
                   <div class="select-dropdown__item active"><img src="images/1688.svg" alt=""></div>
                   <div class="select-dropdown__item"><img src="images/taobaoLogo.svg" alt=""></div>
                   <div class="select-dropdown__item"><img src="images/trendyolLogo.svg" alt=""></div>
@@ -353,6 +357,168 @@
         </div>
       </header>
       <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs__item">Главная</a>
+            <a href="blog.html" class="breadcrumbs__item">Избранное</a>
+          </div>
+          <h1 class="title">Избранное</h1>
+          <div class="empty-favorites d-none flex-column align-items-center justify-content-center">
+            <img src="images/no-favorites.svg" alt="">
+            <h3 class="title">В избранных еще нет добавленных товаров</h3>
+          </div>
+          <div class="favorites-container">
+            <div class="favorites-nav d-flex">
+              <div class="favorites-nav__item active" data-index="1">Избранные товары</div>
+              <div class="favorites-nav__item" data-index="2">Избранные продавцы</div>
+            </div>
+            <div class="favorites-block">
+              <div class="main-grid active" data-index="1">
+                <div class="main-grid__item favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount"></div>
+                  <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                  <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                </div>
+                <div class="main-grid__item favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount"></div>
+                  <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                  <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                </div>
+                <div class="main-grid__item favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount"></div>
+                  <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                  <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                </div>
+                <div class="main-grid__item favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount"></div>
+                  <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+                  <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                </div>
+              </div>
+              <div class="main-grid seller" data-index="2">
+                <div class="main-grid__item seller favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Имя</div>
+                    <div class="value">tb9862905392</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Магазин</div>
+                    <div class="value">宝马中心</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка доставки</div>
+                    <div class="value">4.69</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка товара</div>
+                    <div class="value">4.56</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка услуг</div>
+                    <div class="value">4.64</div>
+                  </div>
+                </div>
+                <div class="main-grid__item seller favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Имя</div>
+                    <div class="value">tb9862905392</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Магазин</div>
+                    <div class="value">宝马中心</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка доставки</div>
+                    <div class="value">4.69</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка товара</div>
+                    <div class="value">4.56</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка услуг</div>
+                    <div class="value">4.64</div>
+                  </div>
+                </div>
+                <div class="main-grid__item seller favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Имя</div>
+                    <div class="value">tb9862905392</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Магазин</div>
+                    <div class="value">宝马中心</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка доставки</div>
+                    <div class="value">4.69</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка товара</div>
+                    <div class="value">4.56</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка услуг</div>
+                    <div class="value">4.64</div>
+                  </div>
+                </div>
+                <div class="main-grid__item seller favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Имя</div>
+                    <div class="value">tb9862905392</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Магазин</div>
+                    <div class="value">宝马中心</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка доставки</div>
+                    <div class="value">4.69</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка товара</div>
+                    <div class="value">4.56</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка услуг</div>
+                    <div class="value">4.64</div>
+                  </div>
+                </div>
+                <div class="main-grid__item seller favorite">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Имя</div>
+                    <div class="value">tb9862905392</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Магазин</div>
+                    <div class="value">宝马中心</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка доставки</div>
+                    <div class="value">4.69</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка товара</div>
+                    <div class="value">4.56</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="name">Оценка услуг</div>
+                    <div class="value">4.64</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="container d-flex justify-content-between">
@@ -427,6 +593,198 @@
           <div class="text">Powered by © OT Commerce otcommerce.com</div>
         </div>
       </footer>
+      <div class="modal-wrapper" id="modal-registration">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Регистрация
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <form action="">
+            <div class="modal-input input">
+              <div class="required">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Номер телефона</div>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Повторите пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span>Использовать логин друга</span>
+              <input type='checkbox' class='switch' id='checkbox-1'>
+              <label for='checkbox-1'></label>
+            </div>
+            <label class="checkbox-primary caption">
+              Я принимаю <div class="agreement" onclick="openModal('#modal-user-agreement', false)">Условия пользовательского соглашения</div>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-registration-code')">
+          </form>
+          <button class="change-modal" onclick="openModal('#modal-login')">Войти</button>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-user-agreement">
+        <div class="modal mobile-fill-none">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Пользовательское соглашение
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-agreement">
+            Глава 1. Термины и определения.
+            В целях надлежащего толкования условий пользовательского соглашения нижеприведенные термины используются в следующем значении:
+            Исполнитель – Общество с ограниченной ответственностью «Иско Маркет» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 208676-3301-ООО, код ОКПО 31559310, ИНН 01708202210345, серия ГРЮ 0083217 от 17 августа 2022 года.
+            Соисполнитель – Общество с ограниченной ответственностью «Иско Экспресс» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 158265-3301-ООО, код ОКПО 29406444, ИНН 02504201610160, серия ГРЮ 0048019 от 7 мая 2021 года.
+            Поставщик – Компания на территории КНР - «Yiwu Baqi Trade Co Ltd» , адрес: Room 702, No 1137 Gonreng North Road, Futian Street, Yiwu city, Jinhua city, Zhejiang Province, China, являющаяся представителем предпринимателей на территории КНР осуществляющих свою коммерческую деятельность по реализации продукции, посредством размещения публикаций и другой информации в интернет-магазинах https://world.taobao.com , https://www.1688.com с описанием на китайском языке.
+            Партнеры – Исполнитель, Соисполнитель и Поставщик.
+            Партнерское соглашение – Заключенный Договор о сотрудничестве № 001/22-Д от «01» сентября 2022 года, между Исполнителем, Соисполнителем и Поставщиком в своих интересах и в целях извлечения прибыли на условиях Договора о сотрудничестве № 001/22-Д от «01» сентября 2022 года и настоящего Пользовательского соглашения.
+            Пользователь – физическое лицо, обладающее полной дееспособностью, добровольно прошедшее Регистрацию и заключившее Пользовательское соглашение.
+            Пользовательское соглашение – публичное предложение Партнеров, адресованное Пользователю, заключить с ними договор на существующих условиях, содержащихся в настоящем Пользовательском соглашении, включая все его приложения.
+            Заказчик – Пользователь.
+            Сайт – Программное обеспечение, являющееся личным неимущественным правом интеллектуальной собственности Исполнителя – https://isco.kg, предназначенное для предоставления услуг Исполнителем, Пользователям согласно функциональным возможностям Программного обеспечения.
+            Программное обеспечение – это совокупность программных и документальных средств Сайта, систем обработки данных средствами вычислительной техники, разработанное и принадлежащее Исполнителю.
+            Исходный код – текст Программного обеспечения на каком-либо языке программирования.
+            Стороны – Исполнитель, Соисполнитель, Поставщик, Пользователь.
+            Товар – продукция, предлагаемая к продаже Поставщиком, информация о которой представлена на Сайте на русском языке.
+            Услуги сайтом – Исполнитель оказывает услуги Заказчику по предоставлению Сайта, посредством которого осуществляется Заказ Товаров в интересах Заказчика на условиях настоящего Пользовательского соглашения.
+            Услуги доставки – Соисполнитель предоставляет услуги по доставке Товаров Заказчику.
+            Услуги поставки – Поставщик предлагает услуги поставки Товаров, которые заказаны Пользователем.
+            Услуги – Услуги сайтом, Услуги доставки, Услуги поставки.
+            Регистрация — процедура, в ходе которой Заказчик посредством Сайта предоставляет Исполнителю информацию, необходимую для оказания Услуг сайтом. Регистрация считается завершенной только в случае успешного прохождения всех ее этапов в соответствии с опубликованными на Сайте инструкциями. По итогам Регистрации создается учетная запись Пользователя, лицевой счет и личный кабинет. Сообщенная при регистрации информация может быть впоследствии изменена Пользователем.
+            Личный кабинет — персональный и не доступный третьим лицам раздел Сайта, доступ к которому осуществляется Заказчиком путем ввода личных логина — имени доступа и пароля — кода доступа, и который содержит информацию о заказах Заказчика, их оплате, исполнении и состоянии лицевого счета, а также предоставляет функциональную возможность удаленного взаимодействия Сторон при исполнении своих обязательств.            
+            <div class="primary-button fill fit" onclick="openModal('#modal-registration-code')">Ознакомлен</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-registration-code">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Подтверждение
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-phone-number">
+            Код отправлен на номер<br>
+            +996 (505) 396-999 <span class="change-number">Изменить</span>
+          </div>
+          <div class="modal-code">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+            <input class="modal-code__item" type="text">
+          </div>
+          <div class="modal-error">Неверный код</div>
+          <div class="primary-button fill disabled" onclick="openModal('#modal-registration-complete')">Продолжить</div>
+          <div class="code-timer"> 00:59 </div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-registration-complete">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Регистрация прошла успешно!
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <p class="modal-text">
+            Поздравляем! Вам присвоен уникальный код клиента. 
+            Теперь вы можете совершать покупки на нашем сайте. Для входа на сайт используйте регистрационные данные, они были высланы вам на почту. Вся необходимая информация доступна в вашем личном кабинете.
+          </p>
+          <p class="modal-text">
+            Для начала вам необходимо заполнить ваш профиль. Для этого перейдите во вкладку “Профиль”. Заполните все поля. Видеоинструкция по заполению профиля: <a href="https://www.youtube.com/watch?v=p9vgBU3CpWE" class="link">https://www.youtube.com/watch?v=p9vgBU3CpWE</a>
+          </p>
+          <p class="modal-text">
+            После заполнения профиля вам станут доступны адреса наших складов, они размещены во вкладке “Мои адреса”.
+            Как пользоваться системой отслеживания на сайте описано в этой видеоинструкции: <a href="https://youtu.be/r3ir-ByT7ME" class="link">https://youtu.be/r3ir-ByT7ME</a>
+          </p>
+          <p class="modal-text">
+            Во вкладке “Счет” вы можете заранее пополнить свой лицевой счет, средства на вашем счету вы можете использовать для осуществления заказов на сайте. Важно! Средства на вашем счету на сайте вы можете использовать только в счет оплаты ваших заказов и покупок, вывод средств не предусмотрен. Способы оплаты описаны в разделе: <a href="https://isco.kg/Sposoby-oplaty" class="link">https://isco.kg/Sposoby-oplaty.</a> Или вы можете произвести оплату после оформления заказа в корзине.
+          </p>
+          <p class="modal-text">
+            Как осуществлять заказ подробно описано в статье: <a href="https://isco.kg/how_to_order" class="link">https://isco.kg/how_to_order.</a>
+          </p>
+          <p class="modal-text">
+            Если вы столкнулись с проблемами или трудностями, то вы можете написать в службу поддержки, используя вкладку “Служба поддержки”: <a href="https://isco.kg/support" class="link">https://isco.kg/support.</a> Также вы можете обратиться по всем интересующим вопросам по номерам, указанным в контактах на сайте.
+          </p>
+          <p class="modal-text">
+            Желаем вам приятных покупок!
+          </p>
+          <div class="primary-button fill fit auto" onclick="closeModal(this)">Начать делать покупки</div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-login">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Войти
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-auth-method d-flex align-items-center justify-content-center">
+            <div class="modal-auth-method__item active" data-method="email">По E-mail</div>
+            <div class="modal-auth-method__item" data-method="phone">По номеру телефона</div>
+          </div>
+          <form action="">
+            <div class="modal-input input email">
+              <div class="required"></div>
+              <div class="field">
+                <div class="title">E-mail</div>
+                <input type="email" required>
+              </div>
+            </div>
+            <div class="modal-input input phone">
+              <div class="required"></div>
+              <div class="field">
+                <div class="title">Номер телефона</div>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required"></div>
+              <div class="field">
+                <div class="title">Пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="pass-reset" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
+            <label class="checkbox-primary caption">
+              Запомнить меня
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <input class="primary-button fill" type="button" value="Продолжить">
+          </form>
+          <button class="change-modal" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-reset-password">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Восстановление пароля
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <form action="">
+            <div class="modal-input input email">
+              <div class="required"></div>
+              <div class="field">
+                <div class="title">Ваш e-mail или номер телефона</div>
+                <input type="email" required>
+              </div>
+            </div>
+            <input class="primary-button fill" type="button" value="Продолжить">
+          </form>
+        </div>
+      </div>
     </div>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/swiper-bundle.min.js" type="text/javascript"></script>

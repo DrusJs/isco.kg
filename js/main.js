@@ -430,6 +430,22 @@ if (productImageContainerElements.length) {
   }
 }
 
+//favorites
+const favoriteSelectBlockElements = document.querySelectorAll('.favorites-nav__item')
+const favoritesGridContainer = document.querySelector('.favorites-block')
+
+if (favoriteSelectBlockElements.length) {
+  for (let item of favoriteSelectBlockElements) {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('active')) {
+        document.querySelector('.favorites-nav__item.active').classList.remove('active')
+        favoritesGridContainer.querySelector('.main-grid.active').classList.remove('active')
+        item.classList.add('active')
+        favoritesGridContainer.querySelectorAll('.main-grid')[item.dataset.index-1].classList.add('active')
+      }
+    })
+  }
+}
 
 //Swiper.js
 if (document.querySelector('.brand-swiper')){
