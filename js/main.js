@@ -33,7 +33,7 @@ const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
   const catalogOpenElement = document.querySelector('#catalog-open')
   const catalogCloseElement = document.querySelector('#catalog-close')
-  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select__item')
+  const catalogSelectElements = document.querySelectorAll('.catalog-nav-select')
 //const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
   const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
 
@@ -48,11 +48,13 @@ if (catalogElement) {
   })
 
   for (let item of catalogSelectElements) {
-    item.addEventListener('click', function() {
-      if (!item.classList.contains('active')) {
-          document.querySelector('.catalog-nav-select__item.active').classList.remove('active')
-        item.classList.add('active')
-      }
+    item.querySelectorAll('.catalog-nav-select__item').forEach((el)=>{
+      el.addEventListener('click', function() {
+        if (!el.classList.contains('active')) {
+            item.querySelector('.catalog-nav-select__item.active').classList.remove('active')
+          el.classList.add('active')
+        }
+      })
     })
   }
 
