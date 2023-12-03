@@ -2134,6 +2134,34 @@ h2.title.price .subprice {
     text-decoration: underline;
     color: var(--color-primary);
 }
+
+.modal-warning {
+    padding: 12px;
+    background-color: #FFFBCC;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-family: var(--font-regular);
+    font-size: 14px;
+    line-height: 16px;
+}
+.select-primary {
+    width: 596px;
+    padding: 4px 12px;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+}
+.select-primary .title {
+    font-family: var(--font-medium);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-gray-dark);
+}
+.select-primary-dropdown {
+    position: absolute;
+    display: none;
+}
 /********Responsive**********/
 
 @media (max-width: 1399.98px) {
