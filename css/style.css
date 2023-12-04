@@ -2496,6 +2496,67 @@ h2.title.price .subprice {
     stroke: var(--color-primary);
 }
 
+.profile-grid {
+    display: grid;
+    gap: 16px 16px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.profile-grid__item {
+    padding: 16px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+}
+.profile-grid__item_long {
+    grid-row: span 2;
+}
+.profile-grid__item img {
+    margin-bottom: 18px;
+}
+
+.profile-grid__item .text {
+    font-family: var(--font-medium);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-gray-dark);
+    margin-top: 4px;
+}
+.profile-grid__item .progress {
+    background-color: var(--color-white);
+    width: 140px;
+    height: 140px;
+    margin: 10px auto 0;
+}
+.profile-grid__item .progress__text {
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 16px;
+    fill: var(--color-gray-dark);
+}
+.profile-grid__item .progress__count {
+    font-family: var(--font-bold);
+    font-size: 30px;
+    line-height: 28px;
+    fill: var(--color-green);
+}
+.profile-grid__item .verification {
+    padding: 4px 8px;
+    width: fit-content;
+    font-family: var(--font-medium);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-white);
+    background-color: var(--color-gray);
+    border-radius: 100px;
+    margin-top: 4px;
+}
+.profile-grid__item .verification.wait {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+}
+.profile-grid__item .verification.accept {
+    background-color: var(--color-blue)
+}
 
 /********Responsive**********/
 
