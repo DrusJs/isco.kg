@@ -2457,6 +2457,45 @@ h2.title.price .subprice {
     color: var(--color-dark);
 }
 
+
+.profile-wrapper {
+    margin-top: 32px;
+}
+.profile-menu {
+    width: 220px;
+}
+.profile-menu__item, a.profile-menu__item {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-gray-dark);
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+.profile-menu__item:hover, a.profile-menu__item:hover {
+    color: var(--color-dark);
+}
+.profile-menu__item:hover path,
+.profile-menu__item:hover circle {
+    stroke: var(--color-dark);
+}
+.profile-menu__item.active {
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+}
+.profile-menu__item path,
+.profile-menu__item circle {
+    transition: 200ms ease-in-out;
+}
+.profile-menu__item.active path,
+.profile-menu__item.active circle {
+    stroke: var(--color-primary);
+}
+
+
 /********Responsive**********/
 
 @media (max-width: 1399.98px) {
