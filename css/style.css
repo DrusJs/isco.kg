@@ -2375,13 +2375,31 @@ h2.title.price .subprice {
     box-shadow: inset 0px 0px 0 3px var(--color-primary);
 }
 .product-list-block {
-    padding: 12px 23px 12px 12px;
+    padding: 12px 4px 0px 12px;
     border: 1px solid var(--color-gray-light);
     border-radius: 8px;
-    overflow-y: auto;
     width: 100%;
     max-width: 490px;
+    height: fit-content;
+}
+.product-list-block .overflow {
+    overflow-y: auto;
     max-height: 300px;
+    scrollbar-color: var(--color-gray) var(--color-bg);
+    scrollbar-width: thin;
+    margin-bottom: 12px;
+}
+
+.product-list-block .overflow::-webkit-scrollbar {
+    width: 6px;
+}
+.product-list-block .overflow::-webkit-scrollbar-track {
+    background-color: var(--color-bg);
+    border-radius: 3px;
+}
+.product-list-block .overflow::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray);
+    border-radius: 3px;
 }
 .product-list-block__item {
     position: relative;
@@ -2392,6 +2410,7 @@ h2.title.price .subprice {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 73px;
+    padding-right: 12px;
 }
 .product-list-block__item img {
     width: 67px;
