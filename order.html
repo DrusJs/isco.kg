@@ -380,11 +380,11 @@
             <div class="order-block active" data-ordstep="1">
                 <h4 class="title">Товары (<span>2</span>)</h4>
                 <div class="order-product">
-                    <div class="d-flex">
+                    <div class="d-flex gap-2">
                         <img src="images/popular-preview.jpg" alt="" class="image">
                         <div class="title">Bmw, горный велосипед, внедорожный гоночный автомобиль, детский велосипед, регулировка скорости</div>
                         <textarea class="comment" cols="20" rows="5" maxlength="100" placeholder="Комментарий для оператора"></textarea>
-                        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="delete" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.11377 4.66683C8.38833 3.89003 9.12915 3.3335 9.99997 3.3335C10.8708 3.3335 11.6116 3.89003 11.8862 4.66683" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M15.6666 6H4.33325" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M14.5554 7.6665L14.2488 12.2659C14.1308 14.0359 14.0718 14.9208 13.4952 15.4603C12.9185 15.9998 12.0315 15.9998 10.2577 15.9998H9.7421C7.96824 15.9998 7.0813 15.9998 6.50463 15.4603C5.92796 14.9208 5.86896 14.0359 5.75096 12.2659L5.44434 7.6665" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -428,11 +428,11 @@
                     </div>
                 </div>
                 <div class="order-product">
-                    <div class="d-flex">
+                    <div class="d-flex gap-2">
                         <img src="images/popular-preview.jpg" alt="" class="image">
                         <div class="title">Bmw, горный велосипед, внедорожный гоночный автомобиль, детский велосипед, регулировка скорости</div>
                         <textarea class="comment" cols="20" rows="5" maxlength="100" placeholder="Комментарий для оператора"></textarea>
-                        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="delete" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.11377 4.66683C8.38833 3.89003 9.12915 3.3335 9.99997 3.3335C10.8708 3.3335 11.6116 3.89003 11.8862 4.66683" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M15.6666 6H4.33325" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M14.5554 7.6665L14.2488 12.2659C14.1308 14.0359 14.0718 14.9208 13.4952 15.4603C12.9185 15.9998 12.0315 15.9998 10.2577 15.9998H9.7421C7.96824 15.9998 7.0813 15.9998 6.50463 15.4603C5.92796 14.9208 5.86896 14.0359 5.75096 12.2659L5.44434 7.6665" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -475,17 +475,199 @@
                         </div>
                     </div>
                 </div>
-                <div class="primary-button fill fit">Продолжить</div>
+                <div class="primary-button fill fit mt-4" onclick="changeOrderStep(1, true)">Продолжить</div>
             </div>
             <div class="order-block" data-ordstep="2">
                 <h4 class="title">Получатель</h4>
-                <div class="primary-button fill fit">Назад</div>
-                <div class="primary-button fill fit">Продолжить</div>
+                <div class="primary-button fill fit mt-3 d-none">Добавить</div>
+                <div class="delivery-info">
+                  <div class="title">Личные данные</div>
+                  <div class="text">Асанов Нурбек Азатович</div>
+                  <div class="text">Кыргызстан, Бишкек, ул. Оразбекова 2/3 720040</div>
+                </div>
+                <div class="delivery-info">
+                  <div class="title">Обслуживающий филиал</div>
+                  <div class="text">Филиал №1. Головной офис, город Бишкек</div>
+                  <div class="text">Адрес улица Орозбекова 2/3, перес. ул. Линейная. Головной офис, 
+                    номер телефона 996990009933</div>
+                </div>
+                <h4 class="title mt-3">Способ доставки</h4>
+                <label class="radio-primary block mt-3">
+                  Стандартная доставка (Авто) <img src="images/delivery-avto.svg" alt="">
+                  <div class="text">Срок доставки 12-15 дней. Доставка осуществляется автотранспортом.
+                    Дополнительно при получении необходимо оплатить Компании ISCO POSTLINE <span class="bold">0 сом</span></div>
+                  <input class="radio" type="radio" name="delivery" checked>
+                  <span class="radiomark"></span>
+                </label>
+                <label class="radio-primary block mt-3">  
+                  Экспресс доставка (Авиа) <img src="images/delivery-avia.svg" alt="">
+                  <div class="text">Срок доставки 2-3 дня с момента вылета. Доставка осуществляется авиатранспортом.
+                    Дополнительно при получении необходимо оплатить Компании ISCO POSTLINE <span class="bold">0 сом</span></div>
+                  <input class="radio" type="radio" name="delivery">                
+                  <span class="radiomark"></span>
+                </label>
+                <h4 class="title mt-3">Итого</h4>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Общий вес</div>
+                  <div class="text">2 кг</div>
+                </div>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Доставка</div>
+                  <div class="text">Стандартная доставка (Карго - Бишкек)</div>
+                </div>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Стоимость доставки</div>
+                  <div class="text">0 сом</div>
+                </div>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Стоимость товаров</div>
+                  <div class="text">11 796 сом</div>
+                </div>
+                <div class="delivery-row bold d-flex justify-content-between">
+                  <div class="title">К оплате</div>
+                  <div class="text">11 796 сом</div>
+                </div>
+                <div class="d-flex gap-2 mt-4">
+                  <div class="primary-button border fit" onclick="changeOrderStep(2, false)">Назад</div>  
+                  <div class="primary-button fill fit" onclick="changeOrderStep(2, true)">Продолжить</div>
+                </div>
             </div>
-            <div class="order-block" data-ordstep="3">
+            <div class="order-block flex-row" data-ordstep="3">
+              <div class="payment-block">
                 <h4 class="title">Способ оплаты</h4>
-                <div class="primary-button fill fit">Назад</div>  
-                <div class="primary-button fill fit">Продолжить</div>
+                <label class="radio-primary block mt-3">
+                  Оплата с лицевого счета <img src="images/payment-list.svg" alt="">
+                  <div class="text">При оплате с лицевого счета вы оплатите только часть суммы.</div>
+                  <div class="text">На вашем счету <span class="bold">45 сом</span></div>
+                  <input class="radio" type="radio" name="payment" checked>
+                  <span class="radiomark"></span>
+                </label>
+                <label class="radio-primary block mt-3">  
+                  Оплата через платежную систему <img src="images/payment-card.svg" alt="">
+                  <div class="text">Банковские карты</div>
+                  <img src="images/paybox.png" alt="">
+                  <input class="radio" type="radio" name="payment">                
+                  <span class="radiomark"></span>
+                </label>
+                <h4 class="title mt-3">Оплата заказа №ORD-0000002657</h4>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Сумма</div>
+                  <div class="text">11796 сом</div>
+                </div>
+                <div class="delivery-row d-flex justify-content-between">
+                  <div class="title">Уже оплачено</div>
+                  <div class="text">0 сом</div>
+                </div>
+                <div class="delivery-row bold d-flex justify-content-between">
+                  <div class="title">К оплате</div>
+                  <div class="text">11 796 сом</div>
+                </div>
+                <div class="d-flex gap-2 mt-4">
+                  <div class="primary-button border fit" onclick="changeOrderStep(3, false)">Назад</div>  
+                  <div class="primary-button fill fit">Продолжить</div>
+                </div>
+              </div>
+              <div class="product-list-block">
+                <h4 class="title">Список товаров</h4>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+                <div class="product-list-block__item">
+                  <img src="images/popular-preview.jpg" alt="">
+                  <div class="discount active">50%</div>
+                  <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                  <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                  <div class="count">Кол-во: <span class="value">1</span></div>
+                </div>
+              </div>
             </div>
         </div>
       </main>

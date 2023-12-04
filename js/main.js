@@ -27,6 +27,25 @@ function openModal(id, isClose = true) {
   document.querySelector(id).classList.add('active')
 }
 
+function changeOrderStep(now, isNext) {
+  let steps = document.querySelectorAll('.order-steps__item')
+  if (isNext) {
+    steps[now-1].classList.remove('active')
+    steps[now-1].classList.add('complete')
+    steps[now].classList.add('active')
+    now++
+    document.querySelector('.order-block.active').classList.remove('active')
+    document.querySelector('.order-block[data-ordstep="'+now+'"]').classList.add('active')
+  } else {
+    steps[now-1].classList.remove('active')
+    steps[now-2].classList.remove('complete')
+    steps[now-2].classList.add('active')
+    now--
+    document.querySelector('.order-block.active').classList.remove('active')
+    document.querySelector('.order-block[data-ordstep="'+now+'"]').classList.add('active')
+  }
+}
+
 
 //catalog actions
 const catalogElement = document.querySelector('#catalog')
