@@ -621,7 +621,8 @@ a.search-main-result__item.memory {
     align-items: center;
     padding: 12px 0;
 }
-.header-buttons__item-dropdown__item .notice-count {
+.header-buttons__item-dropdown__item .notice-count,
+.profile-menu__item .notice-count {
     position: static;
     margin-left: 8px;
 }
