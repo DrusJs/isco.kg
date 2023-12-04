@@ -361,12 +361,12 @@
             <div class="breadcrumbs">
                 <a href="index.html" class="breadcrumbs__item">Главная</a>
                 <a href="index.html" class="breadcrumbs__item">Личный кабинет</a>
-                <a href="profile-main.html" class="breadcrumbs__item">Главная</a>
+                <a href="profile-main.html" class="breadcrumbs__item">Мои заказы</a>
             </div>
             <h1 class="title">Личный кабинет</h1>
             <div class="profile-wrapper d-flex justify-content-between gap-3">
                 <div class="profile-menu d-flex flex-column">
-                    <a href="profile-main.html" class="profile-menu__item active">
+                    <a href="profile-main.html" class="profile-menu__item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 20L4 20" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M4 11.1992L10.5007 5.99857C11.3773 5.29735 12.6227 5.29735 13.4993 5.99857L20 11.1992" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -386,7 +386,7 @@
                         </svg>                            
                         Профиль
                       </a>
-                      <a href="profile-order.html" class="profile-menu__item">
+                      <a href="profile-order.html" class="profile-menu__item  active">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.8622 5.10557L16.4622 5.94522C18.1835 6.84853 19.0442 7.30019 19.5221 8.11179C20 8.9234 20 9.93334 20 11.9532V12.0468C20 14.0667 20 15.0766 19.5221 15.8882C19.0442 16.6998 18.1835 17.1515 16.4622 18.0548L14.8622 18.8944C13.4577 19.6315 12.7554 20 12 20C11.2446 20 10.5423 19.6315 9.13783 18.8944L7.53783 18.0548C5.8165 17.1515 4.95583 16.6998 4.47792 15.8882C4 15.0766 4 14.0667 4 12.0468V11.9532C4 9.93334 4 8.9234 4.47792 8.11179C4.95583 7.30019 5.8165 6.84853 7.53783 5.94521L9.13783 5.10557C10.5423 4.36852 11.2446 4 12 4C12.7554 4 13.4577 4.36852 14.8622 5.10557Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M19.2 8.4L16 10M12 12L4.80005 8.4M12 12V19.6M12 12C12 12 14.1942 10.9029 15.6 10.2C15.7563 10.1219 16 10 16 10M16 10V12.8M16 10L8.40005 6" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -456,54 +456,7 @@
                       </a>
                 </div>
                 <div class="profile-container">
-                    <div class="profile-grid">
-                        <div class="profile-grid__item profile-grid__item_long">
-                            <img src="images/profile-main.svg" alt="">
-                            <h4 class="title">Нурбек Асанов</h4>
-                            <div class="text">INC18767</div>
-                            <div class="verification accept">Паспорт верифицирован</div>
-                            <svg class="progress" width="160" height="160" viewBox="0 0 160 160">
-                                <circle r="70" cx="80" cy="80" fill="transparent" stroke="#E6E6E6" stroke-width="10px"></circle>
-                                <circle r="70" cx="80" cy="80" fill="transparent" stroke="#6BC132" stroke-width="10px" stroke-linecap="round" stroke-dasharray="439.6px" stroke-dashoffset="109.9px"></circle>
-                                <text x="46" y="55" class="progress__text">Профиль</text>
-                                <text x="30" y="75" class="progress__text">заполнен на</text>
-                                <text x="50" y="115" class="progress__count" id="profile-progress-count">75%</text>
-                            </svg>                              
-                        </div>
-                        <div class="profile-grid__item profile-grid__item">
-                            <img src="images/profile-main-zakaz.svg" alt="">
-                            <h4 class="title">Заказы</h4>
-                            <div class="text">7</div>
-                        </div>
-                        <div class="profile-grid__item profile-grid__item">
-                            <img src="images/profile-main-score.svg" alt="">
-                            <h4 class="title">Номер счета</h4>
-                            <div class="text">252141</div>
-                        </div>
-                        <div class="profile-grid__item profile-grid__item_long">
-                            <div class="d-flex align-items-end gap-3">
-                                <div class="text">Сумма для<br> получения скидки:</div>
-                                <span class="text-bold">0</span>
-                            </div>
-                            <div class="text-bold">Доступные скидки</div>
-                            <div class="percent blue">7%</div>
-                            <div class="text-bold border-top">Скидки на доставку</div>
-                            <div class="percent green">2%</div>
-                        </div>
-                        <div class="profile-grid__item profile-grid__item">
-                            <img src="images/profile-main-score.svg" alt="">
-                            <h4 class="title">Счет</h4>
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <div class="text">0 сом</div>
-                                <button class="up-wallet">Пополнить счет</button>
-                            </div>
-                        </div>
-                        <div class="profile-grid__item profile-grid__item">
-                            <img src="images/profile-main-score.svg" alt="">
-                            <h4 class="title">Ожидание оплаты</h4>
-                            <div class="text">31 412 сом</div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

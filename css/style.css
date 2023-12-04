@@ -2499,13 +2499,24 @@ h2.title.price .subprice {
 .profile-grid {
     display: grid;
     gap: 16px 16px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 242px);
 }
 
 .profile-grid__item {
     padding: 16px;
     border: 1px solid var(--color-gray-light);
     border-radius: 8px;
+}
+.profile-grid__item .up-wallet {
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
 }
 .profile-grid__item_long {
     grid-row: span 2;
