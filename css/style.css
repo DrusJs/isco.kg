@@ -2626,6 +2626,51 @@ h2.title.price .subprice {
     margin: 16px 0 20px 0;
 }
 
+.profile-info-document {
+    display: flex;
+    flex-direction: column;
+}
+.drop-area {
+    padding: 16px;
+    border: 2px dashed var(--color-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-gray);
+    transition: 260ms ease-in-out;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 16px;
+    text-align: center;
+    cursor: copy;
+}
+.drop-area input {
+    position: absolute;
+    opacity: 0;
+    width: 0px;
+    top: 0;
+    left: 0;
+    height: 0px;
+}
+.drop-area:hover {
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+}
+.drop-files__item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 12px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+    margin-top: 4px;
+}
+.drop-files__item .delete {
+    width: fit-content;
+    margin-left: auto;
+}
 .settings-group-title {
     color: var(--color-gray-dark);
     margin-bottom: 10px;
