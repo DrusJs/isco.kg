@@ -1836,6 +1836,12 @@ h2.title.price .subprice {
     cursor: pointer;
     transition: 260ms ease-in-out;
 }
+.primary-button.text {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-primary);
+    padding: 2px 0;
+}
 .primary-button.fit {
     width: fit-content;
 }
@@ -2670,6 +2676,7 @@ h2.title.price .subprice {
 .drop-files__item .delete {
     width: fit-content;
     margin-left: auto;
+    cursor: pointer;
 }
 .settings-group-title {
     color: var(--color-gray-dark);

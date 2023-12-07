@@ -358,10 +358,12 @@ const selectElements =  document.querySelectorAll('.select-primary')
 if (selectElements.length) {
   for (let item of selectElements) {
     item.addEventListener('click', function() {
-      if (document.querySelector('.select-primary.active')) {
-        // document.querySelector('.select-primary.active').classList.remove('active')
+      if (item.classList.contains('active')) {
+        item.classList.remove('active')
+      } else {
+        if (document.querySelector('.select-primary.active')) {document.querySelector('.select-primary.active').classList.remove('active')}
+        item.classList.add('active')
       }
-      item.classList.toggle('active')
     })
     item.querySelectorAll('.select-primary-dropdown__item').forEach((el)=>{
       el.addEventListener('click', function() {
@@ -370,6 +372,9 @@ if (selectElements.length) {
     })
   }
 }
+
+//files input
+const dropFileElements = document.querySelectorAll('.drop-area')
 
 //subcatalog filter dropdown
 const subcatalogFilterDropdownElements = document.querySelectorAll('.subcatalog-filter-accordion-head')
