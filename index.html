@@ -13,6 +13,10 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL">Товар добавлен в корзину</div>
+      </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -20,13 +24,13 @@
             <div class="line"></div>
             <div class="line"></div>
           </div>
-          <div class="text">Идет загрузка, подождите</div>
+          <div class="text mediumL">Идет загрузка, подождите</div>
         </div>
       </div>
       <div class="catalog" id="catalog">
         <div class="container d-flex">
           <div class="catalog-nav">
-            <h2 class="title">Каталог</h2>
+            <h2 class="title d-flex align-items-center justify-content-between">Каталог<div class="close-modal" onclick="closeElement(this)"></div></h2>
             <div class="catalog-nav-select">
               <div class="catalog-nav-select__item active"><img src="images/1688.svg" alt=""></div>
               <div class="catalog-nav-select__item"><img src="images/taobaoLogo.svg" alt=""></div>
@@ -34,20 +38,30 @@
             </div>
             <div class="catalog-nav-list">
               <h4 class="title d-flex justify-content-between align-items-center">Наименование каталога<img src="images/arrow-mobile.svg" alt=""></h4>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+            </div>
+            <div class="catalog-nav-list mobile">
+              <div class="catalog-nav-list__item boldM">
+                Для мужчин
+                <img src="images/catalog-for-man.png" alt="">
+              </div>
+              <div class="catalog-nav-list__item boldM">
+                Для женщин
+                <img src="images/catalog-for-woman.png" alt="">
+              </div>
             </div>
           </div>
-          <div class="catalog-grid-wrappper active">
+          <div class="catalog-grid-wraper active">
             <h2 class="title d-flex align-items-center justify-content-between">Наименование каталога<img class="catalog-close" id="catalog-close" src="images/search-clear.svg" alt=""></h2>
             <div class="catalog-grid">
               <div class="catalog-grid__item">
@@ -146,55 +160,55 @@
               <div class="header-panel-notice js-dropdown-element">
                 <div class="header-panel-notice-head" id="notice-dropdown">
                   <img src="images/notices.svg" alt="">
-                  <span class="notice-count">1</span>
+                  <span class="notice-count regularS">1</span>
                 </div>
                 <div class="header-panel-notice-dropdown">
                   <div class="notice-dropdown-nav d-flex align-items-center justify-content-between">
-                    <div class="notice-dropdown-nav__item active" data-style="all">
+                    <div class="notice-dropdown-nav__item titleS active" data-style="all">
                       Все
                     </div>
-                    <div class="notice-dropdown-nav__item" data-style="read">
+                    <div class="notice-dropdown-nav__item titleS" data-style="read">
                       Прочитанные
                     </div>
-                    <div class="notice-dropdown-nav__item" data-style="unread">
+                    <div class="notice-dropdown-nav__item titleS" data-style="unread">
                       Непрочтанные
                     </div>
                   </div>
                   <div class="notice-dropdown-list">
                     <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                   </div>
                 </div>
@@ -211,23 +225,23 @@
                 <div class="header-panel__contacts-dropdown">
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
-                    <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
-                    <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-whatsapp.svg" alt="">
-                    <div class="title">Whatsapp</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Whatsapp</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-worktime.svg" alt="">
-                    <div class="title">График работы</div>
-                    <div class="text">
+                    <div class="title regularS">График работы</div>
+                    <div class="text regularL">
                       Пн - Пт, с 09:00 до 18:00 (выдача посылок до 20:00)<br>
                       Сб - с 09:00 до 16:00 (выдача посылок до 18:00)<br>
                       Вс - Выходной
@@ -235,8 +249,8 @@
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-adress.svg" alt="">
-                    <div class="title">Адрес</div>
-                    <div class="text">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
+                    <div class="title regularS">Адрес</div>
+                    <div class="text regularL">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
                   </div>
                 </div>
               </div>
@@ -272,82 +286,82 @@
                 </div>
               </div>
               <img src="images/header-search.svg" alt="">
-              <input type="text" class="search-input" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
+              <input type="text" class="search-input mediumL" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
               <img class="search-main-clear" id="clear-search" src="images/search-clear.svg" alt="">
-              <div class="search-photo d-flex align-items-center">
+              <div class="search-photo regularS d-flex align-items-center">
                 Поиск по фото
                 <img src="images/search-photo.svg" alt="">
               </div>
               <div class="search-main-result" id="search-input-result">
-                <a href="subcatalog.html" class="search-main-result__item memory">
+                <a href="subcatalog.html" class="search-main-result__item regularM memory">
                   Велосипед
                 </a>
-                <a href="product-various.html" class="search-main-result__item">
+                <a href="product-various.html" class="search-main-result__item regularM">
                   <b>Велос</b>ипед
                 </a>
               </div>
             </div>
             <div class="header-buttons d-flex">
-              <a href="#" class="header-buttons__item mobile">
+              <a href="#" class="header-buttons__item mediumM mobile">
                 <img src="images/notice-mobile.svg" alt="">
                 <span class="title">Уведомления</span>
               </a>
-              <a href="basket.html" class="header-buttons__item d-flex flex-column align-items-center">
+              <a href="basket.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
                 <img src="images/header-cart.svg" alt="">
                 <span class="title">Корзина</span>
               </a>
-              <a href="favorites.html" class="header-buttons__item d-flex flex-column align-items-center">
+              <a href="favorites.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
                 <img src="images/header-like.svg" alt="">
                 <span class="title">Избранное</span>
               </a>
-              <div class="header-buttons__item js-dropdown-element">
+              <div class="header-buttons__item mediumM js-dropdown-element">
                 <div class="header-buttons__item-head d-flex flex-column align-items-center" id="main-menu">
                   <img src="images/header-profile.svg" alt="">
                   <span class="title"></span>
                 </div>
                 <div class="header-buttons__item-dropdown">
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-home.svg" alt="">
                     Главная
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-profile.svg" alt="">
                     Профиль
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-zakaz.svg" alt="">
                     Мои заказы
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-wallet.svg" alt="">
                     Счет
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-adress.svg" alt="">
                     Адреса складов ISCO
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-sklad.svg" alt="">
                     Мои посылки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-notice.svg" alt="">
                     Уведомления
-                    <span class="notice-count">8</span>
+                    <span class="notice-count regularS">8</span>
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-help.svg" alt="">
                     Служба поддержки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-find.svg" alt="">
                     Отследить посылку
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-setting.svg" alt="">
                     Настройки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     Выйти
                   </a>
                 </div>
@@ -376,86 +390,86 @@
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount"></div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
           </div>
         </div>
@@ -465,86 +479,86 @@
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
             <div class="main-grid__item" onclick="openModal('#modal-preview')">
               <img src="images/popular-preview.jpg" alt="">
               <div class="discount active">50%</div>
-              <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-              <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
           </div>
         </div>
@@ -581,32 +595,32 @@
           <div class="blog-container">
             <a href="blog-item.html" class="blog-container__item">
               <img src="images/blog-preview.jpg" alt="">
-              <div class="header">Заголовок</div>
-              <div class="date">1 сентября</div>
+              <div class="header titleS">Заголовок</div>
+              <div class="date regularS">1 сентября</div>
             </a>
             <a href="blog-item.html" class="blog-container__item">
               <img src="images/blog-preview.jpg" alt="">
-              <div class="header">Заголовок</div>
-              <div class="date">1 сентября</div>
+              <div class="header titleS">Заголовок</div>
+              <div class="date regularS">1 сентября</div>
             </a>
             <a href="blog-item.html" class="blog-container__item">
               <img src="images/blog-preview.jpg" alt="">
-              <div class="header">Заголовок</div>
-              <div class="date">1 сентября</div>
+              <div class="header titleS">Заголовок</div>
+              <div class="date regularS">1 сентября</div>
             </a>
             <a href="blog-item.html" class="blog-container__item">
               <img src="images/blog-preview.jpg" alt="">
-              <div class="header">Заголовок</div>
-              <div class="date">1 сентября</div>
+              <div class="header titleS">Заголовок</div>
+              <div class="date regularS">1 сентября</div>
             </a>
           </div>
         </div>
         <div class="container margin-top">
           <h2 class="title">О компании</h2>
           <div class="about-container d-flex justify-content-between">
-            <div class="about-container__text">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="about-container__text ">
+              <p class="regularL">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p class="regularL">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <img class="about-container__img" src="images/logox4.png" alt="ISCO">
           </div>
@@ -615,29 +629,29 @@
       <footer class="footer">
         <div class="container d-flex justify-content-between">
           <ul class="footer-list">
-            <li class="footer-list__item header">Покупателям</li>
-            <li class="footer-list__item"><a href="#">Как сделать заказ</a></li>
-            <li class="footer-list__item"><a href="#">Способы оплаты</a></li>
-            <li class="footer-list__item"><a href="#">Доставка</a></li>
-            <li class="footer-list__item"><a href="#">Вопросы и ответы</a></li>
-            <li class="footer-list__item"><a href="#">Список запрещенных товаров из Китая</a></li>
-            <li class="footer-list__item"><a href="#">Помощь при выборе товара</a></li>
-            <li class="footer-list__item"><a href="#">Пользовательское соглашение</a></li>
-            <li class="footer-list__item"><a href="#">Магазины</a></li>
+            <li class="footer-list__item header boldL">Покупателям</li>
+            <li class="footer-list__item mediumM"><a href="#">Как сделать заказ</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Способы оплаты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Доставка</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вопросы и ответы</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Список запрещенных товаров из Китая</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Помощь при выборе товара</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пользовательское соглашение</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Магазины</a></li>
           </ul>
           <ul class="footer-list">
-            <li class="footer-list__item header">Партенрам</li>
-            <li class="footer-list__item"><a href="#">Франшиза</a></li>
+            <li class="footer-list__item header boldL">Партенрам</li>
+            <li class="footer-list__item mediumM"><a href="#">Франшиза</a></li>
           </ul>
           <ul class="footer-list">
-            <li class="footer-list__item header">Компания</li>
-            <li class="footer-list__item"><a href="#">О нас</a></li>
-            <li class="footer-list__item"><a href="#">Вакансии</a></li>
-            <li class="footer-list__item"><a href="contacts.html">Контакты</a></li>
-            <li class="footer-list__item"><a href="#">Пункты выдачи заказов</a></li>
+            <li class="footer-list__item header boldL">Компания</li>
+            <li class="footer-list__item mediumM"><a href="#">О нас</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вакансии</a></li>
+            <li class="footer-list__item mediumM"><a href="contacts.html">Контакты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пункты выдачи заказов</a></li>
           </ul>
           <ul class="footer-list mobile">
-            <li class="footer-list__item header">Контакты</li>
+            <li class="footer-list__item header boldL">Контакты</li>
             <div class="contacts-dropdown dark">
               <div class="contacts-dropdown__item">
                 <img src="images/header-contact.svg" alt="">
@@ -681,8 +695,8 @@
           </div>
         </div>
         <div class="container copyright">
-          <div class="text">© 2021–2023 Поиск и доставка товаров из Китая</div>
-          <div class="text">Powered by © OT Commerce otcommerce.com</div>
+          <div class="text regularS">© 2021–2023 Поиск и доставка товаров из Китая</div>
+          <div class="text regularS">Powered by © OT Commerce otcommerce.com</div>
         </div>
       </footer>
       <div class="modal-wrapper" id="modal-registration">
@@ -693,14 +707,14 @@
           </h2>
           <form action="">
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Номер телефона</div>
                 <input type="text" required>
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Пароль</div>
                 <input type="password" required>
@@ -708,7 +722,7 @@
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Повторите пароль</div>
                 <input type="password" required>
@@ -727,7 +741,7 @@
             </label>
             <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-registration-code')">
           </form>
-          <button class="change-modal" onclick="openModal('#modal-login')">Войти</button>
+          <button class="change-modal mediumL" onclick="openModal('#modal-login')">Войти</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-user-agreement">
@@ -736,7 +750,7 @@
             Пользовательское соглашение
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <div class="modal-agreement">
+          <div class="modal-agreement regularL">
             Глава 1. Термины и определения.
             В целях надлежащего толкования условий пользовательского соглашения нижеприведенные термины используются в следующем значении:
             Исполнитель – Общество с ограниченной ответственностью «Иско Маркет» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 208676-3301-ООО, код ОКПО 31559310, ИНН 01708202210345, серия ГРЮ 0083217 от 17 августа 2022 года.
@@ -768,17 +782,17 @@
             Подтверждение
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <div class="modal-phone-number">
+          <div class="modal-phone-number mediumL">
             Код отправлен на номер<br>
-            +996 (505) 396-999 <span class="change-number">Изменить</span>
+            +996 (505) 396-999 <span class="change-number mediumM">Изменить</span>
           </div>
           <div class="modal-code">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
           </div>
-          <div class="modal-error">Неверный код</div>
+          <div class="modal-error regularM">Неверный код</div>
           <div class="primary-button fill disabled" onclick="openModal('#modal-registration-complete')">Продолжить</div>
           <div class="code-timer"> 00:59 </div>
         </div>
@@ -789,27 +803,27 @@
             Регистрация прошла успешно!
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Поздравляем! Вам присвоен уникальный код клиента. 
             Теперь вы можете совершать покупки на нашем сайте. Для входа на сайт используйте регистрационные данные, они были высланы вам на почту. Вся необходимая информация доступна в вашем личном кабинете.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Для начала вам необходимо заполнить ваш профиль. Для этого перейдите во вкладку “Профиль”. Заполните все поля. Видеоинструкция по заполению профиля: <a href="https://www.youtube.com/watch?v=p9vgBU3CpWE" class="link">https://www.youtube.com/watch?v=p9vgBU3CpWE</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             После заполнения профиля вам станут доступны адреса наших складов, они размещены во вкладке “Мои адреса”.
             Как пользоваться системой отслеживания на сайте описано в этой видеоинструкции: <a href="https://youtu.be/r3ir-ByT7ME" class="link">https://youtu.be/r3ir-ByT7ME</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Во вкладке “Счет” вы можете заранее пополнить свой лицевой счет, средства на вашем счету вы можете использовать для осуществления заказов на сайте. Важно! Средства на вашем счету на сайте вы можете использовать только в счет оплаты ваших заказов и покупок, вывод средств не предусмотрен. Способы оплаты описаны в разделе: <a href="https://isco.kg/Sposoby-oplaty" class="link">https://isco.kg/Sposoby-oplaty.</a> Или вы можете произвести оплату после оформления заказа в корзине.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Как осуществлять заказ подробно описано в статье: <a href="https://isco.kg/how_to_order" class="link">https://isco.kg/how_to_order.</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Если вы столкнулись с проблемами или трудностями, то вы можете написать в службу поддержки, используя вкладку “Служба поддержки”: <a href="https://isco.kg/support" class="link">https://isco.kg/support.</a> Также вы можете обратиться по всем интересующим вопросам по номерам, указанным в контактах на сайте.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Желаем вам приятных покупок!
           </p>
           <div class="primary-button fill fit auto" onclick="closeModal(this)">Начать делать покупки</div>
@@ -822,33 +836,33 @@
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
           <div class="modal-auth-method d-flex align-items-center justify-content-center">
-            <div class="modal-auth-method__item active" data-method="email">По E-mail</div>
-            <div class="modal-auth-method__item" data-method="phone">По номеру телефона</div>
+            <div class="modal-auth-method__item titleS active" data-method="email">По E-mail</div>
+            <div class="modal-auth-method__item titleS" data-method="phone">По номеру телефона</div>
           </div>
           <form action="">
             <div class="modal-input input email">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">E-mail</div>
                 <input type="email" required>
               </div>
             </div>
             <div class="modal-input input phone">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Номер телефона</div>
                 <input type="text" required>
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Пароль</div>
                 <input type="password" required>
                 <img class="show-password" src="images/input-pass-show.svg" alt="">
               </div>
             </div>
-            <div class="pass-reset" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
+            <div class="pass-reset mediumS" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
             <label class="checkbox-primary caption">
               Запомнить меня
               <input type="checkbox">
@@ -856,7 +870,7 @@
             </label>
             <input class="primary-button fill" type="button" value="Продолжить">
           </form>
-          <button class="change-modal" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
+          <button class="change-modal mediumL" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-reset-password">
@@ -867,7 +881,7 @@
           </h2>
           <form action="">
             <div class="modal-input input email">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Ваш e-mail или номер телефона</div>
                 <input type="email" required>
@@ -1079,9 +1093,6 @@
                     </div>
                 </div>
             </div>
-        
-        </div>
-      </div>
     </div>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/swiper-bundle.min.js" type="text/javascript"></script>

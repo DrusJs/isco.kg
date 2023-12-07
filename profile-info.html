@@ -13,6 +13,10 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL">Товар добавлен в корзину</div>
+      </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -456,7 +460,140 @@
                       </a>
                 </div>
                 <div class="profile-container">
+                  <div class="profile-info-list d-none">
+                    <div class="profile-info-list__item">Информация</div>
+                    <div class="profile-info-list__item">Адресс</div>
+                    <div class="profile-info-list__item">Паспорт</div>
+                  </div>
+                  <div class="profile-info-block">                    
+                    <h3 class="title">Личная информация</h3>
+                    <div class="grid">
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">Фамилия</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="select-primary">
+                        <div class="title">Пол</div>
+                        <div class="value">Мужской</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">Мужской</div>
+                          <div class="select-primary-dropdown__item mediumM">Женский</div>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">Имя</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="select-primary">
+                        <div class="title">Дата рождения</div>
+                        <div class="value">01.01.1991</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">01.01.1991</div>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">Отчество</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">Телефон</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">ИНН</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">E-mail</div>
+                          <input type="email" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-info-block">                    
+                    <h3 class="title">Личный адрес</h3>
+                    <div class="grid">
+                      <div class="select-primary">
+                        <div class="title">Страна</div>
+                        <div class="value">Кыргызстан</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                          <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                        </div>
+                      </div>
+                      <div class="select-primary">
+                        <div class="title">Обслуживающий филиал</div>
+                        <div class="value">Обслуживающий филиал</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">Обслуживающий филиал</div>
+                          <div class="select-primary-dropdown__item mediumM">Обслуживающий филиал</div>
+                        </div>
+                      </div>
+                      <div class="select-primary">
+                        <div class="title">Город</div>
+                        <div class="value">Бишкек</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">Бишкек</div>
+                          <div class="select-primary-dropdown__item mediumM">Бишкек</div>
+                        </div>
+                      </div>
+                      <div class="select-primary">
+                        <div class="title">Город Бишкек</div>
+                        <div class="value">Город</div>
+                        <div class="select-primary-dropdown">
+                          <div class="select-primary-dropdown__item mediumM">Город</div>
+                          <div class="select-primary-dropdown__item mediumM">Город</div>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="required regularS">Обязательное поле</div>
+                        <div class="field">
+                          <div class="title">Адрес</div>
+                          <input type="text" required>
+                        </div>
+                      </div>
+                      <div class="input">
+                        <div class="field">
+                          <div class="title">Индекс</div>
+                          <input type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-info-block">
+                      <h3 class="title">Паспорт</h3>
+                      <div class="grid">
 
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <button class="primary-button border fit">Удалить аккаунт</button>
+                      <button class="primary-button fill fit" onclick="showNotification()">Сохранить</button>
+                    </div>
+
+                  </div>
                 </div>
             </div>
         </div>

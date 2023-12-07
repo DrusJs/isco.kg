@@ -1,6 +1,13 @@
 //loader element
 const loaderElement = document.querySelector('#loader')
 
+function showNotification(text = "Сохранено") {
+  let notification = document.getElementById('notification')
+  notification.style.opacity = 1
+  notification.lastElementChild.innerHTML = text
+  setTimeout(()=>{notification.style.opacity = 0}, 2000)
+}
+
 function setLoaderDisplay(time = 2000) {
   loaderElement.classList.add('active')
   document.body.classList.add('no-scroll')
@@ -243,6 +250,7 @@ if (modalContainerElements.length) {
     item.addEventListener('click', function(event) {
       if (event.target.classList.contains('modal-wrapper')){
         this.classList.remove('active')
+        document.body.classList.remove('no-scroll')
       }
     })
   }
@@ -344,6 +352,23 @@ if (inputTextElements.length) {
     }
   }
 }
+//select input
+const selectElements =  document.querySelectorAll('.select-primary')
+if (selectElements.length) {
+  for (let item of selectElements) {
+    item.addEventListener('click', function() {
+      if (document.querySelector('.select-primary.active')) {
+        // document.querySelector('.select-primary.active').classList.remove('active')
+      }
+      item.classList.toggle('active')
+    })
+    item.querySelectorAll('.select-primary-dropdown__item').forEach((el)=>{
+      el.addEventListener('click', function() {
+        item.querySelector('.value').innerHTML = this.innerHTML
+      })
+    })
+  }
+}
 
 //subcatalog filter dropdown
 const subcatalogFilterDropdownElements = document.querySelectorAll('.subcatalog-filter-accordion-head')
@@ -355,7 +380,6 @@ if (subcatalogFilterDropdownElements.length) {
   }
 
   var sliderFilter = document.getElementById('noUiSlider');
-
   noUiSlider.create(sliderFilter, {
       start: [0, 90000],
       connect: true,    
@@ -448,6 +472,8 @@ if (productImageContainerElements.length) {
     })
   }
 }
+
+
 
 //favorites
 const favoriteSelectBlockElements = document.querySelectorAll('.favorites-nav__item')
