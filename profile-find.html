@@ -456,7 +456,51 @@
                       </a>
                 </div>
                 <div class="profile-container">
-
+                  <div class="d-flex gap-2">
+                    <div class="track-order-search d-flex align-items-end">
+                      <img src="images/header-search.svg" alt="">
+                      <input type="text" class="search-input" id="search-subcatalog-input" placeholder="Введите трекинг код" oninput="this.value.length>6?document.getElementById('find-track-order').classList.remove('disabled'):document.getElementById('find-track-order').classList.add('disabled')">
+                    </div>
+                    <button class="primary-button fill fit disabled" id="find-track-order" onclick="this.classList.add('disabled'), document.getElementById('track-container').classList.remove('d-none')">Отследить</button>
+                  </div>
+                  <div class="track-find-container d-none" id="track-container">
+                    <h4 class="title mt-3">Информация о посылке</h4>
+                    <div class="grid-find-order mt-3">
+                      <div class="grid__item mediumL">
+                        <div class="name">Код клиента:</div>
+                        <div class="value">INC17130</div>
+                      </div>
+                      <div class="grid__item mediumL">
+                        <div class="name">Трек номер</div>
+                        <div class="value">00190-US64741042</div>
+                      </div>
+                      <div class="grid__item mediumL">
+                        <div class="name">Статус</div>
+                        <div class="status accept fit mediumM">Доставлено</div>
+                      </div>
+                      <div class="grid__item mediumL">
+                        <div class="name">Вес</div>
+                        <div class="value">null кг</div>
+                      </div>
+                      <div class="grid__item mediumL">
+                        <div class="name">Направление</div>
+                        <div class="value">?</div>
+                      </div>
+                    </div>
+                    <h4 class="title mt-3">Список товаров</h4>
+                    <div class="track-product-list d-flex flex-column gap-3 mt-3">
+                      <div class="track-product-list__item">
+                        <div class="name mediumL">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="count mediumM">Кол-во: <span class="value mediumM">1</span></div>
+                        <div class="price boldL">500 сом<div class="subprice regularM">1000 сом</div></div>
+                      </div>
+                      <div class="track-product-list__item">
+                        <div class="name mediumL">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="count mediumM">Кол-во: <span class="value mediumM">1</span></div>
+                        <div class="price boldL">500 сом<div class="subprice regularM">1000 сом</div></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
