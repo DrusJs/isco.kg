@@ -371,6 +371,9 @@ img.contain {
     -ms-overflow-style: none;
     max-height: 388px;
 }
+.notice-list {
+
+}
 .notice-dropdown-list::-webkit-scrollbar {
     display: none;
 }
