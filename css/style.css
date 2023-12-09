@@ -1849,6 +1849,9 @@ h2.title.price .subprice {
 .primary-button.fit {
     width: fit-content;
 }
+.fit {
+    width: fit-content;
+}
 .primary-button.auto {
     margin: 0 auto;
 }
@@ -2150,6 +2153,12 @@ h2.title.price .subprice {
     background-position: right 12px top 11px;
     background-size: 28px;
     position: relative;
+}
+.select-primary.calendar {
+    background-image: url(../images/calendar.svg);
+}
+.select-primary.calendar.fit {
+    width: 256px;
 }
 .select-primary .title {
     font-family: var(--font-medium);
@@ -2745,7 +2754,7 @@ h2.title.price .subprice {
     border-radius: 8px;
 }
 .profile-order-block__item .block-img .more-products {
-    background-color: #CDEDFD;
+    background-color: var(--color-blue-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2793,13 +2802,13 @@ a.back {
     position: relative;
 }
 .profile-adress-storage:hover .copy-adress {
-    /* opacity: 1; */
+    opacity: 1;
 }
 .profile-adress-storage .copy-adress {
     position: absolute;
     top: 12px;
     right: 16px;
-    /* opacity: 0; */
+    opacity: 1;
     transition: 160ms ease-in-out;
     color: var(--color-primary);
     cursor: copy;
@@ -2818,6 +2827,58 @@ a.back {
     display: grid;
     grid-template-columns: max-content max-content;
     gap: 12px 100px;
+}
+
+.profile-wallet-block {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--color-blue-light);
+    width: fit-content;
+}
+.profile-wallet-block__item .name{
+    color: var(--color-gray-dark);
+}
+.profile-wallet-block .primary-button::before {
+    content: "+";
+    font-size: 28px;
+    display: inline-block;
+    height: 0px;
+    font-family: var(--font-regular);
+    margin-right: 6px;
+    position: relative;
+    top: -14px;
+    margin-top: 2px;
+}
+.payment-history {
+    width: 100%;
+    border-spacing: 0px 8px;
+	border-collapse: separate;
+}
+.payment-history-row .payment-history-cell {
+    padding: 16px 12px;
+    background-color: var(--color-bg);
+}
+.payment-history-row .payment-history-cell:first-child {
+    border-radius: 8px 0 0 8px;
+}
+.payment-history-row .payment-history-cell:last-child {
+    border-radius: 0 8px 8px 0;
+}
+.payment-history-row.head .payment-history-head {
+    padding: 12px 12px 4px;
+    font-weight: 400;
+}
+.payment-history-head {
+    color: var(--color-gray-dark);
+}
+.payment-history-cell.up {
+    color: var(--color-green);
+}
+.payment-history-cell.down {
+    color: var(--color-red);
+}
+.wallet-up-cards .cards-list img {
+    cursor: pointer;
 }
 /********Responsive**********/
 

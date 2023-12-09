@@ -456,7 +456,56 @@
                       </a>
                 </div>
                 <div class="profile-container">
-
+                  <h4 class="title">Счет</h4>
+                  <div class="profile-wallet-block mt-3">
+                    <div class="profile-wallet-total titleM">0 сом</div>
+                    <div class="d-flex align-items-center gap-5 mt-3">
+                      <div class="profile-wallet-block__item mediumL">
+                        <div class="name">Номер счета</div>
+                        <div class="value">2521401</div>
+                      </div>
+                      <div class="profile-wallet-block__item mediumL">
+                        <div class="name">Ожидает оплаты:</div>
+                        <div class="value">31 412 сом</div>
+                      </div>
+                      <button class="primary-button fill fit d-flex align-items-center" onclick="openModal('#modal-wallet-up')">Пополнить счет</button>
+                    </div>
+                  </div>
+                  <h4 class="title mt-3">История платежей</h4>
+                  <div class="d-flex gap-3 mt-2">
+                    <div class="select-primary calendar fit">
+                      <div class="title">Дата начала</div>
+                      <div class="value">07.09.2023</div>
+                      <div class="select-primary-dropdown">
+                        <div class="select-primary-dropdown__item mediumM">07.09.2023</div>
+                      </div>
+                    </div>
+                    <div class="select-primary calendar fit">
+                      <div class="title">Дата окончания</div>
+                      <div class="value">07.10.2023</div>
+                      <div class="select-primary-dropdown">
+                        <div class="select-primary-dropdown__item mediumM">07.10.2023</div>
+                      </div>
+                    </div>
+                    <button class="primary-button border fit">Применить</button>
+                  </div>
+                  <table class="payment-history mt-2">
+                    <tr class="payment-history-row head">
+                      <th class="payment-history-head regularS">Дата</th>
+                      <th class="payment-history-head mediumS">Комментарий</th>
+                      <th class="payment-history-head mediumS">Сумма</th>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">2023-10-04 18:48:14</td>
+                      <td class="payment-history-cell mediumM">Оплата заказа с лицевого счета (ORD-0000002659)</td>
+                      <td class="payment-history-cell mediumM up">-666 сом</td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">2023-10-04 18:48:14</td>
+                      <td class="payment-history-cell mediumM">Оплата заказа с лицевого счета (ORD-0000002659)</td>
+                      <td class="payment-history-cell mediumM down">1000 сом</td>
+                    </tr>
+                  </table>
                 </div>
             </div>
         </div>
@@ -724,6 +773,32 @@
             </div>
             <input class="primary-button fill" type="button" value="Продолжить">
           </form>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-wallet-up">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Пополнение счета
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="d-flex gap-3">
+            <div class="modal-input input email">
+              <div class="required"></div>
+              <div class="field">
+                <div class="title">Сумма (сом)</div>
+                <input id="input-wallet-up" type="text" oninput="this.value?document.getElementById('btn-wallet-up').classList.remove('disabled'):document.getElementById('btn-wallet-up').classList.add('disabled')">
+              </div>
+            </div>
+            <input class="primary-button fill fit disabled" type="button" value="Пополнить" id="btn-wallet-up" onclick="closeModal(this), document.getElementById('input-wallet-up').value='' ">
+          </div>
+          <div class="wallet-up-cards">
+            <div class="wallet-up-text mediumM mt-2">Банковские карты</div>
+            <div class="cards-list mt-1 d-flex gap-4">
+              <img src="images/paybox.png" alt="PAYBOX">
+              <img src="images/paybox.png" alt="PAYBOX">
+              <img src="images/paybox.png" alt="PAYBOX">
+            </div>
+          </div>
         </div>
       </div>
     </div>
