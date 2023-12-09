@@ -2772,6 +2772,50 @@ a.back {
     margin-left: 16px;
     display: inline-block;
 }
+.profile-adress-nav__item {
+    color: var(--color-gray);
+    padding-bottom: 6px;
+    border-bottom: 1px solid transparent;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.profile-adress-nav__item.active {
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+}
+.profile-adress-storage {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: var(--color-bg);
+    position: relative;
+}
+.profile-adress-storage:hover .copy-adress {
+    /* opacity: 1; */
+}
+.profile-adress-storage .copy-adress {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    /* opacity: 0; */
+    transition: 160ms ease-in-out;
+    color: var(--color-primary);
+    cursor: copy;
+}
+.profile-adress-storage .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 10px;
+}
+
+.profile-adress-storage .grid .name,
+.profile-adress-conditions .grid .name {
+    color: var(--color-gray-dark);
+}
+.profile-adress-conditions .grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 12px 100px;
+}
 /********Responsive**********/
 
 @media (max-width: 1399.98px) {
