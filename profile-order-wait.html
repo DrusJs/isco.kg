@@ -13,6 +13,10 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL">Товар добавлен в корзину</div>
+      </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -20,34 +24,30 @@
             <div class="line"></div>
             <div class="line"></div>
           </div>
-          <div class="text">Идет загрузка, подождите</div>
+          <div class="text mediumL">Идет загрузка, подождите</div>
         </div>
       </div>
       <div class="catalog" id="catalog">
         <div class="container d-flex">
           <div class="catalog-nav">
-            <h2 class="title">Каталог</h2>
+            <h2 class="title d-flex align-items-center justify-content-between">Каталог<div class="close-modal" onclick="closeElement(this)"></div></h2>
             <div class="catalog-nav-select">
               <div class="catalog-nav-select__item active"><img src="images/1688.svg" alt=""></div>
               <div class="catalog-nav-select__item"><img src="images/taobaoLogo.svg" alt=""></div>
               <div class="catalog-nav-select__item"><img src="images/trendyolLogo.svg" alt=""></div>
             </div>
-            <div class="catalog-nav-list">
-              <h4 class="title d-flex justify-content-between align-items-center">Наименование каталога<img src="images/arrow-mobile.svg" alt=""></h4>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
-              <div class="catalog-nav-list__item">Наименование каталога</div>
+            <div class="catalog-nav-list mobile">
+              <div class="catalog-nav-list__item boldM">
+                Для мужчин
+                <img src="images/catalog-for-man.png" alt="">
+              </div>
+              <div class="catalog-nav-list__item boldM">
+                Для женщин
+                <img src="images/catalog-for-woman.png" alt="">
+              </div>
             </div>
           </div>
-          <div class="catalog-grid-wrappper active">
+          <div class="catalog-grid-wraper active">
             <h2 class="title d-flex align-items-center justify-content-between">Наименование каталога<img class="catalog-close" id="catalog-close" src="images/search-clear.svg" alt=""></h2>
             <div class="catalog-grid">
               <div class="catalog-grid__item">
@@ -146,55 +146,55 @@
               <div class="header-panel-notice js-dropdown-element">
                 <div class="header-panel-notice-head" id="notice-dropdown">
                   <img src="images/notices.svg" alt="">
-                  <span class="notice-count">1</span>
+                  <span class="notice-count regularS">1</span>
                 </div>
                 <div class="header-panel-notice-dropdown">
                   <div class="notice-dropdown-nav d-flex align-items-center justify-content-between">
-                    <div class="notice-dropdown-nav__item active" data-style="all">
+                    <div class="notice-dropdown-nav__item titleS active" data-style="all">
                       Все
                     </div>
-                    <div class="notice-dropdown-nav__item" data-style="read">
+                    <div class="notice-dropdown-nav__item titleS" data-style="read">
                       Прочитанные
                     </div>
-                    <div class="notice-dropdown-nav__item" data-style="unread">
+                    <div class="notice-dropdown-nav__item titleS" data-style="unread">
                       Непрочтанные
                     </div>
                   </div>
                   <div class="notice-dropdown-list">
                     <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item unread">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                     <div class="notice-dropdown-list__item read">
-                      <div class="title">Заголовок</div>
+                      <div class="title boldL">Заголовок</div>
                       <img class="image" src="images/Flag.svg" alt="">
-                      <div class="date">2023-09-18 14:04:29</div>
+                      <div class="date regularS">2023-09-18 14:04:29</div>
                     </div>
                   </div>
                 </div>
@@ -211,23 +211,23 @@
                 <div class="header-panel__contacts-dropdown">
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
-                    <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-contact.svg" alt="">
-                    <div class="title">Номер телефона</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-whatsapp.svg" alt="">
-                    <div class="title">Whatsapp</div>
-                    <a href="tel:+996770009933" class="text">+996 770009933</a>
+                    <div class="title regularS">Whatsapp</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-worktime.svg" alt="">
-                    <div class="title">График работы</div>
-                    <div class="text">
+                    <div class="title regularS">График работы</div>
+                    <div class="text regularL">
                       Пн - Пт, с 09:00 до 18:00 (выдача посылок до 20:00)<br>
                       Сб - с 09:00 до 16:00 (выдача посылок до 18:00)<br>
                       Вс - Выходной
@@ -235,8 +235,8 @@
                   </div>
                   <div class="contacts-dropdown__item">
                     <img src="images/header-adress.svg" alt="">
-                    <div class="title">Адрес</div>
-                    <div class="text">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
+                    <div class="title regularS">Адрес</div>
+                    <div class="text regularL">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
                   </div>
                 </div>
               </div>
@@ -272,82 +272,82 @@
                 </div>
               </div>
               <img src="images/header-search.svg" alt="">
-              <input type="text" class="search-input" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
+              <input type="text" class="search-input mediumL" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
               <img class="search-main-clear" id="clear-search" src="images/search-clear.svg" alt="">
-              <div class="search-photo d-flex align-items-center">
+              <div class="search-photo regularS d-flex align-items-center">
                 Поиск по фото
                 <img src="images/search-photo.svg" alt="">
               </div>
               <div class="search-main-result" id="search-input-result">
-                <a href="subcatalog.html" class="search-main-result__item memory">
+                <a href="subcatalog.html" class="search-main-result__item regularM memory">
                   Велосипед
                 </a>
-                <a href="product-various.html" class="search-main-result__item">
+                <a href="product-various.html" class="search-main-result__item regularM">
                   <b>Велос</b>ипед
                 </a>
               </div>
             </div>
             <div class="header-buttons d-flex">
-              <a href="#" class="header-buttons__item mobile">
+              <a href="#" class="header-buttons__item mediumM mobile">
                 <img src="images/notice-mobile.svg" alt="">
                 <span class="title">Уведомления</span>
               </a>
-              <a href="basket.html" class="header-buttons__item d-flex flex-column align-items-center">
+              <a href="basket.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
                 <img src="images/header-cart.svg" alt="">
                 <span class="title">Корзина</span>
               </a>
-              <a href="favorites.html" class="header-buttons__item d-flex flex-column align-items-center">
+              <a href="favorites.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
                 <img src="images/header-like.svg" alt="">
                 <span class="title">Избранное</span>
               </a>
-              <div class="header-buttons__item js-dropdown-element">
+              <div class="header-buttons__item mediumM js-dropdown-element">
                 <div class="header-buttons__item-head d-flex flex-column align-items-center" id="main-menu">
                   <img src="images/header-profile.svg" alt="">
                   <span class="title"></span>
                 </div>
                 <div class="header-buttons__item-dropdown">
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-main.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-home.svg" alt="">
                     Главная
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-info.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-profile.svg" alt="">
                     Профиль
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-order.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-zakaz.svg" alt="">
                     Мои заказы
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-wallet.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-wallet.svg" alt="">
                     Счет
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-adress.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-adress.svg" alt="">
                     Адреса складов ISCO
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-mail.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-sklad.svg" alt="">
                     Мои посылки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-notice.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-notice.svg" alt="">
                     Уведомления
-                    <span class="notice-count">8</span>
+                    <span class="notice-count regularS">8</span>
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-help.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-help.svg" alt="">
                     Служба поддержки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-find.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-find.svg" alt="">
                     Отследить посылку
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a href="profile-settings.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-setting.svg" alt="">
                     Настройки
                   </a>
-                  <a class="header-buttons__item-dropdown__item">
+                  <a class="header-buttons__item-dropdown__item mediumL">
                     Выйти
                   </a>
                 </div>
@@ -362,262 +362,175 @@
                 <a href="index.html" class="breadcrumbs__item">Главная</a>
                 <a href="index.html" class="breadcrumbs__item">Личный кабинет</a>
                 <a href="profile-main.html" class="breadcrumbs__item">Мои заказы</a>
+                <span class="breadcrumbs__item">Детали заказа</span>
             </div>
-            <h1 class="title">Личный кабинет</h1>
-            <div class="profile-wrapper d-flex justify-content-between gap-3">
-                <div class="profile-menu d-flex flex-column">
-                    <a href="profile-main.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20L4 20" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M4 11.1992L10.5007 5.99857C11.3773 5.29735 12.6227 5.29735 13.4993 5.99857L20 11.1992" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M14.8 6.80078V5.20078C14.8 4.97987 14.9791 4.80078 15.2 4.80078H17.2C17.421 4.80078 17.6 4.97987 17.6 5.20078V9.20078" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M5.59998 20V10" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M18.4 20V10" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M14.4 19.9996V15.9996C14.4 14.8682 14.4 14.3026 14.0485 13.9511C13.697 13.5996 13.1313 13.5996 12 13.5996C10.8686 13.5996 10.3029 13.5996 9.95145 13.9511C9.59998 14.3026 9.59998 14.8682 9.59998 15.9996V19.9996" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M13.6 10.0004C13.6 10.884 12.8837 11.6004 12 11.6004C11.1164 11.6004 10.4 10.884 10.4 10.0004C10.4 9.11673 11.1164 8.40039 12 8.40039C12.8837 8.40039 13.6 9.11673 13.6 10.0004Z" stroke="#626C7A" stroke-width="1.5"/>
-                        </svg>                            
-                        Главная
-                      </a>
-                      <a href="profile-info.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="9.59922" r="2.4" stroke="#626C7A" stroke-width="1.5"/>
-                            <circle cx="12" cy="12" r="8" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M16.7753 18.4004C16.648 16.0872 15.9398 14.4004 12 14.4004C8.06017 14.4004 7.35193 16.0872 7.22461 18.4004" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>                            
-                        Профиль
-                      </a>
-                      <a href="profile-order.html" class="profile-menu__item  active">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.8622 5.10557L16.4622 5.94522C18.1835 6.84853 19.0442 7.30019 19.5221 8.11179C20 8.9234 20 9.93334 20 11.9532V12.0468C20 14.0667 20 15.0766 19.5221 15.8882C19.0442 16.6998 18.1835 17.1515 16.4622 18.0548L14.8622 18.8944C13.4577 19.6315 12.7554 20 12 20C11.2446 20 10.5423 19.6315 9.13783 18.8944L7.53783 18.0548C5.8165 17.1515 4.95583 16.6998 4.47792 15.8882C4 15.0766 4 14.0667 4 12.0468V11.9532C4 9.93334 4 8.9234 4.47792 8.11179C4.95583 7.30019 5.8165 6.84853 7.53783 5.94521L9.13783 5.10557C10.5423 4.36852 11.2446 4 12 4C12.7554 4 13.4577 4.36852 14.8622 5.10557Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M19.2 8.4L16 10M12 12L4.80005 8.4M12 12V19.6M12 12C12 12 14.1942 10.9029 15.6 10.2C15.7563 10.1219 16 10 16 10M16 10V12.8M16 10L8.40005 6" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>                            
-                        Мои заказы
-                      </a>
-                      <a href="profile-wallet.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.6 17.6004C7.35286 17.6004 6.22929 17.6004 5.42218 17.0611C5.07277 16.8276 4.77276 16.5276 4.5393 16.1782C4 15.3711 4 14.2475 4 12.0004C4 9.75325 4 8.62968 4.5393 7.82257C4.77276 7.47316 5.07277 7.17316 5.42218 6.93969C6.22929 6.40039 7.35286 6.40039 9.6 6.40039L14.4 6.40039C16.6471 6.40039 17.7707 6.40039 18.5778 6.93969C18.9272 7.17315 19.2272 7.47316 19.4607 7.82257C20 8.62968 20 9.75325 20 12.0004C20 14.2475 20 15.3711 19.4607 16.1782C19.2272 16.5276 18.9272 16.8276 18.5778 17.0611C17.7707 17.6004 16.6471 17.6004 14.4 17.6004H9.6Z" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M12 9.60039C13.3255 9.60039 14.4 10.6749 14.4 12.0004C14.4 13.3259 13.3255 14.4004 12 14.4004C10.6745 14.4004 9.59998 13.3259 9.59998 12.0004C9.59998 10.6749 10.6745 9.60039 12 9.60039Z" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M6.80005 14.4004L6.80005 9.60039" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M17.2 14.4004L17.2 9.60039" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>                            
-                        Счет
-                      </a>
-                      <a href="profile-adress.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.59998 10.5146C5.59998 6.9167 8.46535 4 12 4C15.5346 4 18.4 6.9167 18.4 10.5146C18.4 14.0844 16.3573 18.2499 13.1703 19.7396C12.4274 20.0868 11.5726 20.0868 10.8296 19.7396C7.64263 18.2499 5.59998 14.0844 5.59998 10.5146Z" stroke="#626C7A" stroke-width="1.5"/>
-                            <circle cx="12" cy="10.4" r="2.4" stroke="#626C7A" stroke-width="1.5"/>
-                        </svg>                            
-                        Адреса складов ISCO
-                      </a>
-                      <a href="profile-mail.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 2V12C15 13.1 14.1 14 13 14H2V6C2 3.79 3.79 2 6 2H15Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 12V14H19C18.45 14 18 13.55 18 13V10C18 9.45 18.45 9 19 9H20.29L22 12Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
-                        Мои посылки
-                      </a>
-                      <a href="profile-notice.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.6 10.1633V9.6C17.6 6.50721 15.0928 4 12 4C8.90718 4 6.39998 6.50721 6.39998 9.6V10.1633C6.39998 10.8393 6.19988 11.5001 5.82491 12.0626L4.90603 13.4409C4.06672 14.6999 4.70746 16.4111 6.16723 16.8092C9.98599 17.8507 14.014 17.8507 17.8327 16.8092C19.2925 16.4111 19.9332 14.6999 19.0939 13.4409L18.175 12.0626C17.8001 11.5001 17.6 10.8393 17.6 10.1633Z" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M8.40002 17.6C8.92405 18.9982 10.338 20 12 20C13.6621 20 15.076 18.9982 15.6 17.6" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>                            
-                        Уведомления
-                        <span class="notice-count">8</span>
-                      </a>
-                      <a href="profile-help.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.4 19.9992C13.9346 19.9992 16.8 17.1338 16.8 13.5992C16.8 10.0646 13.9346 7.19922 10.4 7.19922C6.86538 7.19922 4 10.0646 4 13.5992C4 14.5876 4.22406 15.5237 4.62416 16.3594C4.76167 16.6467 4.80996 16.9721 4.72764 17.2797L4.46521 18.2605C4.25836 19.0336 4.96561 19.7409 5.73868 19.534L6.71951 19.2716C7.02715 19.1893 7.35257 19.2375 7.6398 19.3751C8.47552 19.7752 9.4116 19.9992 10.4 19.9992Z" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M16.8 14.0015C16.8532 13.9793 16.9059 13.9563 16.9582 13.9324C17.2479 13.8001 17.5729 13.7506 17.8805 13.8329L18.2613 13.9348C19.0344 14.1416 19.7416 13.4344 19.5348 12.6613L19.4329 12.2805C19.3506 11.9729 19.4001 11.6478 19.5324 11.3582C19.8327 10.7008 20 9.96994 20 9.2C20 6.32812 17.6719 4 14.8 4C12.6382 4 10.7845 5.31919 10 7.19648" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M8.40005 13.6008C8.40005 14.0426 8.04188 14.4008 7.60005 14.4008C7.15822 14.4008 6.80005 14.0426 6.80005 13.6008C6.80005 13.159 7.15822 12.8008 7.60005 12.8008C8.04188 12.8008 8.40005 13.159 8.40005 13.6008Z" fill="#626C7A"/>
-                            <path d="M11.2 13.6008C11.2 14.0426 10.8419 14.4008 10.4 14.4008C9.95822 14.4008 9.60005 14.0426 9.60005 13.6008C9.60005 13.159 9.95822 12.8008 10.4 12.8008C10.8419 12.8008 11.2 13.159 11.2 13.6008Z" fill="#626C7A"/>
-                            <path d="M14 13.6008C14 14.0426 13.6419 14.4008 13.2 14.4008C12.7582 14.4008 12.4 14.0426 12.4 13.6008C12.4 13.159 12.7582 12.8008 13.2 12.8008C13.6419 12.8008 14 13.159 14 13.6008Z" fill="#626C7A"/>
-                        </svg>                            
-                        Служба поддержки
-                      </a>
-                      <a href="profile-find.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="11.6" cy="11.6" r="7.6" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M17.2 17.1992L20 19.9992" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>                            
-                        Отследить посылку
-                      </a>
-                      <a href="profile-settings.html" class="profile-menu__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="11.9996" r="2.4" stroke="#626C7A" stroke-width="1.5"/>
-                            <path d="M13.4123 4.12179C13.1182 4 12.7455 4 12 4C11.2545 4 10.8817 4 10.5877 4.12179C10.1956 4.28418 9.88415 4.59566 9.72176 4.98771C9.64763 5.16667 9.61862 5.3748 9.60727 5.67839C9.59058 6.12454 9.36178 6.53752 8.97513 6.76074C8.58849 6.98397 8.11645 6.97563 7.72173 6.76701C7.45313 6.62504 7.25838 6.5461 7.06632 6.52081C6.64561 6.46542 6.22012 6.57943 5.88346 6.83776C5.63097 7.0315 5.44459 7.35432 5.07184 7.99995C4.69909 8.64557 4.51271 8.96839 4.47117 9.28392C4.41578 9.70464 4.52979 10.1301 4.78812 10.4668C4.90603 10.6204 5.07174 10.7496 5.32892 10.9112C5.70701 11.1488 5.95029 11.5535 5.95026 12C5.95024 12.4465 5.70697 12.8511 5.32892 13.0887C5.07169 13.2503 4.90596 13.3795 4.78804 13.5332C4.52971 13.8698 4.4157 14.2953 4.47109 14.716C4.51263 15.0316 4.69901 15.3544 5.07176 16C5.44452 16.6456 5.63089 16.9684 5.88339 17.1622C6.22004 17.4205 6.64553 17.5345 7.06625 17.4791C7.25829 17.4538 7.45303 17.3749 7.72161 17.233C8.11635 17.0243 8.58842 17.016 8.97509 17.2392C9.36177 17.4625 9.59058 17.8755 9.60727 18.3217C9.61862 18.6252 9.64763 18.8333 9.72176 19.0123C9.88415 19.4043 10.1956 19.7158 10.5877 19.8782C10.8817 20 11.2545 20 12 20C12.7455 20 13.1182 20 13.4123 19.8782C13.8043 19.7158 14.1158 19.4043 14.2782 19.0123C14.3523 18.8333 14.3813 18.6252 14.3927 18.3216C14.4093 17.8754 14.6381 17.4625 15.0248 17.2392C15.4114 17.016 15.8835 17.0243 16.2783 17.2329C16.5468 17.3749 16.7416 17.4538 16.9336 17.4791C17.3543 17.5345 17.7798 17.4205 18.1165 17.1621C18.369 16.9684 18.5553 16.6456 18.9281 15.9999C19.3008 15.3543 19.4872 15.0315 19.5288 14.716C19.5842 14.2953 19.4701 13.8698 19.2118 13.5331C19.0939 13.3794 18.9282 13.2503 18.671 13.0886C18.2929 12.8511 18.0496 12.4464 18.0497 11.9999C18.0497 11.5535 18.2929 11.1489 18.671 10.9114C18.9282 10.7497 19.094 10.6205 19.2119 10.4668C19.4702 10.1302 19.5842 9.7047 19.5288 9.28398C19.4873 8.96844 19.3009 8.64563 18.9282 8C18.5554 7.35437 18.369 7.03156 18.1165 6.83781C17.7799 6.57949 17.3544 6.46548 16.9337 6.52087C16.7416 6.54615 16.5469 6.62509 16.2783 6.76704C15.8836 6.97567 15.4115 6.98401 15.0248 6.76077C14.6382 6.53752 14.4094 6.12453 14.3927 5.67835C14.3813 5.37478 14.3523 5.16666 14.2782 4.98771C14.1158 4.59566 13.8043 4.28418 13.4123 4.12179Z" stroke="#626C7A" stroke-width="1.5"/>
-                        </svg>                            
-                        Настройки
-                      </a>
-                      <a href="index.html" class="profile-menu__item">
-                        Выйти
-                      </a>
+            <a href="profile-order.html" class="back mediumL d-flex align-items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5.33398L8 10.0007L12 14.6673" stroke="#1E1E2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+            </a>
+            <h2 class="title mt-3">Заказ № ORD-0000002662</h2>
+            <div class="status order-status mediumM wait">Ожидает оплаты</div>
+            <div class="d-flex justify-content-between mt-3 mb-5">
+                <div class="current-order-info d-flex flex-column gap-2">
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Дата заказа</div>
+                        <div class="value">2023-10-04, 18:48:14</div>
+                    </div>
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Адрес доставки</div>
+                        <div class="value">720040, Кыргызстан, bishkek_city, Бишкек, улица Орозбекова 2/3</div>
+                    </div>
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Сумма заказа</div>
+                        <div class="value">2 666 сом</div>
+                    </div>
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Оплачено</div>
+                        <div class="value">2 666 сом</div>
+                    </div>
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Остаток</div>
+                        <div class="value">0 сом<button class="primary-button fill fit">Оплатить</button></div>
+                    </div>
+                    <div class="current-order-info__item mediumL">
+                        <div class="title">Способ оплаты</div>
+                        <div class="value">Через платежную систему</div>
+                    </div>
                 </div>
-                <div class="profile-container">
-                  <div class="select-primary profile-order-status">
-                    <div class="title">Статус</div>
-                    <div class="value">Все</div>
-                    <div class="select-primary-dropdown">
-                      <div class="select-primary-dropdown__item mediumM">Все</div>
-                      <div class="select-primary-dropdown__item mediumM">Добавлено</div>
-                      <div class="select-primary-dropdown__item mediumM">Отменено</div>
-                      <div class="select-primary-dropdown__item mediumM">В пути</div>
-                      <div class="select-primary-dropdown__item mediumM">На складе</div>
-                      <div class="select-primary-dropdown__item mediumM">Оплачено</div>
+                <div class="product-list-block">
+                    <h4 class="title">Список товаров</h4>
+                    <div class="overflow">
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
+                      <div class="product-list-block__item">
+                        <img src="images/popular-preview.jpg" alt="">
+                        <div class="discount active">50%</div>
+                        <div class="name">Bmw, горный велосипед, внедорожный гоночный</div>
+                        <div class="price">500 сом <span class="subprice">1000 сом</span></div>
+                        <div class="count">Кол-во: <span class="value">1</span></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="profile-order-block">
-                    <a href="profile-order-wait.html" class="profile-order-block__item d-flex justify-content-between">
-                      <div class="block-text">
-                        <div class="title titleS">ORD-0000002662</div>
-                        <div class="status mediumM wait">Ожидает оплаты</div>
-                        <div class="date mediumM">2023-10-04 18:48:14</div>
-                        <div class="d-flex mt-3 gap-3">
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Количество</div>
-                            <div class="value boldL">7</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Сумма</div>
-                            <div class="value boldL">2 666 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Оплачено</div>
-                            <div class="value boldL">2 000 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Остаток</div>
-                            <div class="value boldL">666 сом</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block-img d-flex gap-3">
-                        <img src="images/popular-preview.jpg" alt="">
-                        <img src="images/popular-preview.jpg" alt="">
-                        <img src="images/popular-preview.jpg" alt="">
-                        <div class="more-products titleS">+ 4</div>
-                      </div>
-                    </a>
-                    <a href="profile-order-accept.html" class="profile-order-block__item d-flex justify-content-between">
-                      <div class="block-text">
-                        <div class="title titleS">ORD-0000002662</div>
-                        <div class="status mediumM accept">Завершено</div>
-                        <div class="date mediumM">2023-10-04 18:48:14</div>
-                        <div class="d-flex mt-3 gap-3">
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Количество</div>
-                            <div class="value boldL">7</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Сумма</div>
-                            <div class="value boldL">2 666 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Оплачено</div>
-                            <div class="value boldL">2 000 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Остаток</div>
-                            <div class="value boldL">666 сом</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block-img d-flex gap-3">
-                        <img src="images/popular-preview.jpg" alt="">
-                        <img src="images/popular-preview.jpg" alt="">
-                        <img src="images/popular-preview.jpg" alt="">
-                      </div>
-                    </a>
-                    <a href="profile-order-refuse.html" class="profile-order-block__item d-flex justify-content-between">
-                      <div class="block-text">
-                        <div class="title titleS">ORD-0000002662</div>
-                        <div class="status mediumM refuse">Отменено</div>
-                        <div class="date mediumM">2023-10-04 18:48:14</div>
-                        <div class="d-flex mt-3 gap-3">
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Количество</div>
-                            <div class="value boldL">7</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Сумма</div>
-                            <div class="value boldL">2 666 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Оплачено</div>
-                            <div class="value boldL">2 000 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Остаток</div>
-                            <div class="value boldL">666 сом</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block-img d-flex gap-3">
-                        <img src="images/popular-preview.jpg" alt="">
-                      </div>
-                    </a>
-                    <!-- href="profile-order-send-wait.html" -->
-                    <a href="#"  class="profile-order-block__item d-flex justify-content-between">
-                      <div class="block-text">
-                        <div class="title titleS">ORD-0000002662</div>
-                        <div class="status mediumM wait">Ожидает отправки</div>
-                        <div class="date mediumM">2023-10-04 18:48:14</div>
-                        <div class="d-flex mt-3 gap-3">
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Количество</div>
-                            <div class="value boldL">7</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Сумма</div>
-                            <div class="value boldL">2 666 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Оплачено</div>
-                            <div class="value boldL">2 000 сом</div>
-                          </div>
-                          <div class="profile-order-block__info">
-                            <div class="name mediumS">Остаток</div>
-                            <div class="value boldL">666 сом</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block-img d-flex gap-3">
-                        <img src="images/popular-preview.jpg" alt="">
-                      </div>
-                    </a>
-                  </div>
-                </div>
             </div>
         </div>
       </main>
       <footer class="footer">
         <div class="container d-flex justify-content-between">
           <ul class="footer-list">
-            <li class="footer-list__item header">Покупателям</li>
-            <li class="footer-list__item"><a href="#">Как сделать заказ</a></li>
-            <li class="footer-list__item"><a href="#">Способы оплаты</a></li>
-            <li class="footer-list__item"><a href="#">Доставка</a></li>
-            <li class="footer-list__item"><a href="#">Вопросы и ответы</a></li>
-            <li class="footer-list__item"><a href="#">Список запрещенных товаров из Китая</a></li>
-            <li class="footer-list__item"><a href="#">Помощь при выборе товара</a></li>
-            <li class="footer-list__item"><a href="#">Пользовательское соглашение</a></li>
-            <li class="footer-list__item"><a href="#">Магазины</a></li>
+            <li class="footer-list__item header boldL">Покупателям</li>
+            <li class="footer-list__item mediumM"><a href="#">Как сделать заказ</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Способы оплаты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Доставка</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вопросы и ответы</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Список запрещенных товаров из Китая</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Помощь при выборе товара</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пользовательское соглашение</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Магазины</a></li>
           </ul>
           <ul class="footer-list">
-            <li class="footer-list__item header">Партенрам</li>
-            <li class="footer-list__item"><a href="#">Франшиза</a></li>
+            <li class="footer-list__item header boldL">Партенрам</li>
+            <li class="footer-list__item mediumM"><a href="#">Франшиза</a></li>
           </ul>
           <ul class="footer-list">
-            <li class="footer-list__item header">Компания</li>
-            <li class="footer-list__item"><a href="#">О нас</a></li>
-            <li class="footer-list__item"><a href="#">Вакансии</a></li>
-            <li class="footer-list__item"><a href="contacts.html">Контакты</a></li>
-            <li class="footer-list__item"><a href="#">Пункты выдачи заказов</a></li>
+            <li class="footer-list__item header boldL">Компания</li>
+            <li class="footer-list__item mediumM"><a href="#">О нас</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вакансии</a></li>
+            <li class="footer-list__item mediumM"><a href="contacts.html">Контакты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пункты выдачи заказов</a></li>
           </ul>
           <ul class="footer-list mobile">
-            <li class="footer-list__item header">Контакты</li>
+            <li class="footer-list__item header boldL">Контакты</li>
             <div class="contacts-dropdown dark">
               <div class="contacts-dropdown__item">
                 <img src="images/header-contact.svg" alt="">
@@ -661,8 +574,8 @@
           </div>
         </div>
         <div class="container copyright">
-          <div class="text">© 2021–2023 Поиск и доставка товаров из Китая</div>
-          <div class="text">Powered by © OT Commerce otcommerce.com</div>
+          <div class="text regularS">© 2021–2023 Поиск и доставка товаров из Китая</div>
+          <div class="text regularS">Powered by © OT Commerce otcommerce.com</div>
         </div>
       </footer>
       <div class="modal-wrapper" id="modal-registration">
@@ -673,14 +586,14 @@
           </h2>
           <form action="">
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Номер телефона</div>
                 <input type="text" required>
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Пароль</div>
                 <input type="password" required>
@@ -688,7 +601,7 @@
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required">Обязательное поле</div>
+              <div class="required regularS">Обязательное поле</div>
               <div class="field">
                 <div class="title">Повторите пароль</div>
                 <input type="password" required>
@@ -707,7 +620,7 @@
             </label>
             <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-registration-code')">
           </form>
-          <button class="change-modal" onclick="openModal('#modal-login')">Войти</button>
+          <button class="change-modal mediumL" onclick="openModal('#modal-login')">Войти</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-user-agreement">
@@ -716,7 +629,7 @@
             Пользовательское соглашение
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <div class="modal-agreement">
+          <div class="modal-agreement regularL">
             Глава 1. Термины и определения.
             В целях надлежащего толкования условий пользовательского соглашения нижеприведенные термины используются в следующем значении:
             Исполнитель – Общество с ограниченной ответственностью «Иско Маркет» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 208676-3301-ООО, код ОКПО 31559310, ИНН 01708202210345, серия ГРЮ 0083217 от 17 августа 2022 года.
@@ -748,17 +661,17 @@
             Подтверждение
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <div class="modal-phone-number">
+          <div class="modal-phone-number mediumL">
             Код отправлен на номер<br>
-            +996 (505) 396-999 <span class="change-number">Изменить</span>
+            +996 (505) 396-999 <span class="change-number mediumM">Изменить</span>
           </div>
           <div class="modal-code">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
-            <input class="modal-code__item" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
           </div>
-          <div class="modal-error">Неверный код</div>
+          <div class="modal-error regularM">Неверный код</div>
           <div class="primary-button fill disabled" onclick="openModal('#modal-registration-complete')">Продолжить</div>
           <div class="code-timer"> 00:59 </div>
         </div>
@@ -769,27 +682,27 @@
             Регистрация прошла успешно!
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Поздравляем! Вам присвоен уникальный код клиента. 
             Теперь вы можете совершать покупки на нашем сайте. Для входа на сайт используйте регистрационные данные, они были высланы вам на почту. Вся необходимая информация доступна в вашем личном кабинете.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Для начала вам необходимо заполнить ваш профиль. Для этого перейдите во вкладку “Профиль”. Заполните все поля. Видеоинструкция по заполению профиля: <a href="https://www.youtube.com/watch?v=p9vgBU3CpWE" class="link">https://www.youtube.com/watch?v=p9vgBU3CpWE</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             После заполнения профиля вам станут доступны адреса наших складов, они размещены во вкладке “Мои адреса”.
             Как пользоваться системой отслеживания на сайте описано в этой видеоинструкции: <a href="https://youtu.be/r3ir-ByT7ME" class="link">https://youtu.be/r3ir-ByT7ME</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Во вкладке “Счет” вы можете заранее пополнить свой лицевой счет, средства на вашем счету вы можете использовать для осуществления заказов на сайте. Важно! Средства на вашем счету на сайте вы можете использовать только в счет оплаты ваших заказов и покупок, вывод средств не предусмотрен. Способы оплаты описаны в разделе: <a href="https://isco.kg/Sposoby-oplaty" class="link">https://isco.kg/Sposoby-oplaty.</a> Или вы можете произвести оплату после оформления заказа в корзине.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Как осуществлять заказ подробно описано в статье: <a href="https://isco.kg/how_to_order" class="link">https://isco.kg/how_to_order.</a>
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Если вы столкнулись с проблемами или трудностями, то вы можете написать в службу поддержки, используя вкладку “Служба поддержки”: <a href="https://isco.kg/support" class="link">https://isco.kg/support.</a> Также вы можете обратиться по всем интересующим вопросам по номерам, указанным в контактах на сайте.
           </p>
-          <p class="modal-text">
+          <p class="modal-text regularL">
             Желаем вам приятных покупок!
           </p>
           <div class="primary-button fill fit auto" onclick="closeModal(this)">Начать делать покупки</div>
@@ -802,33 +715,33 @@
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
           <div class="modal-auth-method d-flex align-items-center justify-content-center">
-            <div class="modal-auth-method__item active" data-method="email">По E-mail</div>
-            <div class="modal-auth-method__item" data-method="phone">По номеру телефона</div>
+            <div class="modal-auth-method__item titleS active" data-method="email">По E-mail</div>
+            <div class="modal-auth-method__item titleS" data-method="phone">По номеру телефона</div>
           </div>
           <form action="">
             <div class="modal-input input email">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">E-mail</div>
                 <input type="email" required>
               </div>
             </div>
             <div class="modal-input input phone">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Номер телефона</div>
                 <input type="text" required>
               </div>
             </div>
             <div class="modal-input input">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Пароль</div>
                 <input type="password" required>
                 <img class="show-password" src="images/input-pass-show.svg" alt="">
               </div>
             </div>
-            <div class="pass-reset" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
+            <div class="pass-reset mediumS" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
             <label class="checkbox-primary caption">
               Запомнить меня
               <input type="checkbox">
@@ -836,7 +749,7 @@
             </label>
             <input class="primary-button fill" type="button" value="Продолжить">
           </form>
-          <button class="change-modal" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
+          <button class="change-modal mediumL" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-reset-password">
@@ -847,7 +760,7 @@
           </h2>
           <form action="">
             <div class="modal-input input email">
-              <div class="required"></div>
+              <div class="required regularS"></div>
               <div class="field">
                 <div class="title">Ваш e-mail или номер телефона</div>
                 <input type="email" required>

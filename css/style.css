@@ -53,6 +53,7 @@ body.no-scroll {
 
 a {
     text-decoration: none;
+    color: var(--color-dark);
 }
 ol, ul, h1, h2, h3, h4 {
     padding: 0;
@@ -2690,6 +2691,86 @@ h2.title.price .subprice {
 }
 .settings-group .block {
     padding: 10px 0;
+}
+
+.profile-order-status {
+    max-width: 256px;
+}
+.profile-order-block__item, a.profile-order-block__item {
+    padding: 16px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 12px;
+    margin-top: 16px;
+    display: block;
+    color: var(--color-dark);
+}
+.profile-order-block__item .title {
+    margin-right: 12px;
+}
+.profile-order-block__item .title,
+.profile-order-block__item .status {
+    display: inline-block;
+}
+.profile-order-block__item .status, .order-status {
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.status.accept {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+.status.wait {
+    background-color: var(--color-yellow);
+}
+.status.refuse {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+.profile-order-block__item .date,
+.profile-order-block__info .name {
+    color: var(--color-gray-dark);
+}
+.profile-order-block__item .block-img {
+    width: fit-content;
+    max-height: 88px;
+}
+.profile-order-block__item .block-img img,
+.profile-order-block__item .block-img .more-products {
+    width: 88px;
+    border-radius: 8px;
+}
+.profile-order-block__item .block-img .more-products {
+    background-color: #CDEDFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+a.back {
+    color: var(--color-dark);
+}
+.current-order-info {
+    max-width: 700px;
+    width: 100%;
+}
+.current-order-info__item {
+    display: flex;
+    align-content: center;
+    gap: 12px;
+}
+.current-order-info__item .title {
+    color: var(--color-gray-dark);
+    flex-basis: 20%;
+}
+.current-order-info__item .primary-button {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 16px;
+    display: inline-block;
 }
 /********Responsive**********/
 
