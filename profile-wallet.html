@@ -13,6 +13,10 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL"></div>
+      </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -789,7 +793,7 @@
                 <input id="input-wallet-up" type="text" oninput="this.value?document.getElementById('btn-wallet-up').classList.remove('disabled'):document.getElementById('btn-wallet-up').classList.add('disabled')">
               </div>
             </div>
-            <input class="primary-button fill fit disabled" type="button" value="Пополнить" id="btn-wallet-up" onclick="closeModal(this), document.getElementById('input-wallet-up').value='' ">
+            <input class="primary-button fill fit disabled" type="button" value="Пополнить" id="btn-wallet-up" onclick="closeModal(this), document.getElementById('input-wallet-up').value='', showNotification('Счет пополнен')">
           </div>
           <div class="wallet-up-cards">
             <div class="wallet-up-text mediumM mt-2">Банковские карты</div>
