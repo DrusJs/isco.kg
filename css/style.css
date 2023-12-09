@@ -2705,7 +2705,7 @@ h2.title.price .subprice {
     padding: 10px 0;
 }
 
-.profile-order-status {
+.profile-status {
     max-width: 256px;
 }
 .profile-order-block__item, a.profile-order-block__item {
@@ -2734,17 +2734,27 @@ h2.title.price .subprice {
     color: var(--color-white);
     border-radius: 8px;
     padding: 4px 8px;
+    width: fit-content;
 }
 .status.wait {
     background-color: var(--color-yellow);
     border-radius: 8px;
     padding: 4px 8px;
+    width: fit-content;
+}
+.status.add {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 4px 8px;
+    width: fit-content;
 }
 .status.refuse {
     background-color: var(--color-red);
     color: var(--color-white);
     border-radius: 8px;
     padding: 4px 8px;
+    width: fit-content;
 }
 .profile-order-block__item .date,
 .profile-order-block__info .name {
@@ -2874,6 +2884,10 @@ a.back {
     padding: 12px 12px 4px;
     font-weight: 400;
 }
+.payment-history-row .primary-button.fill.disabled {
+    border: 1px solid var(--color-gray);
+    color: var(--color-gray);
+}
 .payment-history-head {
     color: var(--color-gray-dark);
 }
@@ -2907,6 +2921,22 @@ a.back {
 }
 .grid-find-order .name {
     color: var(--color-gray-dark);
+}
+
+.modal-current-mail-container {
+    padding: 12px;
+    background-color: var(--color-bg);
+    border-radius: 8px;   
+    display: block;
+    width: 816px;
+}
+.modal-current-mail__item {
+    display: flex;  
+    padding: 6px 0;
+}
+.modal-current-mail-container .name {
+    color: var(--color-gray-dark);
+    flex-basis: 30%;
 }
 /********Responsive**********/
 

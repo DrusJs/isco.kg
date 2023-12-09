@@ -26,12 +26,12 @@ function closeModal(element) {
   element.closest('.modal-wrapper').classList.remove('active')
 }
 function openModal(id, isClose = true) {
-  document.body.classList.add('no-scroll')
   let previous = document.querySelector('.modal-wrapper.active')
   if (previous && isClose) {
     previous.classList.remove('active')
   }
   document.querySelector(id).classList.add('active')
+  document.body.classList.add('no-scroll')
 }
 
 function changeOrderStep(now, isNext) {

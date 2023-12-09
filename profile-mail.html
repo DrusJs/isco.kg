@@ -13,6 +13,11 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="wrapper d-flex flex-column">
+        <div class="notification" id="notification">
+          <img src="images/accept-notice.svg" alt="">
+          <div class="text mediumL">Товар добавлен в корзину</div>
+        </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -456,7 +461,113 @@
                       </a>
                 </div>
                 <div class="profile-container">
-
+                  <div class="d-flex justify-content-between">
+                    <button class="primary-button fill fit" onclick="openModal('#modal-add-mail')">Добавить посылку</button>
+                    <div class="select-primary profile-status">
+                      <div class="title">Статус</div>
+                      <div class="value">Все</div>
+                      <div class="select-primary-dropdown">
+                        <div class="select-primary-dropdown__item mediumM">Все</div>
+                        <div class="select-primary-dropdown__item mediumM">Добавлено</div>
+                        <div class="select-primary-dropdown__item mediumM">Отменено</div>
+                        <div class="select-primary-dropdown__item mediumM">В пути</div>
+                        <div class="select-primary-dropdown__item mediumM">На складе</div>
+                        <div class="select-primary-dropdown__item mediumM">Оплачено</div>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="payment-history mt-2">
+                    <tr class="payment-history-row head">
+                      <th class="payment-history-head mediumS">Трек-код</th>
+                      <th class="payment-history-head mediumS">Направление</th>
+                      <th class="payment-history-head mediumS">Кол-во товаров</th>
+                      <th class="payment-history-head mediumS">Сумма</th>
+                      <th class="payment-history-head mediumS">Стоимость доставки</th>
+                      <th class="payment-history-head mediumS">Дата создания</th>
+                      <th class="payment-history-head mediumS">Статус</th>
+                      <th class="payment-history-head mediumS">Подтверждение<br>получения</th>
+                    </tr>
+                    <tr class="payment-history-row" onclick="openModal('#modal-current-mail')">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status accept">Передан<br>клиенту</div></td>
+                      <td class="payment-history-cell mediumM"><div class="primary-button fill fit">Получил</div></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status add">Добавлено</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status accept">Передан<br>курьеру</div></td>
+                      <td class="payment-history-cell mediumM"><div class="primary-button fill fit disabled">Получил</div></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status wait">На складе<br>отправления</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status wait">В пути</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status wait">Доставлен в<br>головной офис</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status accept">Оплачено</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                    <tr class="payment-history-row">
+                      <td class="payment-history-cell mediumM">034231241432</td>
+                      <td class="payment-history-cell mediumM">Китай (Авто)<br> ->Кыргызстан</td>
+                      <td class="payment-history-cell mediumM">1</td>
+                      <td class="payment-history-cell mediumM">4 $</td>
+                      <td class="payment-history-cell mediumM">1170 сом / 13.07 $</td>
+                      <td class="payment-history-cell mediumM">2023-10-04</td>
+                      <td class="payment-history-cell mediumM"><div class="status accept">Доставлен в<br>пункт выдачи<br>заказов</div></td>
+                      <td class="payment-history-cell mediumM"></td>
+                    </tr>
+                  </table>
                 </div>
             </div>
         </div>
@@ -726,6 +837,72 @@
           </form>
         </div>
       </div>
+      <div class="modal-wrapper" id="modal-current-mail">
+        <div class="modal">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="title d-flex align-items-center gap-2">034231241432<div class="status mediumM add">Добавлено</div></h2>
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </div>
+          <div class="modal-current-mail-container">
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Направление</div>
+              <div class="value">Китай (Авто) ->Кыргызстан</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Получатель</div>
+              <div class="value">Асанов Нурбек Азатович</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Номер посылки</div>
+              <div class="value">274</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Количество товаров</div>
+              <div class="value">1</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Сумма товаров</div>
+              <div class="value">4 $</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Стоимость доставки</div>
+              <div class="value">1170 сом / 13.07 $</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Дата создания</div>
+              <div class="value">2023-08-23 12:34:58</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Дата отправления</div>
+              <div class="value">2023-08-23 15:55:36</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Поступила на склад в Кыргызстане</div>
+              <div class="value">2023-09-18 11:03:40</div>
+            </div>
+            <div class="modal-current-mail__item mediumL">
+              <div class="name">Декларация</div>
+              <div class="value">Нужное, 5 шт. / 4 $ - цена за 1 шт.<br>Итого: 20 $</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-wrapper" id="modal-add-mail">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Добавить посылку
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <h4 class="title">Декларация</h4>
+          <div class="modal-warning">
+            <img src="images/modal-warning.svg" alt="">
+            Во избежание проблем при таможенной очистке, просим вводить детальное описание наименования товара на русском.
+          </div>
+          <button class="primary-button fill fit" style="margin-left: auto;" onclick="closeModal(this), showNotification('Посылка добавлена')">Добавить</button>
+        </div>
+      </div>
+
     </div>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/swiper-bundle.min.js" type="text/javascript"></script>
