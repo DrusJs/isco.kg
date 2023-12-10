@@ -813,6 +813,10 @@ h3.title, .titleM {
     margin-top: 24px;
     grid-template-columns: repeat(7, 1fr);
 }
+.main-grid:has(.favorite) {
+    overflow: visible;
+    max-height: none;
+}
 
 .main-grid__item {
     max-width: 168px;
@@ -825,6 +829,9 @@ h3.title, .titleM {
 
 .main-grid__item.seller {
     max-width: 236px;
+}
+.main-grid__item.seller img {
+    width: 100%;
 }
 .main-grid__item.seller .name,
 .main-grid__item.seller .value {
@@ -3057,6 +3064,9 @@ a.back {
         overflow-y: hidden;
         max-height: 520px;
     }
+    .main-grid.seller {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -3090,7 +3100,7 @@ a.back {
         gap: 10px;
     }
     .search-input {
-        max-width: 210px;
+        max-width: 225px;
     }
     .search-main {
         margin-right: 12px;
@@ -3144,6 +3154,9 @@ a.back {
     }
     .about-container {
         flex-direction: column;
+    }
+    .main-grid.seller {
+        grid-template-columns: repeat(3, 1fr);
     }
     .map-container {
         height: 400px;
@@ -3358,8 +3371,25 @@ a.back {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+    .main-grid:has(.favorite) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .favorites-nav {
+        gap: 12px;
+    }
+    .favorites-nav__item {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: var(--font-regular);
+    }
     .main-grid__item {
         min-width: 140px;
+    }
+    .main-grid__item.favorite {
+        min-width: auto;
+    }
+    .main-grid__item.seller.favorite {
+        min-width: 212px;
     }
     .main-grid__item .prev-price {
         display: none;
@@ -3370,6 +3400,9 @@ a.back {
     .main-grid__item .text {
         font-size: 12px;
         line-height: 16px;
+    }
+    .main-grid.seller {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .blog-container__item, .blog-container__item img {
@@ -3496,6 +3529,9 @@ a.back {
     .main-swiper, .main-swiper .swiper-slide img {
         max-height: 140px;
     }
+    .main-grid:has(.favorite) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 }
 
 @media (max-width: 380px) {
@@ -3505,4 +3541,8 @@ a.back {
     .modal {        
         padding: 32px 16px;
     }
+    .main-grid__item.favorite, .main-grid__item.favorite img {
+        width: 140px;
+        min-height: auto;
+    } 
 }
