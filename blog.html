@@ -13,6 +13,10 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL">Сохранено</div>
+      </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
           <div class="loader-animate">
@@ -26,25 +30,231 @@
       <div class="catalog" id="catalog">
         <div class="container d-flex">
           <div class="catalog-nav">
-            <h2 class="title">Каталог</h2>
+            <h2 class="title d-flex align-items-center justify-content-between">Каталог<div class="close-modal" onclick="closeElement(this)"></div></h2>
             <div class="catalog-nav-select">
-              <div class="catalog-nav-select__item active"><img src="images/1688.svg" alt=""></div>
-              <div class="catalog-nav-select__item"><img src="images/taobaoLogo.svg" alt=""></div>
-              <div class="catalog-nav-select__item"><img src="images/trendyolLogo.svg" alt=""></div>
+              <div class="catalog-nav-select__item active" data-block="0"><img src="images/1688.svg" alt="1688"></div>
+              <div class="catalog-nav-select__item" data-block="1"><img src="images/taobaoLogo.svg" alt="taobao"></div>
+              <div class="catalog-nav-select__item" data-block="2"><img src="images/trendyolLogo.svg" alt="trendyol"></div>
             </div>
-            <div class="catalog-nav-list">
-              <h4 class="title d-flex justify-content-between align-items-center">Наименование каталога<img src="images/arrow-mobile.svg" alt=""></h4>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
-              <div class="catalog-nav-list__item mediumL">Наименование каталога</div>
+            <div class="catalog-nav-list mobile">
+              <div class="block active">
+                <div class="catalog-nav-list__item boldM">
+                  Для мужчин
+                  <img src="images/catalog-for-man.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для женщин
+                  <img src="images/catalog-for-woman.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для детей
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Все для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Спортивные товары
+                  <img src="images/catalog-for-sport.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Косметика
+                  <img src="images/catalog-for-make.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Книги
+                  <img src="images/catalog-for-books.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Хобби
+                  <img src="images/catalog-for-hobbi.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для авто
+                  <img src="images/catalog-for-cars.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Канцелярские товары
+                  <img src="images/catalog-for-office.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+              </div>
+              <div class="block">
+                <div class="catalog-nav-list__item boldM">
+                  Одежда
+                  <img src="images/catalog-for-clothes.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Обувь
+                  <img src="images/catalog-for-shoose.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для детей
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Красота и здоровье
+                  <img src="images/catalog-for-make.png" alt="">
+                </div> 
+                <div class="catalog-nav-list__item boldM">
+                  Спортивные товары
+                  <img src="images/catalog-for-sport.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для туризма и активного отдыха
+                  <img src="images/catalog-for-travel.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Электроника
+                  <img src="images/catalog-for-tech.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Авто-, мототовары
+                  <img src="images/catalog-for-avtomoto.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аудио-, видеотехника
+                  <img src="images/catalog-for-audiovideo.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Музыкальные инструменты
+                  <img src="images/catalog-for-music.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для взрослых (18+)
+                  <img src="images/catalog-for-adult.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Декор интерьера, сувениры
+                  <img src="images/catalog-for-decor.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Канцелярские товары
+                  <img src="images/catalog-for-office.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Другие
+                  <div></div>
+                </div>
+              </div>
+              <div class="block">
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для женщин
+                  <img src="images/catalog-for-woman.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для мужчин
+                  <img src="images/catalog-for-man.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Детский мир
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Обувь
+                  <img src="images/catalog-for-shoose.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для матери и ребенка
+                  <img src="images/catalog-for-mothers.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Косметика и уход за кожей
+                  <img src="images/catalog-for-make.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Мобильная электроника
+                  <img src="images/catalog-for-mobile.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Автомобильные аксессуары
+                  <img src="images/catalog-for-cars.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  СМИ, радио и телевидение
+                  <img src="images/catalog-for-tvradio.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Защитное снаряжение, оборудование и системы безопасности
+                  <img src="images/catalog-for-protect.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Пакеты, коробки и упаковка
+                  <img src="images/catalog-for-boxes.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для офиса, школы и проведения мероприятий
+                  <img src="images/catalog-for-school.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Электронные компоненты
+                  <img src="images/catalog-for-techcomponent.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Ткань, кожа, пряжа, текстиль
+                  <img src="images/catalog-for-textile.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Промышленность,оборудование и производство
+                  <img src="images/catalog-for-factory.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Инструменты и строительные материалы
+                  <img src="images/catalog-for-build.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Изделия из пластика
+                  <img src="images/catalog-for-plastic.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Сельское хозяйство
+                  <img src="images/catalog-for-garden.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Все для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Запчасти для авто- и мототехники
+                  <img src="images/catalog-for-avtomoto.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Средства связи
+                  <img src="images/catalog-for-communicate.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Лекарства. Медицинские препараты и инструменты
+                  <img src="images/catalog-for-medicine.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Спорт, туризм и активный отдых
+                  <img src="images/catalog-for-active.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для бизнеса
+                  <img src="images/catalog-for-busines.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для взрослых (18+)
+                  <img src="images/catalog-for-adult.png" alt="">
+                </div>
+              </div>
             </div>
           </div>
           <div class="catalog-grid-wraper active">
@@ -306,44 +516,44 @@
                   <span class="title"></span>
                 </div>
                 <div class="header-buttons__item-dropdown">
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-main.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-home.svg" alt="">
                     Главная
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-info.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-profile.svg" alt="">
                     Профиль
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-order.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-zakaz.svg" alt="">
                     Мои заказы
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-wallet.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-wallet.svg" alt="">
                     Счет
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-adress.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-adress.svg" alt="">
                     Адреса складов ISCO
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-mail.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-sklad.svg" alt="">
                     Мои посылки
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-notice.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-notice.svg" alt="">
                     Уведомления
                     <span class="notice-count regularS">8</span>
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-help.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-help.svg" alt="">
                     Служба поддержки
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-find.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-find.svg" alt="">
                     Отследить посылку
                   </a>
-                  <a class="header-buttons__item-dropdown__item mediumL">
+                  <a href="profile-settings.html" class="header-buttons__item-dropdown__item mediumL">
                     <img src="images/menu-setting.svg" alt="">
                     Настройки
                   </a>

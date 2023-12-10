@@ -1,7 +1,7 @@
 //loader element
 const loaderElement = document.querySelector('#loader')
 
-function showNotification(text = "Сохранено") {
+function showNotification(text = 'Сохранено') {
   let notification = document.getElementById('notification')
   notification.style.opacity = 1
   notification.lastElementChild.innerHTML = text
@@ -77,8 +77,10 @@ if (catalogElement) {
     item.querySelectorAll('.catalog-nav-select__item').forEach((el)=>{
       el.addEventListener('click', function() {
         if (!el.classList.contains('active')) {
-            item.querySelector('.catalog-nav-select__item.active').classList.remove('active')
+          item.querySelector('.catalog-nav-select__item.active').classList.remove('active')
           el.classList.add('active')
+          document.querySelector('.catalog-nav-list.mobile .block.active').classList.remove('active')
+          document.querySelectorAll('.catalog-nav-list.mobile .block')[el.dataset.block].classList.add('active')
         }
       })
     })
@@ -306,7 +308,7 @@ if (inputCodeElements.length) {
     item.querySelectorAll('.modal-code__item').forEach((el)=> {
       el.addEventListener('keypress', function(event) {
         if (el.value) {
-          el.value = ""
+          el.value = ''
         }
         if (el.nextElementSibling) {
           el.nextElementSibling.focus()
@@ -343,10 +345,10 @@ if (inputTextElements.length) {
     })
     if (showPass) {
       showPass.addEventListener('click', function() {
-        if (input.type === "password") {
-          input.type = "text";
+        if (input.type === 'password') {
+          input.type = 'text';
         } else {
-          input.type = "password";
+          input.type = 'password';
         }
         input.focus()
       })
