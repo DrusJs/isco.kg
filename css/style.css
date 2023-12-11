@@ -3081,9 +3081,31 @@ a.back {
     padding: 16px 0 16px 12px;
     color: var(--color-gray);
 }
-
-
-
+.store-list .title {
+    margin-bottom: 12px;
+}
+.store-list__item {
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--color-gray-dark);
+}
+.store-list__item.active {
+    font-family: var(--font-bold);
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+}
+.rating-star {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../images/rating-star-none.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.rating-star.active {
+    background-image: url(../images/rating-star.svg);
+}
 
 /********Responsive**********/
 /* disable hover on touch screen */
