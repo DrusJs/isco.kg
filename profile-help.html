@@ -666,7 +666,7 @@
                       </a>
                 </div>
                 <div class="profile-container">
-                  <button class="primary-button fill fit">Создать обращение</button>
+                  <button class="primary-button fill fit" onclick="openModal('#modal-create-quest')">Создать обращение</button>
                   <div class="profile-help-block d-flex flex-column mt-3 gap-3">
                       <div class="profile-help__item">
                         <div class="title boldL ">Тема обращения</div>
@@ -761,6 +761,41 @@
           <div class="text regularS">Powered by © OT Commerce otcommerce.com</div>
         </div>
       </footer>
+    </div>
+    <div class="modal-wrapper" id="modal-create-quest">
+      <div class="modal">
+        <h2 class="title d-flex align-items-center justify-content-between">
+          Создание обращения
+          <div class="close-modal" onclick="closeModal(this)"></div>
+        </h2>
+        <div class="text regularM mt-4 mb-4">Создайте обращение и мы ответим на него как можно скорее.<br>Максимальный срок ответа — 24 часа</div>
+          <div class="modal-input input">
+            <div class="required regularS">Обязательное поле</div>
+            <div class="field">
+              <div class="title">Тема</div>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="select-primary">
+            <div class="title">№ Заказа</div>
+            <div class="value">№ Заказа</div>
+            <div class="select-primary-dropdown">
+              <div class="select-primary-dropdown__item mediumM">31313131</div>
+              <div class="select-primary-dropdown__item mediumM">12313123</div>
+            </div>
+          </div>
+          <div class="select-primary">
+            <div class="title">Категория</div>
+            <div class="value">Категория</div>
+            <div class="select-primary-dropdown">
+              <div class="select-primary-dropdown__item mediumM">Категория</div>
+              <div class="select-primary-dropdown__item mediumM">Категория</div>
+            </div>
+          </div>
+          <textarea class="comment" cols="20" rows="5" maxlength="100" placeholder="Текст обращения"></textarea>
+          <input class="primary-button fill" type="button" value="Отправить">
+      </div>
+    </div>
       <div class="modal-wrapper" id="modal-registration">
         <div class="modal">
           <h2 class="title d-flex align-items-center justify-content-between">

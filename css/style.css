@@ -2947,6 +2947,7 @@ a.back {
 }
 .profile-help__item .help-status .help-accept {
     color: var(--color-green);
+    cursor: pointer;
 }
 
 .modal-current-mail-container {
