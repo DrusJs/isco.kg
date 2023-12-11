@@ -3036,6 +3036,51 @@ a.back {
 .information-container .subtitle {
     margin-top: 16px;
 }
+.information-list__item {
+    width: 210px;
+    padding: 16px;
+}
+.information-list__item:has(.information-list__item-head) {
+    padding: 0;
+}
+.information-list__item.active {
+    padding-bottom: 0;
+}
+
+.information-list__item.active .information-list__item-head {
+    background-color: var(--color-bg);
+}
+.information-list__item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+.information-list__item-head::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    display: block;
+    background-image: url(../images/1688-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.information-list__item-dropdown {
+    max-height: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+.information-list__item.active .information-list__item-dropdown {
+    max-height: fit-content;
+    opacity: 1;
+    pointer-events: auto;
+}
+.information-list-dropdown__item {
+    padding: 16px 0 16px 12px;
+    color: var(--color-gray);
+}
 
 
 
