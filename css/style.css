@@ -3094,6 +3094,56 @@ a.back {
     color: var(--color-dark);
     background-color: var(--color-bg);
 }
+.store-main__item {
+    padding: 16px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+}
+.store-preview {
+    margin-right: 16px;
+}
+.store-main-container {
+    max-height: 580px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.store-main-container::-webkit-scrollbar {
+    display: none;
+}
+.store-main__item-info .text {
+    color: var(--color-gray-dark);
+    margin: 16px 0 18px;
+}
+.store-main__item-link {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-blue);
+}
+.store-main__item-link::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/link-blue.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.rating-set-button {
+    color: var(--color-gray);
+    margin-left: 12px;
+    cursor: pointer;
+    pointer-events: none;
+}
 .rating-star {
     width: 20px;
     height: 20px;
@@ -3103,9 +3153,85 @@ a.back {
     background-size: contain;
     background-position: center center;
 }
+.rating-row:has(.rating-star.active) .rating-set-button {
+    pointer-events: auto;
+    color: var(--color-primary);
+}
 .rating-star.active {
     background-image: url(../images/rating-star.svg);
 }
+.rating-row.js-rating-select .rating-star {
+    cursor: pointer;
+}
+
+.stores-search {
+    border: 1px solid var(--color-gray);
+    padding: 0px 12px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    gap: 8px;
+    width: 100%;
+    max-width: 224px;
+    position: relative;
+}
+.store-search .search-input {
+    width: 160px;
+}
+
+.vacancy {
+    margin-top: 32px;
+}
+
+.vacancy-list {
+    flex-basis: 28%;
+}
+.vacancy-list__item {
+    padding: 12px 16px;
+    width: 100%;
+    border-radius: 8px;
+}
+.vacancy-container {
+    flex-basis: 70%;
+}
+.vacancy-list__item.active {
+    background-color: var(--color-bg);
+}
+
+.vacancy-list__item .wage {
+    color: var(--color-gray-dark);
+}
+
+.vacancy-container .wage {
+    color: #0393BF;
+    margin-top: 8px;
+}
+.vacancy-info {
+    margin-top: 8px;
+}
+.vacancy-info .name {
+    color: var(--color-gray-dark);
+}
+.vacancy-block {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+    margin-top: 32px;
+}
+.vacancy-block-list {
+    gap: 16px;
+    list-style: inside;
+    padding-left: 4px;
+}
+.vacancy-block .input,
+.vacancy-block .drop-area,
+.vacancy-block .policy {
+    max-width: 520px;
+    width: 100%;
+}
+
 
 /********Responsive**********/
 /* disable hover on touch screen */
