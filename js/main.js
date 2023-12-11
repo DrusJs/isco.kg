@@ -203,7 +203,7 @@ if (menuDropdownElement) {
     } else {
       openModal('#modal-registration')
     }
-    this.parentElement.classList.toggle('js-authentication')
+    //this.parentElement.classList.toggle('js-authentication')
   })
 }
 
