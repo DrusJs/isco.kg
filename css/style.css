@@ -1393,7 +1393,7 @@ input[type="checkbox"].switch:checked + label:before {
 }
 .subcatalog-search {
     border: 1px solid var(--color-gray);
-    padding: 10px 12px;
+    padding: 0px 12px;
     background-color: var(--color-white);
     border-radius: 8px;
     gap: 8px;
@@ -3022,6 +3022,15 @@ a.back {
 }
 .pickup-points__item.active {
     background-color: var(--color-bg);
+}
+.information-container .text {
+    color: var(--color-gray-dark);
+}
+.information-container .title {
+    margin-bottom: 16px;
+}
+.information-container .subtitle {
+    margin-top: 16px;
 }
 
 

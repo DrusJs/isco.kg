@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="images/favicon.webp">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Товары из Китая в Кыргызстан оптом - ISCO</title>
+  </head>
+  <body>
+    <div class="wrapper d-flex flex-column">
+      <div class="notification" id="notification">
+        <img src="images/accept-notice.svg" alt="">
+        <div class="text mediumL">Сохранено</div>
+      </div>
+      <div class="loader" id="loader">
+        <div class="loader-container d-flex flex-column align-items-center">
+          <div class="loader-animate">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="text mediumL">Идет загрузка, подождите</div>
+        </div>
+      </div>
+      <div class="catalog" id="catalog">
+        <div class="container d-flex">
+          <div class="catalog-nav">
+            <h2 class="title d-flex align-items-center justify-content-between">Каталог<div class="close-modal" onclick="closeElement(this)"></div></h2>
+            <div class="catalog-nav-select">
+              <div class="catalog-nav-select__item active" data-block="0"><img src="images/1688.svg" alt="1688"></div>
+              <div class="catalog-nav-select__item" data-block="1"><img src="images/taobaoLogo.svg" alt="taobao"></div>
+              <div class="catalog-nav-select__item" data-block="2"><img src="images/trendyolLogo.svg" alt="trendyol"></div>
+            </div>
+            <div class="catalog-nav-list mobile">
+              <div class="block active">
+                <div class="catalog-nav-list__item boldM">
+                  Для мужчин
+                  <img src="images/catalog-for-man.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для женщин
+                  <img src="images/catalog-for-woman.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для детей
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Все для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Спортивные товары
+                  <img src="images/catalog-for-sport.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Косметика
+                  <img src="images/catalog-for-make.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Книги
+                  <img src="images/catalog-for-books.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Хобби
+                  <img src="images/catalog-for-hobbi.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для авто
+                  <img src="images/catalog-for-cars.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Канцелярские товары
+                  <img src="images/catalog-for-office.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+              </div>
+              <div class="block">
+                <div class="catalog-nav-list__item boldM">
+                  Одежда
+                  <img src="images/catalog-for-clothes.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Обувь
+                  <img src="images/catalog-for-shoose.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для детей
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Красота и здоровье
+                  <img src="images/catalog-for-make.png" alt="">
+                </div> 
+                <div class="catalog-nav-list__item boldM">
+                  Спортивные товары
+                  <img src="images/catalog-for-sport.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для туризма и активного отдыха
+                  <img src="images/catalog-for-travel.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Электроника
+                  <img src="images/catalog-for-tech.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Авто-, мототовары
+                  <img src="images/catalog-for-avtomoto.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Аудио-, видеотехника
+                  <img src="images/catalog-for-audiovideo.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Музыкальные инструменты
+                  <img src="images/catalog-for-music.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для взрослых (18+)
+                  <img src="images/catalog-for-adult.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Декор интерьера, сувениры
+                  <img src="images/catalog-for-decor.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Канцелярские товары
+                  <img src="images/catalog-for-office.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Другие
+                  <div></div>
+                </div>
+              </div>
+              <div class="block">
+                <div class="catalog-nav-list__item boldM">
+                  Аксессуары
+                  <img src="images/catalog-for-acsessories.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для женщин
+                  <img src="images/catalog-for-woman.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для мужчин
+                  <img src="images/catalog-for-man.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Детский мир
+                  <img src="images/catalog-for-children.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Обувь
+                  <img src="images/catalog-for-shoose.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для матери и ребенка
+                  <img src="images/catalog-for-mothers.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Косметика и уход за кожей
+                  <img src="images/catalog-for-make.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Мобильная электроника
+                  <img src="images/catalog-for-mobile.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Автомобильные аксессуары
+                  <img src="images/catalog-for-cars.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  СМИ, радио и телевидение
+                  <img src="images/catalog-for-tvradio.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Защитное снаряжение, оборудование и системы безопасности
+                  <img src="images/catalog-for-protect.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Пакеты, коробки и упаковка
+                  <img src="images/catalog-for-boxes.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для офиса, школы и проведения мероприятий
+                  <img src="images/catalog-for-school.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Электронные компоненты
+                  <img src="images/catalog-for-techcomponent.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Ткань, кожа, пряжа, текстиль
+                  <img src="images/catalog-for-textile.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Промышленность,оборудование и производство
+                  <img src="images/catalog-for-factory.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Инструменты и строительные материалы
+                  <img src="images/catalog-for-build.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Изделия из пластика
+                  <img src="images/catalog-for-plastic.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Сельское хозяйство
+                  <img src="images/catalog-for-garden.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Все для дома
+                  <img src="images/catalog-for-home.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Запчасти для авто- и мототехники
+                  <img src="images/catalog-for-avtomoto.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Средства связи
+                  <img src="images/catalog-for-communicate.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Лекарства. Медицинские препараты и инструменты
+                  <img src="images/catalog-for-medicine.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Спорт, туризм и активный отдых
+                  <img src="images/catalog-for-active.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Для бизнеса
+                  <img src="images/catalog-for-busines.png" alt="">
+                </div>
+                <div class="catalog-nav-list__item boldM">
+                  Товары для взрослых (18+)
+                  <img src="images/catalog-for-adult.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-grid-wraper active">
+            <h2 class="title d-flex align-items-center justify-content-between">Наименование каталога<img class="catalog-close" id="catalog-close" src="images/search-clear.svg" alt=""></h2>
+            <div class="catalog-grid">
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+              <div class="catalog-grid__item">
+                <h4 class="title">Наименнование подкаталога</h4>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+                <a href="#" class="link">Наименование</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="header-panel d-flex justify-content-between">
+          <div class="container d-flex justify-content-between">
+            <div class="lenguage-select js-dropdown-element">
+              <div class="lenguage-select__active">
+                <span class="js-select-field">RU</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.6668 8L10.0002 12L5.3335 8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+              </div>
+              <div class="lenguage-select__dropdown">
+                <div class="lenguage-select__item">KZ</div>
+                <div class="lenguage-select__item">RU</div>              
+                <div class="lenguage-select__item">EU</div>
+              </div>
+            </div>
+            <div class="header-panel__block d-flex align-items-center">
+              <div class="header-panel-notice js-dropdown-element">
+                <div class="header-panel-notice-head" id="notice-dropdown">
+                  <img src="images/notices.svg" alt="">
+                  <span class="notice-count regularS">1</span>
+                </div>
+                <div class="header-panel-notice-dropdown">
+                  <div class="notice-dropdown-nav d-flex align-items-center justify-content-between">
+                    <div class="notice-dropdown-nav__item titleS active" data-style="all">
+                      Все
+                    </div>
+                    <div class="notice-dropdown-nav__item titleS" data-style="read">
+                      Прочитанные
+                    </div>
+                    <div class="notice-dropdown-nav__item titleS" data-style="unread">
+                      Непрочтанные
+                    </div>
+                  </div>
+                  <div class="notice-dropdown-list">
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item unread">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                    <div class="notice-dropdown-list__item read">
+                      <div class="title boldL">Заголовок</div>
+                      <img class="image" src="images/Flag.svg" alt="">
+                      <div class="date regularS">2023-09-18 14:04:29</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-panel__contacts d-flex js-dropdown-element">
+                <div class="header-panel__contacts-head" id="contacts-dropdown">
+                  <img src="images/phone.svg" alt="">
+                  <!-- tel:+996770009933 -->
+                  <a href="#">+996 770009933</a>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.6668 8L10.0002 12L5.3335 8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>  
+                </div>
+                <div class="header-panel__contacts-dropdown">
+                  <div class="contacts-dropdown__item">
+                    <img src="images/header-contact.svg" alt="">
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
+                  </div>
+                  <div class="contacts-dropdown__item">
+                    <img src="images/header-contact.svg" alt="">
+                    <div class="title regularS">Номер телефона</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
+                  </div>
+                  <div class="contacts-dropdown__item">
+                    <img src="images/header-whatsapp.svg" alt="">
+                    <div class="title regularS">Whatsapp</div>
+                    <a href="tel:+996770009933" class="text regularL">+996 770009933</a>
+                  </div>
+                  <div class="contacts-dropdown__item">
+                    <img src="images/header-worktime.svg" alt="">
+                    <div class="title regularS">График работы</div>
+                    <div class="text regularL">
+                      Пн - Пт, с 09:00 до 18:00 (выдача посылок до 20:00)<br>
+                      Сб - с 09:00 до 16:00 (выдача посылок до 18:00)<br>
+                      Вс - Выходной
+                    </div>
+                  </div>
+                  <div class="contacts-dropdown__item">
+                    <img src="images/header-adress.svg" alt="">
+                    <div class="title regularS">Адрес</div>
+                    <div class="text regularL">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-panel__social-links d-flex">
+                <a href="#"><img src="images/telegram.svg" alt=""></a>
+                <a href="#"><img src="images/instagram.svg" alt=""></a>
+                <a href="#"><img src="images/facebook.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-main">
+          <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="header-logo d-flex align-items-center"><img class="contain" src="images/logo.png" alt=""></a>
+            <div class="catalog-main d-flex align-items-center" id="catalog-open">
+              <img src="images/catalog-bars.svg" alt="">
+              Каталог
+            </div>
+            <div class="search-main d-flex align-items-center">
+              <div class="search-main__select js-dropdown-element">
+                <div class="search-main__select-head d-flex align-items-center justify-content-between" id="search-main-dropdown">
+                  <img src="images/1688.svg" alt="">
+                  <img src="images/1688-arrow.svg" alt="">
+                </div>
+                <div class="search-main__select-dropdown">
+                  <h2 class="title align-items-center justify-content-between mobile">
+                    Поиск по порталу
+                    <div class="close-modal" onclick="closeElement(this)"></div>
+                  </h2>
+                  <div class="select-dropdown__item active"><img src="images/1688.svg" alt=""></div>
+                  <div class="select-dropdown__item"><img src="images/taobaoLogo.svg" alt=""></div>
+                  <div class="select-dropdown__item"><img src="images/trendyolLogo.svg" alt=""></div>
+                </div>
+              </div>
+              <img src="images/header-search.svg" alt="">
+              <input type="text" class="search-input mediumL" id="search-input" placeholder="Поиск среди 800 000 000 товаров из Китая">
+              <img class="search-main-clear" id="clear-search" src="images/search-clear.svg" alt="">
+              <div class="search-photo regularS d-flex align-items-center">
+                Поиск по фото
+                <img src="images/search-photo.svg" alt="">
+              </div>
+              <div class="search-main-result" id="search-input-result">
+                <a href="subcatalog.html" class="search-main-result__item regularM memory">
+                  Велосипед
+                </a>
+                <a href="product-various.html" class="search-main-result__item regularM">
+                  <b>Велос</b>ипед
+                </a>
+              </div>
+            </div>
+            <div class="header-buttons d-flex">
+              <a href="#" class="header-buttons__item mediumM mobile">
+                <img src="images/notice-mobile.svg" alt="">
+                <span class="title">Уведомления</span>
+              </a>
+              <a href="basket.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
+                <img src="images/header-cart.svg" alt="">
+                <span class="title">Корзина</span>
+              </a>
+              <a href="favorites.html" class="header-buttons__item mediumM d-flex flex-column align-items-center">
+                <img src="images/header-like.svg" alt="">
+                <span class="title">Избранное</span>
+              </a>
+              <div class="header-buttons__item mediumM js-dropdown-element">
+                <div class="header-buttons__item-head d-flex flex-column align-items-center" id="main-menu">
+                  <img src="images/header-profile.svg" alt="">
+                  <span class="title"></span>
+                </div>
+                <div class="header-buttons__item-dropdown">
+                  <a href="profile-main.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-home.svg" alt="">
+                    Главная
+                  </a>
+                  <a href="profile-info.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-profile.svg" alt="">
+                    Профиль
+                  </a>
+                  <a href="profile-order.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-zakaz.svg" alt="">
+                    Мои заказы
+                  </a>
+                  <a href="profile-wallet.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-wallet.svg" alt="">
+                    Счет
+                  </a>
+                  <a href="profile-adress.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-adress.svg" alt="">
+                    Адреса складов ISCO
+                  </a>
+                  <a href="profile-mail.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-sklad.svg" alt="">
+                    Мои посылки
+                  </a>
+                  <a href="profile-notice.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-notice.svg" alt="">
+                    Уведомления
+                    <span class="notice-count regularS">8</span>
+                  </a>
+                  <a href="profile-help.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-help.svg" alt="">
+                    Служба поддержки
+                  </a>
+                  <a href="profile-find.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-find.svg" alt="">
+                    Отследить посылку
+                  </a>
+                  <a href="profile-settings.html" class="header-buttons__item-dropdown__item mediumL">
+                    <img src="images/menu-setting.svg" alt="">
+                    Настройки
+                  </a>
+                  <a class="header-buttons__item-dropdown__item mediumL">
+                    Выйти
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+            <h2 class="title mt-4 mb-4">Магазины</h2>
+            <div class="d-flex gap-3">
+                <div class="store-list">
+                    <h3 class="title">Каталог</h3>
+                    <div class="store-list__item active">Одежда, обувь и аксессуары</div>
+                    <div class="store-list__item">Онлайн Молл</div>
+                    <div class="store-list__item">Здоровье и красота</div>
+                    <div class="store-list__item">Украшения и подарки</div>
+                    <div class="store-list__item">Электроника и аксессуары</div>
+                    <div class="store-list__item">Детская одежда и игрушки</div>
+                </div>
+                <div class="store-main">
+                    <div class="profile-adress-nav d-flex gap-3 mb-2">
+                        <div class="profile-adress-nav__item titleS active">
+                          Все
+                        </div>
+                        <div class="profile-adress-nav__item titleS">
+                          США    
+                        </div>
+                        <div class="profile-adress-nav__item titleS">
+                          Турция
+                        </div>
+                        <div class="profile-adress-nav__item titleS">
+                          Китай
+                        </div>
+                        <div class="profile-adress-nav__item titleS">
+                          Европа
+                        </div>
+                      </div>
+                </div>
+                <div class="store-search">
+                    
+                </div>
+            </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container d-flex justify-content-between">
+          <ul class="footer-list">
+            <li class="footer-list__item header boldL">Покупателям</li>
+            <li class="footer-list__item mediumM"><a href="#">Как сделать заказ</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Способы оплаты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Доставка</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вопросы и ответы</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Список запрещенных товаров из Китая</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Помощь при выборе товара</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пользовательское соглашение</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Магазины</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li class="footer-list__item header boldL">Партенрам</li>
+            <li class="footer-list__item mediumM"><a href="#">Франшиза</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li class="footer-list__item header boldL">Компания</li>
+            <li class="footer-list__item mediumM"><a href="#">О нас</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Вакансии</a></li>
+            <li class="footer-list__item mediumM"><a href="contacts.html">Контакты</a></li>
+            <li class="footer-list__item mediumM"><a href="#">Пункты выдачи заказов</a></li>
+          </ul>
+          <ul class="footer-list mobile">
+            <li class="footer-list__item header boldL">Контакты</li>
+            <div class="contacts-dropdown dark">
+              <div class="contacts-dropdown__item">
+                <img src="images/header-contact.svg" alt="">
+                <div class="title">Номер телефона</div>
+                <a href="tel:+996770009933" class="text">+996 770009933</a>
+              </div>
+              <div class="contacts-dropdown__item">
+                <img src="images/header-contact.svg" alt="">
+                <div class="title">Номер телефона</div>
+                <a href="tel:+996770009933" class="text">+996 770009933</a>
+              </div>
+              <div class="contacts-dropdown__item">
+                <img src="images/header-whatsapp.svg" alt="">
+                <div class="title">Whatsapp</div>
+                <a href="tel:+996770009933" class="text">+996 770009933</a>
+              </div>
+              <div class="contacts-dropdown__item">
+                <img src="images/header-worktime.svg" alt="">
+                <div class="title">График работы</div>
+                <div class="text">
+                  Пн - Пт, с 09:00 до 18:00 (выдача посылок до 20:00)<br>
+                  Сб - с 09:00 до 16:00 (выдача посылок до 18:00)<br>
+                  Вс - Выходной
+                </div>
+              </div>
+              <div class="contacts-dropdown__item">
+                <img src="images/header-adress.svg" alt="">
+                <div class="title">Адрес</div>
+                <div class="text">Орозбекова 2/3 пересекает Линейная. Офис #1</div>
+              </div>
+          </div>
+          </ul>
+          <div class="app-buttons d-flex">
+            <a href="#"><img src="images/GooglePlay.svg" alt="GooglePlay"></a>
+            <a href="#"><img src="images/AppStore.svg" alt="AppStore"></a>
+          </div>
+          <div class="footer-social-links d-flex">
+            <a href="#"><img src="images/telegram.svg" alt=""></a>
+            <a href="#"><img src="images/instagram.svg" alt=""></a>
+            <a href="#"><img src="images/facebook.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="container copyright">
+          <div class="text regularS">© 2021–2023 Поиск и доставка товаров из Китая</div>
+          <div class="text regularS">Powered by © OT Commerce otcommerce.com</div>
+        </div>
+      </footer>
+      <div class="modal-wrapper" id="modal-registration">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Регистрация
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <form action="">
+            <div class="modal-input input">
+              <div class="required regularS">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Номер телефона</div>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required regularS">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required regularS">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Повторите пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span>Использовать логин друга</span>
+              <input type='checkbox' class='switch' id='checkbox-1'>
+              <label for='checkbox-1'></label>
+            </div>
+            <label class="checkbox-primary caption">
+              Я принимаю <div class="agreement" onclick="openModal('#modal-user-agreement', false)">Условия пользовательского соглашения</div>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <input class="primary-button fill" type="button" value="Продолжить" onclick="openModal('#modal-registration-code')">
+          </form>
+          <button class="change-modal mediumL" onclick="openModal('#modal-login')">Войти</button>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-user-agreement">
+        <div class="modal mobile-fill-none">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Пользовательское соглашение
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-agreement regularL">
+            Глава 1. Термины и определения.
+            В целях надлежащего толкования условий пользовательского соглашения нижеприведенные термины используются в следующем значении:
+            Исполнитель – Общество с ограниченной ответственностью «Иско Маркет» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 208676-3301-ООО, код ОКПО 31559310, ИНН 01708202210345, серия ГРЮ 0083217 от 17 августа 2022 года.
+            Соисполнитель – Общество с ограниченной ответственностью «Иско Экспресс» зарегистрированное по адресу: Кыргызская Республика, г. Бишкек, ул. Максима Горького, д.1 Г, регистрационный номер 158265-3301-ООО, код ОКПО 29406444, ИНН 02504201610160, серия ГРЮ 0048019 от 7 мая 2021 года.
+            Поставщик – Компания на территории КНР - «Yiwu Baqi Trade Co Ltd» , адрес: Room 702, No 1137 Gonreng North Road, Futian Street, Yiwu city, Jinhua city, Zhejiang Province, China, являющаяся представителем предпринимателей на территории КНР осуществляющих свою коммерческую деятельность по реализации продукции, посредством размещения публикаций и другой информации в интернет-магазинах https://world.taobao.com , https://www.1688.com с описанием на китайском языке.
+            Партнеры – Исполнитель, Соисполнитель и Поставщик.
+            Партнерское соглашение – Заключенный Договор о сотрудничестве № 001/22-Д от «01» сентября 2022 года, между Исполнителем, Соисполнителем и Поставщиком в своих интересах и в целях извлечения прибыли на условиях Договора о сотрудничестве № 001/22-Д от «01» сентября 2022 года и настоящего Пользовательского соглашения.
+            Пользователь – физическое лицо, обладающее полной дееспособностью, добровольно прошедшее Регистрацию и заключившее Пользовательское соглашение.
+            Пользовательское соглашение – публичное предложение Партнеров, адресованное Пользователю, заключить с ними договор на существующих условиях, содержащихся в настоящем Пользовательском соглашении, включая все его приложения.
+            Заказчик – Пользователь.
+            Сайт – Программное обеспечение, являющееся личным неимущественным правом интеллектуальной собственности Исполнителя – https://isco.kg, предназначенное для предоставления услуг Исполнителем, Пользователям согласно функциональным возможностям Программного обеспечения.
+            Программное обеспечение – это совокупность программных и документальных средств Сайта, систем обработки данных средствами вычислительной техники, разработанное и принадлежащее Исполнителю.
+            Исходный код – текст Программного обеспечения на каком-либо языке программирования.
+            Стороны – Исполнитель, Соисполнитель, Поставщик, Пользователь.
+            Товар – продукция, предлагаемая к продаже Поставщиком, информация о которой представлена на Сайте на русском языке.
+            Услуги сайтом – Исполнитель оказывает услуги Заказчику по предоставлению Сайта, посредством которого осуществляется Заказ Товаров в интересах Заказчика на условиях настоящего Пользовательского соглашения.
+            Услуги доставки – Соисполнитель предоставляет услуги по доставке Товаров Заказчику.
+            Услуги поставки – Поставщик предлагает услуги поставки Товаров, которые заказаны Пользователем.
+            Услуги – Услуги сайтом, Услуги доставки, Услуги поставки.
+            Регистрация — процедура, в ходе которой Заказчик посредством Сайта предоставляет Исполнителю информацию, необходимую для оказания Услуг сайтом. Регистрация считается завершенной только в случае успешного прохождения всех ее этапов в соответствии с опубликованными на Сайте инструкциями. По итогам Регистрации создается учетная запись Пользователя, лицевой счет и личный кабинет. Сообщенная при регистрации информация может быть впоследствии изменена Пользователем.
+            Личный кабинет — персональный и не доступный третьим лицам раздел Сайта, доступ к которому осуществляется Заказчиком путем ввода личных логина — имени доступа и пароля — кода доступа, и который содержит информацию о заказах Заказчика, их оплате, исполнении и состоянии лицевого счета, а также предоставляет функциональную возможность удаленного взаимодействия Сторон при исполнении своих обязательств.            
+            <div class="primary-button fill fit" onclick="closeModal(this)">Ознакомлен</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-registration-code">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Подтверждение
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-phone-number mediumL">
+            Код отправлен на номер<br>
+            +996 (505) 396-999 <span class="change-number mediumM">Изменить</span>
+          </div>
+          <div class="modal-code">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+            <input class="modal-code__item titleM" type="text">
+          </div>
+          <div class="modal-error regularM">Неверный код</div>
+          <div class="primary-button fill disabled" onclick="openModal('#modal-registration-complete')">Продолжить</div>
+          <div class="code-timer"> 00:59 </div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-registration-complete">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Регистрация прошла успешно!
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <p class="modal-text regularL">
+            Поздравляем! Вам присвоен уникальный код клиента. 
+            Теперь вы можете совершать покупки на нашем сайте. Для входа на сайт используйте регистрационные данные, они были высланы вам на почту. Вся необходимая информация доступна в вашем личном кабинете.
+          </p>
+          <p class="modal-text regularL">
+            Для начала вам необходимо заполнить ваш профиль. Для этого перейдите во вкладку “Профиль”. Заполните все поля. Видеоинструкция по заполению профиля: <a href="https://www.youtube.com/watch?v=p9vgBU3CpWE" class="link">https://www.youtube.com/watch?v=p9vgBU3CpWE</a>
+          </p>
+          <p class="modal-text regularL">
+            После заполнения профиля вам станут доступны адреса наших складов, они размещены во вкладке “Мои адреса”.
+            Как пользоваться системой отслеживания на сайте описано в этой видеоинструкции: <a href="https://youtu.be/r3ir-ByT7ME" class="link">https://youtu.be/r3ir-ByT7ME</a>
+          </p>
+          <p class="modal-text regularL">
+            Во вкладке “Счет” вы можете заранее пополнить свой лицевой счет, средства на вашем счету вы можете использовать для осуществления заказов на сайте. Важно! Средства на вашем счету на сайте вы можете использовать только в счет оплаты ваших заказов и покупок, вывод средств не предусмотрен. Способы оплаты описаны в разделе: <a href="https://isco.kg/Sposoby-oplaty" class="link">https://isco.kg/Sposoby-oplaty.</a> Или вы можете произвести оплату после оформления заказа в корзине.
+          </p>
+          <p class="modal-text regularL">
+            Как осуществлять заказ подробно описано в статье: <a href="https://isco.kg/how_to_order" class="link">https://isco.kg/how_to_order.</a>
+          </p>
+          <p class="modal-text regularL">
+            Если вы столкнулись с проблемами или трудностями, то вы можете написать в службу поддержки, используя вкладку “Служба поддержки”: <a href="https://isco.kg/support" class="link">https://isco.kg/support.</a> Также вы можете обратиться по всем интересующим вопросам по номерам, указанным в контактах на сайте.
+          </p>
+          <p class="modal-text regularL">
+            Желаем вам приятных покупок!
+          </p>
+          <div class="primary-button fill fit auto" onclick="closeModal(this)">Начать делать покупки</div>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-login">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Войти
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="modal-auth-method d-flex align-items-center justify-content-center">
+            <div class="modal-auth-method__item titleS active" data-method="email">По E-mail</div>
+            <div class="modal-auth-method__item titleS" data-method="phone">По номеру телефона</div>
+          </div>
+          <form action="">
+            <div class="modal-input input email">
+              <div class="required regularS"></div>
+              <div class="field">
+                <div class="title">E-mail</div>
+                <input type="email" required>
+              </div>
+            </div>
+            <div class="modal-input input phone">
+              <div class="required regularS"></div>
+              <div class="field">
+                <div class="title">Номер телефона</div>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="modal-input input">
+              <div class="required regularS"></div>
+              <div class="field">
+                <div class="title">Пароль</div>
+                <input type="password" required>
+                <img class="show-password" src="images/input-pass-show.svg" alt="">
+              </div>
+            </div>
+            <div class="pass-reset mediumS" onclick="openModal('#modal-reset-password')">Забыли пароль?</div>
+            <label class="checkbox-primary caption">
+              Запомнить меня
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <input class="primary-button fill" type="button" value="Продолжить">
+          </form>
+          <button class="change-modal mediumL" onclick="openModal('#modal-registration')">Зарегистрироваться</button>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-reset-password">
+        <div class="modal">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Восстановление пароля
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <form action="">
+            <div class="modal-input input email">
+              <div class="required regularS"></div>
+              <div class="field">
+                <div class="title">Ваш e-mail или номер телефона</div>
+                <input type="email" required>
+              </div>
+            </div>
+            <input class="primary-button fill" type="button" value="Продолжить">
+          </form>
+        </div>
+      </div>
+    </div>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/swiper-bundle.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
