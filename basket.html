@@ -577,12 +577,12 @@
             <img src="images/no-basket.svg" alt="">
             <h3 class="title">В корзине еще нет добавленных товаров</h3>
           </div>
-          <div class="catalog-nav-select mt-3">
+          <div class="catalog-nav-select justify-content-start mt-3">
             <div class="catalog-nav-select__item active"><img src="images/1688.svg" alt=""></div>
             <div class="catalog-nav-select__item"><img src="images/taobaoLogo.svg" alt=""></div>
             <div class="catalog-nav-select__item"><img src="images/trendyolLogo.svg" alt=""></div>
           </div>
-          <div class="basket-wrapper d-flex justify-content-between align-items-start">
+          <div class="basket-wrapper d-flex justify-content-between align-items-lg-start align-items-center flex-lg-row flex-column">
             <div class="basket">
               <div class="basket-action d-flex justify-content-between">
                 <label class="checkbox-primary">
@@ -836,7 +836,7 @@
               <div class="select-primary-dropdown__item mediumM">Дисковые тормоза -четыре режущий диск - красный / 碟刹-三刀轮-黑色</div>
             </div>
           </div>
-          <button class="primary-button fill disabled" onclick="closeModal(this)">Изменить</button>
+          <button class="primary-button fill" onclick="closeModal(this), showNotification('Конфигурация изменена')">Изменить</button>
         </div>
       </div>
       <div class="modal-wrapper" id="modal-registration">

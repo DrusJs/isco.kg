@@ -1979,6 +1979,7 @@ h2.title.price .subprice {
 }
 .empty-container .title {
     color: var(--color-gray-dark);
+    text-align: center;
 }
 
 .favorites-container {
@@ -2182,7 +2183,7 @@ h2.title.price .subprice {
 .select-primary {
     width: 100%;
     height: 48px;
-    padding: 4px 12px;
+    padding: 4px 38px 4px 12px;
     border: 1px solid var(--color-gray);
     border-radius: 8px;
     background-image: url(../images/1688-arrow.svg);
@@ -2190,6 +2191,10 @@ h2.title.price .subprice {
     background-position: right 12px top 11px;
     background-size: 28px;
     position: relative;
+}
+.select-primary .value {
+    white-space: nowrap;
+    overflow: hidden;
 }
 .select-primary.calendar {
     background-image: url(../images/calendar.svg);
@@ -2399,6 +2404,7 @@ h2.title.price .subprice {
     font-family: var(--font-medium);
     font-size: 16px;
     line-height: 24px;
+    flex-basis: 60%;
 }
 .delivery-row .text {
     color: var(--color-dark);
@@ -2411,11 +2417,14 @@ h2.title.price .subprice {
     font-family: var(--font-bold);
     color: var(--color-dark);
 }
+.payment-block {
+    margin-right: 32px;
+}
 .radio-primary.block {
     padding: 16px 16px 16px 42px;
     border-radius: 8px;
     max-width: 720px;
-    width: 720px;
+    width: 100%;
     border: 1px solid var(--color-gray-light);
     position: relative;
     user-select: none;
@@ -3257,7 +3266,7 @@ a.back {
 
 /********Responsive**********/
 /* disable hover on touch screen */
-@media (min-width:  767.98px) {
+@media (min-width: 991.98px) {
     .main-grid__item:hover .fast-view {
         bottom: 0;
     }
@@ -3320,6 +3329,9 @@ a.back {
         overflow-y: hidden;
         max-height: 520px;
     }
+    .profile-grid {
+        grid-template-columns: repeat(2, 242px);
+      }
 }
 
 @media (max-width: 1199.98px) {
@@ -3349,6 +3361,10 @@ a.back {
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.48px; 
+    }
+    .basket-form {
+        max-width: none;
+        margin-top: 32px;
     }
     .title .basket-total {
         font-size: 12px;
@@ -3422,6 +3438,9 @@ a.back {
     .about-container {
         flex-direction: column;
     }
+    .profile-order-block__item .block-img {
+        margin-top: 24px;
+    }
     .main-grid.seller {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -3441,6 +3460,9 @@ a.back {
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.48px; 
+    }
+    h1.title {
+        display: none !important;
     }
     .notification {
         top: auto;
@@ -3488,6 +3510,10 @@ a.back {
         max-width: 452px;
         margin-top: 12px;
         padding-left: 0px;
+    }
+    .empty-container .title {
+        font-size: 16px;
+        line-height: 24px;
     }
     .contacts-dropdown__item img {
         margin-left: 0;
@@ -3646,7 +3672,7 @@ a.back {
     }
     .favorites-nav__item {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 16px;
         font-family: var(--font-regular);
     }
     .main-grid__item {
@@ -3671,6 +3697,12 @@ a.back {
     .main-grid.seller {
         grid-template-columns: repeat(2, 1fr);
     }
+    .main-grid__item.seller .name {
+        padding: 8px 0px 0px;
+    }
+    .main-grid__item.seller .value {
+        padding: 0;
+    }
 
     .blog-container__item, .blog-container__item img {
         max-width: 296px;
@@ -3682,6 +3714,12 @@ a.back {
         flex-wrap: nowrap;
         flex-direction: column;
         gap: 32px;
+    }
+    .basket-action .remove {
+        margin-right: 32px;
+    }
+    .basket-action .remove, .basket-action .add-fav {
+        font-size: 0;
     }
     .app-buttons {
         order: 1;
@@ -3746,6 +3784,9 @@ a.back {
         padding-top: 56px;
         /* justify-content: center; */
     }
+    .modal .select-primary {
+        width: 100%;
+    }
     #modal-reset-password .modal, #modal-login .modal {
         padding-top: 112px;
     }
@@ -3769,6 +3810,25 @@ a.back {
     }
     .modal-input {
         width: 100%;
+    }
+    .order-steps {
+        justify-content: center;
+    }
+    .order-steps__item {
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 85px;
+        width: 138px;
+        position: relative;
+    }
+    .order-steps__item .name {
+        white-space: nowrap;
+    }
+    .order-steps__item::before {
+        width: 32px;
+        position: absolute;
+        left: -24px;
+        top: 52px;
     }
     .map-container {
         border-radius: 0px;
@@ -3811,5 +3871,8 @@ a.back {
     .main-grid__item.favorite, .main-grid__item.favorite img {
         width: 140px;
         min-height: auto;
-    } 
+    }
+    .empty-container .title {
+        max-width: 260px;
+    }
 }
