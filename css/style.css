@@ -854,6 +854,9 @@ h3.title, .titleM {
 .main-grid__item img {
     border-radius: 8px;
 }
+.main-grid__item .price {
+    color: var(--color-dark);
+}
 .main-grid__item .fast-view {
     text-align: center;
     width: 100%;
@@ -1542,6 +1545,7 @@ input[type="checkbox"].switch:checked + label:before {
     margin: 0 6px;
     background: var(--color-gray-light);
     height: 2px;
+    position: relative;
 }
 .noUi-connect {
     background: var(--color-primary);

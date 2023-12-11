@@ -389,7 +389,7 @@ if (subcatalogFilterDropdownElements.length) {
 
   var sliderFilter = document.getElementById('noUiSlider');
   noUiSlider.create(sliderFilter, {
-      start: [0, 90000],
+      start: [90000, 90000],
       connect: true,    
       behaviour: 'snap',
       step: 1,
@@ -399,6 +399,7 @@ if (subcatalogFilterDropdownElements.length) {
       }
   });
   sliderFilter.noUiSlider.on('update', function () { 
+    console.log(1);
     sliderFilter.previousElementSibling.firstElementChild.value = Math.floor(sliderFilter.noUiSlider.get(true)[0])
     sliderFilter.previousElementSibling.lastElementChild.value = Math.floor(sliderFilter.noUiSlider.get(true)[1])
   });
