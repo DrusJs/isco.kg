@@ -389,7 +389,7 @@ if (subcatalogFilterDropdownElements.length) {
 
   var sliderFilter = document.getElementById('noUiSlider');
   noUiSlider.create(sliderFilter, {
-      start: [90000, 90000],
+      start: [6000, 84000],
       connect: true,    
       behaviour: 'snap',
       step: 1,
