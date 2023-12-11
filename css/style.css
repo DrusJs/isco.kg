@@ -2931,6 +2931,23 @@ a.back {
 .grid-find-order .name {
     color: var(--color-gray-dark);
 }
+.profile-help__item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.profile-help__item .date, .profile-help__item .help-status {
+    color: var(--color-gray);
+}
+.profile-help__item .help-status .help-wait {
+    color: var(--color-dark);
+}
+.profile-help__item .help-status .help-accept {
+    color: var(--color-green);
+}
 
 .modal-current-mail-container {
     padding: 12px;
@@ -2987,6 +3004,8 @@ a.back {
 .pickup-points__item.active {
     background-color: var(--color-bg);
 }
+
+
 
 
 /********Responsive**********/
