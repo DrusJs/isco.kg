@@ -2527,6 +2527,7 @@ h2.title.price .subprice {
 }
 .profile-container {
     width: 100%;
+    max-width: 1000px;
 }
 .profile-menu {
     min-width: 220px;
