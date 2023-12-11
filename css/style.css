@@ -1365,6 +1365,20 @@ input[type="checkbox"].switch:checked + label:before {
     background-color: var(--color-gray);
     border-radius: 4px;
 }
+.modal-check-quest {
+    max-width: 1000px;
+}
+.modal-check-quest .date, .modal-check-quest .title:not(h2) {
+    color: var(--color-gray-dark);
+}
+.check-quest-answer {
+    background-color: var(--color-bg);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
 /***********subcatalog.html*********/
 
