@@ -3460,6 +3460,9 @@ a.back {
     .about-block {
         text-align: left;
     }
+    .delete-notice {
+        font-size: 0;
+    }
     .about-wrapper .image.mobile-none {
         display: none;
     }
@@ -3810,6 +3813,9 @@ a.back {
     .copyright {
         margin-top: 32px;
     }
+    .delete-notice {
+        display: none !important;
+    } 
     .blog-banner-img {
         width: calc(100% + 32px);
         margin-left: -16px;
@@ -3848,7 +3854,7 @@ a.back {
     .profile-adress-storage .copy-adress img {
         display: none;
     }
-    .profile-adress-nav__item {
+    .notice-dropdown-nav__item {
         color: var(--color-gray);
         padding: 4px 12px;
         font-size: 16px;
@@ -3856,10 +3862,19 @@ a.back {
         font-family: var(--font-regular);
         border: 1px solid var(--color-gray);
         border-radius: 18px;
-        transition: 300ms ease-in-out;
-        cursor: pointer;
     }
-    .profile-adress-nav__item.active {
+    .profile-adress-nav__item,
+    .notice-dropdown-nav__item {
+        color: var(--color-gray);
+        padding: 4px 12px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: var(--font-regular);
+        border: 1px solid var(--color-gray);
+        border-radius: 18px;
+    }
+    .profile-adress-nav__item.active,
+    .notice-dropdown-nav__item.active {
         color: var(--color-white);
         border: 1px solid var(--color-primary);
         background-color: var(--color-primary);
