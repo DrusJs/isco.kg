@@ -2462,14 +2462,17 @@ h2.title.price .subprice {
 }
 .radiomark {
     display: inline-block;
-    position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    top: 18px;
-    left: 16px;
+
     border: 2px solid var(--color-gray);
     transition: 200ms ease-in-out;
+}
+.block .radiomark {
+    top: 18px;
+    left: 16px;
+    position: absolute;
 }
 .radio-primary input:checked ~ .radiomark {
     box-shadow: inset 0px 0px 0 3px var(--color-primary);
@@ -2579,6 +2582,11 @@ h2.title.price .subprice {
     color: var(--color-gray-dark);
     transition: 200ms ease-in-out;
     cursor: pointer;
+}
+.profile-menu__item .value {
+    color: var(--color-gray-dark);
+    width: fit-content;
+    margin-left: auto;
 }
 
 .profile-menu__item.active {

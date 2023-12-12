@@ -576,7 +576,7 @@
             <h1 class="title">Личный кабинет</h1>
             <div class="profile-wrapper d-flex justify-content-between gap-3">
                 <div class="profile-menu main d-flex flex-column">
-                    <a href="profile-main.html" class="profile-menu__item active">
+                    <a href="profile-main.html" class="profile-menu__item d-md-block d-none active">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 20L4 20" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M4 11.1992L10.5007 5.99857C11.3773 5.29735 12.6227 5.29735 13.4993 5.99857L20 11.1992" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -596,6 +596,15 @@
                         </svg>                            
                         Профиль
                       </a>
+                      <a href="currency-mobile.html" class="profile-menu__item d-md-none d-flex">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 13.5992C4 10.5822 4 9.07374 4.93726 8.13648C5.87452 7.19922 7.38301 7.19922 10.4 7.19922H13.6C16.617 7.19922 18.1255 7.19922 19.0627 8.13648C20 9.07374 20 10.5822 20 13.5992C20 16.6162 20 18.1247 19.0627 19.062C18.1255 19.9992 16.617 19.9992 13.6 19.9992H10.4C7.38301 19.9992 5.87452 19.9992 4.93726 19.062C4 18.1247 4 16.6162 4 13.5992Z" stroke="#1E1E2A" stroke-width="1.5"/>
+                          <path d="M15.2 7.2C15.2 5.69151 15.2 4.93726 14.7314 4.46863C14.2627 4 13.5085 4 12 4C10.4915 4 9.73726 4 9.26863 4.46863C8.8 4.93726 8.8 5.69151 8.8 7.2" stroke="#1E1E2A" stroke-width="1.5"/>
+                          <path d="M12 16.2651C12.8837 16.2651 13.6 15.6682 13.6 14.9318C13.6 14.1954 12.8837 13.5984 12 13.5984C11.1163 13.5984 10.4 13.0015 10.4 12.2651C10.4 11.5287 11.1163 10.9318 12 10.9318M12 16.2651C11.1163 16.2651 10.4 15.6682 10.4 14.9318M12 16.2651V16.7984M12 10.3984V10.9318M12 10.9318C12.8837 10.9318 13.6 11.5287 13.6 12.2651" stroke="#1E1E2A" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>                          
+                        Валюта
+                        <span class="value mediumL d-md-none d-block">Сом</span>
+                      </a>
                       <a href="profile-order.html" class="profile-menu__item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.8622 5.10557L16.4622 5.94522C18.1835 6.84853 19.0442 7.30019 19.5221 8.11179C20 8.9234 20 9.93334 20 11.9532V12.0468C20 14.0667 20 15.0766 19.5221 15.8882C19.0442 16.6998 18.1835 17.1515 16.4622 18.0548L14.8622 18.8944C13.4577 19.6315 12.7554 20 12 20C11.2446 20 10.5423 19.6315 9.13783 18.8944L7.53783 18.0548C5.8165 17.1515 4.95583 16.6998 4.47792 15.8882C4 15.0766 4 14.0667 4 12.0468V11.9532C4 9.93334 4 8.9234 4.47792 8.11179C4.95583 7.30019 5.8165 6.84853 7.53783 5.94521L9.13783 5.10557C10.5423 4.36852 11.2446 4 12 4C12.7554 4 13.4577 4.36852 14.8622 5.10557Z" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
@@ -611,6 +620,7 @@
                             <path d="M17.2 14.4004L17.2 9.60039" stroke="#626C7A" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>                            
                         Счет
+                        <span class="value mediumL d-md-none d-block">№252141</span>
                       </a>
                       <a href="profile-adress.html" class="profile-menu__item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
