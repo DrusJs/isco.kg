@@ -4026,6 +4026,18 @@ a.back {
     .about-logos img {
         width: 90px;
     }
+    .profile-grid__item .text-bold {
+        font-size: 12px;
+        line-height: 16px;
+        font-family: var(--font-medium);
+    }
+    .profile-grid__item .percent {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .profile-grid__item.mobile-height {
+        max-height: 80px;
+    }
 }
 
 @media (max-width: 380px) {
