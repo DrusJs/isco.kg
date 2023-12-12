@@ -377,9 +377,12 @@ img.contain {
 .notice-dropdown-list {
     margin-top: 24px;
     overflow-y: auto;
+    max-height: 388px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    max-height: 388px;
+}
+.notice-dropdown-list::-webkit-scrollbar {
+    display: none;
 }
 .notice-list {
 
@@ -2420,6 +2423,9 @@ h2.title.price .subprice {
 .payment-block {
     margin-right: 32px;
 }
+.radio-primary {
+    position: relative;
+}
 .radio-primary.block {
     padding: 16px 16px 16px 42px;
     border-radius: 8px;
@@ -2737,6 +2743,9 @@ h2.title.price .subprice {
     color: var(--color-gray-dark);
     margin-bottom: 10px;
 }
+.settings-group .lenguage {
+    color: var(--color-gray-dark);
+}
 .settings-group {
     background-color: var(--color-bg);
     border-radius: 8px;
@@ -2881,7 +2890,7 @@ a.back {
 }
 .profile-adress-conditions .grid {
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: 1.5fr 0.7fr;
     gap: 12px 100px;
 }
 
@@ -2933,9 +2942,11 @@ a.back {
 }
 .payment-history-cell.up {
     color: var(--color-green);
+    white-space: nowrap;
 }
 .payment-history-cell.down {
     color: var(--color-red);
+    white-space: nowrap;
 }
 .wallet-up-cards .cards-list img {
     cursor: pointer;
@@ -3461,6 +3472,12 @@ a.back {
     .about-container {
         flex-direction: column;
     }
+    .profile-wallet-block {
+        width: 100%;
+    }
+    .select-primary.calendar.fit {
+        width: 158px;
+    }
     .profile-order-block__item .block-img {
         margin-top: 24px;
     }
@@ -3797,6 +3814,55 @@ a.back {
         width: calc(100% + 32px);
         margin-left: -16px;
         border-radius: 0;
+    }
+    .profile-wrapper .profile-menu {
+        display: none !important;
+    }
+    .profile-adress-nav {
+        overflow-x: auto;    
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .profile-adress-nav::-webkit-scrollbar {
+        display: none;
+    }
+    .profile-adress-storage .grid,
+    .profile-adress-conditions .grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-adress-storage .grid {
+        padding-bottom: 64px;
+    }
+    .profile-adress-storage .copy-adress {
+        top: auto;
+        left: 16px;
+        bottom: 16px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .profile-adress-storage .copy-adress img {
+        display: none;
+    }
+    .profile-adress-nav__item {
+        color: var(--color-gray);
+        padding: 4px 12px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: var(--font-regular);
+        border: 1px solid var(--color-gray);
+        border-radius: 18px;
+        transition: 300ms ease-in-out;
+        cursor: pointer;
+    }
+    .profile-adress-nav__item.active {
+        color: var(--color-white);
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-primary);
     }
     /*модал*/
     .modal-wrapper {
