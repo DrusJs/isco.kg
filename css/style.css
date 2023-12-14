@@ -1457,6 +1457,11 @@ input[type="checkbox"].switch:checked + label:before {
 .subcatalog-category-overflow::-webkit-scrollbar {
     display: none;
 }
+.mobile-filter {
+    border-bottom: 1px solid var(--color-gray-light);
+    padding: 16px 24px;
+    margin-bottom: 16px;
+}
 .subcatalog-filter-accordion-head {
     font-family: var(--font-bold);
     color: var(--color-dark);
@@ -3793,7 +3798,29 @@ a.back {
         justify-content: center;
     }
     .subcatalog-filter {
-        display: none !important;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        background-color: var(--color-white);
+        transition: 260ms ease-in-out;
+        z-index: 10;
+    }
+    .subcatalog-filter.active {
+        left: 0;
+    }
+    .hide-filter, .reset-filter {
+        cursor: pointer;
+    }
+    .reset-filter {
+        color: var(--color-primary);
+    }
+    .reset-filter.disabled {
+        color: var(--color-gray-dark);
+    }
+    .subcatalog-filter-accordion {
+        padding: 0 16px;
     }
     .main-grid:has(.favorite) {
         grid-template-columns: repeat(3, 1fr);
