@@ -36,6 +36,9 @@ function openModal(id, isClose = true) {
 
 function changeOrderStep(now, isNext) {
   let steps = document.querySelectorAll('.order-steps__item')
+  if (window.matchMedia("(max-width: 758px)").matches) {
+    document.querySelector('header.header').scrollIntoView({ block: "start", behavior: "smooth" });
+  }
   if (isNext) {
     steps[now-1].classList.remove('active')
     steps[now-1].classList.add('complete')
@@ -70,6 +73,7 @@ if (catalogElement) {
 
   catalogCloseElement.addEventListener('click', function() {
     catalogElement.classList.remove('active')
+    catalogElement.classList.remove('js-subcatalog')
     document.body.classList.remove('no-scroll')
   })
 
