@@ -4065,4 +4065,12 @@ a.back {
     .empty-container .title {
         max-width: 260px;
     }
+    .catalog-nav-list.mobile {
+        width: 306px;
+    }
+    .catalog-nav-list.mobile .catalog-nav-list__item {
+        width: 140px;
+        min-width: 140px;
+        height: 160px;
+    }
 }
