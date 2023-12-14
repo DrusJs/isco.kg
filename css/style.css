@@ -3800,9 +3800,12 @@ a.back {
     .subcatalog-filter {
         position: absolute;
         left: -100%;
-        top: 0;
+        top: 58px;
         width: 100%;
+        height: calc(100vh - 53px - 80px);
+        padding: 16px 0;
         max-width: none;
+        overflow: scroll;
         background-color: var(--color-white);
         transition: 260ms ease-in-out;
         z-index: 10;
@@ -3818,6 +3821,20 @@ a.back {
     }
     .reset-filter.disabled {
         color: var(--color-gray-dark);
+    }
+    .filter-button-container {
+        border-top: 1px solid var(--color-gray-light);
+        padding: 16px;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        background-color: var(--color-white);
+    }
+    .mobile-filter {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        background-color: var(--color-white);
     }
     .subcatalog-filter-accordion {
         padding: 0 16px;
