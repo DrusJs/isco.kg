@@ -4045,6 +4045,9 @@ a.back {
     .profile-grid__item.mobile-height {
         max-height: 80px;
     }
+    .settings-group {
+        width: 100%;
+    }
 }
 
 @media (max-width: 380px) {
