@@ -521,7 +521,7 @@ img.contain {
 
 .search-main {
     border: 1px solid var(--color-gray);
-    padding: 0 12px;
+    padding: 1px 12px;
     background-color: var(--color-white);
     border-radius: 8px;
     gap: 8px;
@@ -1399,7 +1399,7 @@ input[type="checkbox"].switch:checked + label:before {
 }
 .subcatalog-search {
     border: 1px solid var(--color-gray);
-    padding: 0px 12px;
+    padding: 1px 12px;
     background-color: var(--color-white);
     border-radius: 8px;
     gap: 8px;
@@ -1407,6 +1407,25 @@ input[type="checkbox"].switch:checked + label:before {
     max-width: 822px;
     position: relative;
     margin-top: 32px;
+}
+.subcatalog-header.mobile {
+    display: none !important;
+    gap: 16px;
+}
+.subcatalog-category-overflow {
+    margin-top: 16px;
+}
+.subcatalog-category-overflow__item {
+    padding: 4px 12px;
+    border: 1px solid var(--color-gray);
+    border-radius: 20px;
+    color: var(--color-gray);
+    transition: 260ms ease-in-out;
+}
+.subcatalog-category-overflow__item.active {
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
 }
 .subcatalog-container {
     margin-top: 32px;
@@ -1424,6 +1443,19 @@ input[type="checkbox"].switch:checked + label:before {
     gap: 32px;
     max-width: 244px;
     width: 100%;
+}
+.subcatalog-category-overflow {
+    display: none;
+    align-items: center;
+    gap: 16px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-left: -16px;
+    padding: 0 16px;
+    width: calc(100% + 32px);
+}
+.subcatalog-category-overflow::-webkit-scrollbar {
+    display: none;
 }
 .subcatalog-filter-accordion-head {
     font-family: var(--font-bold);
@@ -3144,6 +3176,7 @@ a.back {
 .store-main-container::-webkit-scrollbar {
     display: none;
 }
+
 .store-main__item-info .text {
     color: var(--color-gray-dark);
     margin: 16px 0 18px;
@@ -3359,22 +3392,28 @@ a.back {
     }
     .main-grid {
         grid-template-columns: repeat(6, 1fr);
+    }
+    .main-grid.overflow {
         overflow-y: hidden;
         max-height: 520px;
     }
+    .subcatalog-products .main-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
     .profile-grid {
         grid-template-columns: repeat(2, 242px);
-      }
+    }
 }
 
 @media (max-width: 1199.98px) {
     .search-input {
         max-width: 184px;
     }
+    .subcatalog-products .main-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
     .main-grid {
         grid-template-columns: repeat(5, 1fr);
-        overflow-y: hidden;
-        max-height: 520px;
     }
     .main-grid.seller {
         grid-template-columns: repeat(4, 1fr);
@@ -3398,6 +3437,9 @@ a.back {
     .basket-form {
         max-width: none;
         margin-top: 32px;
+    }
+    .subcatalog-products .main-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     .title .basket-total {
         font-size: 12px;
@@ -3717,6 +3759,37 @@ a.back {
         overflow-y: auto;
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+    .subcatalog-products .main-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 16px;
+        justify-content: center;
+    }
+    .subcatalog-header {
+        display: none !important;
+    }
+    .subcatalog-products-pagination {
+        justify-content: center !important;
+    }
+    .subcatalog-header.mobile {
+        display: flex !important;
+    }
+    .subcatalog-search {
+        display: none !important;
+    }
+    .subcatalog-category-overflow {
+        display: flex;
+    }
+    .subcatalog-sorting {
+        border-radius: 8px;
+        border: 1px solid var(--color-gray-light);
+        padding: 4px 12px;
+        width: 100%;
+        justify-content: center;
+    }
+    .subcatalog-filter {
+        display: none !important;
     }
     .main-grid:has(.favorite) {
         grid-template-columns: repeat(3, 1fr);
@@ -4048,6 +4121,9 @@ a.back {
     }
     .settings-group {
         width: 100%;
+    }
+    .subcatalog-products .main-grid__item {
+        max-width: 150px;
     }
 }
 
