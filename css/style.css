@@ -2882,6 +2882,7 @@ a.back {
 .current-order-info__item .title {
     color: var(--color-gray-dark);
     flex-basis: 20%;
+    min-width: 140px;
 }
 .current-order-info__item .primary-button {
     font-size: 12px;
@@ -3543,6 +3544,9 @@ a.back {
     .map-container img {
         height: 400px;
         width: 100%;
+    }
+    .product-list-block.mobile-margin {
+        margin-top: 26px;
     }
 }
 
