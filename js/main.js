@@ -567,3 +567,19 @@ if (profileInfoNavElements.length) {
     })
   }
 }
+const informationListDropdownElements = document.querySelectorAll('.information-list__item')
+if (informationListDropdownElements.length) {
+  for (let item of informationListDropdownElements) {
+    if (item.firstElementChild) {
+      item.addEventListener('click', (event) => {
+        if (event.target.classList.contains('information-list__item-head')) {item.classList.toggle('active')}
+      })
+    }
+  }
+  document.querySelectorAll('.information-list-dropdown__item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelector('.information-list').classList.add('hide')
+      document.querySelector('.information-container').classList.add('active')
+    })
+  })
+}
