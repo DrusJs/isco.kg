@@ -583,3 +583,13 @@ if (informationListDropdownElements.length) {
     })
   })
 }
+if (document.querySelector('.vacancy-list__item')) {
+  document.querySelectorAll('.vacancy-list__item').forEach(el => {
+    el.addEventListener('click', (event) => {
+      if (!event.currentTarget.classList.contains('active')) {
+        document.querySelector('.vacancy-list__item.active').classList.remove('active')
+        el.classList.add('active')
+      }
+    })
+  }) 
+}

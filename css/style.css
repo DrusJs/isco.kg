@@ -3368,6 +3368,10 @@ a.back {
     width: 100%;
     border-radius: 8px;
 }
+.vacancy-list__item-dropdown {
+    display: none;
+}
+
 .vacancy-container {
     flex-basis: 70%;
 }
@@ -3549,6 +3553,26 @@ a.back {
         margin-left: 0;
         margin-top: 24px;
     }
+    .payment-history.mobile-table {
+        display: none;
+    }
+    .mail-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+    .mail-block {
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        border: 1px solid var(--color-gray-light);
+    }
+    .mail-block .date, .mail-block .name {
+        color: var(--color-gray-dark);
+    }
+    .mail-row {
+        margin-top: 16px;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -3558,7 +3582,9 @@ a.back {
         line-height: 40px;
         letter-spacing: -0.64px; 
     }
-    
+    .modal-current-mail-container {
+        width: 600px;
+    }
     h2.title {
         font-family: var(--font-bold);
         font-size: 24px;
@@ -4388,7 +4414,57 @@ a.back {
     .modal:not(.mobile-fill-none).modal-check-quest h2.title {
         justify-content: flex-start !important;
     }
-
+    .vacancy-block .drop-area {
+        border: 2px dashed var(--color-primary);
+    }
+    .vacancy-block .drop-area .text {
+        color: var(--color-gray);
+    }
+    .vacancy-block .drop-area .text.primary-color {
+        color: var(--color-primary);
+    }
+    .vacancy-list__item-dropdown {
+        padding: 12px 16px;
+    }
+    .vacancy-block .policy {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+    .vacancy-list__item.active .vacancy-list__item-dropdown {
+        display: block;
+    }
+    .vacancy-list__item, .vacancy-list__item.active {
+        background-color: transparent;
+        padding: 0;
+    }
+    .vacancy-list__item-head {
+        border-radius: 8px;
+        padding: 12px 16px;
+    }
+    .vacancy-list__item-head {
+        background-image: url(../images/1688-arrow.svg);
+        background-size: 20px 20px;
+        background-repeat:  no-repeat;
+        background-position: right 16px top 26px;
+    }
+    .vacancy-list__item.active .vacancy-list__item-head {
+        background-color: var(--color-bg);
+    }
+    .vacancy-list {
+        flex-basis: 100%;
+    }
+    .modal-current-mail-container {
+        width: 100%;
+    }
+    #modal-current-mail .title {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-start !important;
+    }
+    .modal-current-mail__item {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 575.98px) {
