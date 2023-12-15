@@ -528,3 +528,15 @@ if (document.querySelector('.brand-swiper')){
     },
   })
 }
+if (document.querySelector('.main-swiper-product')){
+  var mainSwiperProduct = new Swiper('.main-swiper-product', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next.js-main',
+      prevEl: '.swiper-button-prev.js-main',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+  })
+}

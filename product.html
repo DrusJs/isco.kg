@@ -15,7 +15,7 @@
     <div class="wrapper d-flex flex-column">
       <div class="notification" id="notification">
         <img src="images/accept-notice.svg" alt="">
-        <div class="text mediumL">Сохранено</div>
+        <div class="text mediumL">Товар добавлен в корзину</div>
       </div>
       <div class="loader" id="loader">
         <div class="loader-container d-flex flex-column align-items-center">
@@ -574,9 +574,19 @@
                 <a href="subcatalog.html" class="breadcrumbs__item">Велосипеды  и запчасти</a>
                 <a href="subcatalog.html" class="breadcrumbs__item">Горные велосипеды </a>
             </div>
+              <div class="swiper main-swiper-product d-md-none d-flex">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/product-swiper.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/product-swiper.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/product-swiper.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/product-swiper.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/product-swiper.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             <h2 class="title">Bmw, горный велосипед, внедорожный гоночный автомобиль, детский велосипед, регулировка скорости</h2>
             <div class="product-buttons d-flex align-items-center">
-                <div class="product-buttons__item d-flex align-items-center" onclick="this.classList.toggle('active')">
+                <div class="product-buttons__item d-md-flex d-none align-items-center" onclick="this.classList.toggle('active')">
                     В избранное
                     <svg class="favorite" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.33325 5.09091C1.33325 8.33287 4.01287 10.0604 5.97441 11.6068C6.66658 12.1524 7.33325 12.6662 7.99992 12.6662C8.66658 12.6662 9.33325 12.1524 10.0254 11.6068C11.987 10.0604 14.6666 8.33287 14.6666 5.09091C14.6666 1.84895 10.9998 -0.450179 7.99992 2.6666C5.00003 -0.450179 1.33325 1.84895 1.33325 5.09091Z" fill="none"/>
@@ -594,7 +604,7 @@
             <div class="product-wrapper d-flex">
                 <div class="product-container">
                     <div class="product-view d-flex">
-                        <div class="product-view-img">
+                        <div class="product-view-img d-md-block d-none">
                             <div class="product-view-img-main">
                                 <div class="discount active">50%</div>
                                 <img src="images/product-image.jpg" alt="">
@@ -628,7 +638,7 @@
                                 Цвет
                                 <span class="color" id="product-view-config-color">Белый</span>
                             </div>
-                            <div class="product-view-img-list">
+                            <div class="product-view-img-list scroll-hide">
                                 <div class="product-view-img-list__item active">
                                     <img src="images/product-image.jpg" alt="">
                                 </div>
@@ -675,7 +685,7 @@
                             <div class="product-view-config-header margin-top">
                                 Вращание:
                             </div>
-                            <div class="product-view-block-list d-flex">
+                            <div class="product-view-block-list d-flex scroll-hide">
                                 <div class="product-view-block-list__item active">21 скорость</div>
                                 <div class="product-view-block-list__item">21 скорость</div>
                                 <div class="product-view-block-list__item">21 скорость</div>
@@ -828,93 +838,135 @@
             </div>
         </div>
         <div class="container margin-top">
-            <h3 class="title">Похожие товары</h3>
-            <div class="main-grid">
-              <div class="main-grid__item">
+          <h2 class="title">Похожие товары</h2>
+          <div class="main-grid">
+            <div class="main-grid__item">
+              <div class="image">
                 <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
               </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
-              <div class="main-grid__item">
-                <img src="images/popular-preview.jpg" alt="">
-                <div class="discount active">50%</div>
-                <div class="text">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
-                <div class="price">500 сом<span class="prev-price">500 сом</span></div>
-              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
             </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+            <div class="main-grid__item">
+              <div class="image">
+                <img src="images/popular-preview.jpg" alt="">
+                <div class="fast-view boldL" onclick="openModal('#modal-preview')">Быстрый просмотр</div>
+              </div>
+              <div class="discount active">50%</div>
+              <div class="text mediumM">Bmw, горный велосипед, внедорожный гоночный, подходит для гор</div>
+              <div class="price boldL">500 сом<span class="prev-price regularL">500 сом</span></div>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer">
