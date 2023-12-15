@@ -383,10 +383,13 @@ if (selectElements.length) {
         if (document.querySelector('.select-primary.active')) {document.querySelector('.select-primary.active').classList.remove('active')}
         item.classList.add('active')
       }
+      if (window.matchMedia("(max-width: 767.98px)")) {document.body.classList.toggle('no-scroll')}
     })
     item.querySelectorAll('.select-primary-dropdown__item').forEach((el)=>{
       el.addEventListener('click', function() {
         item.querySelector('.value').innerHTML = this.innerHTML
+        if (item.querySelector('.select-primary-dropdown__item.active')) {item.querySelector('.select-primary-dropdown__item.active').classList.remove('active')}        
+        el.classList.add('active')
       })
     })
   }
