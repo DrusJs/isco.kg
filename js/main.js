@@ -241,6 +241,19 @@ if (noticeDropdownElement) {
   })
 }
 
+if (document.querySelector('.profile-container .notice-dropdown-nav')) {
+  document.querySelectorAll('.profile-container .notice-dropdown-nav__item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelector('.profile-container .notice-dropdown-nav__item.active').classList.remove('active')
+      el.classList.add('active')
+      let notices = document.querySelector('.profile-container .notice-list')
+      notices.classList.remove('unread')
+      notices.classList.remove('read')
+      if (el.dataset.style != 'all') {notices.classList.add(el.dataset.style)}  
+    })
+  })
+}
+
 const footerDropdownElements = document.querySelectorAll('.footer-list__item.header')
 if (footerDropdownElements.length) {
   for (let item of footerDropdownElements) {
@@ -539,4 +552,18 @@ if (document.querySelector('.main-swiper-product')){
         el: '.swiper-pagination',
     },
   })
+}
+
+const profileInfoNavElements = document.querySelectorAll('.profile-info-list__item')
+if (profileInfoNavElements.length) {
+  for (let item of profileInfoNavElements) {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('active')) {
+        document.querySelector('.profile-info-list__item.active').classList.remove('active')
+        item.classList.add('active')
+        document.querySelector('.profile-info-block.active').classList.remove('active')
+        document.querySelectorAll('.profile-info-block')[item.dataset.block].classList.add('active')
+      }
+    })
+  }
 }
