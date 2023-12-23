@@ -666,7 +666,7 @@
                       </a>
                 </div>
                 <div class="profile-container">
-                  <button class="primary-button fill fit" onclick="openModal('#modal-create-quest')">Создать обращение</button>
+                  <button class="primary-button fill fit fit-m" onclick="openModal('#modal-create-quest')">Создать обращение</button>
                   <div class="profile-help-block d-flex flex-column mt-3 gap-3">
                       <div class="profile-help__item">
                         <div class="title boldL ">Тема обращения</div>
@@ -799,7 +799,7 @@
               <div class="text regularS">DOCX, .XLS, .XLSX, .PDF, .JPG, .PNG, .ZIP<br>Файл не больше 10мб<br>Общий размер вложений не более 50мб</div>
               <input type="file" name="" id="">
             </div>
-            <input class="primary-button fill" type="button" value="Отправить">
+            <input class="primary-button fill" type="button" value="Отправить" onclick="closeModal(this); showNotification('Обращение отправлено')">
         </div>
       </div>
       <div class="modal-wrapper" id="modal-check-quest">
@@ -814,6 +814,16 @@
             <div class="text mediumL">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
             <div class="text mediumL">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
             <div class="title mediumL">Прикреленные файлы</div>
+            <div class="file-block">
+              <img src="images/popular-preview.jpg" alt="">
+              <div class="file-name mediumM">Наименование файла.jpg</div>
+              <div class="file-info mediumS">386 кб</div>
+            </div>
+            <div class="file-block">
+              <img src="images/file.svg" alt="">
+              <div class="file-name mediumM">Наименование файла.doc</div>
+              <div class="file-info mediumS">386 кб</div>
+            </div>
           </div>
           <div class="title mediumL">Ответ</div>
           <div class="text mediumL">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>

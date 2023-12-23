@@ -241,6 +241,19 @@ if (noticeDropdownElement) {
   })
 }
 
+if (document.querySelector('.profile-container .notice-dropdown-nav')) {
+  document.querySelectorAll('.profile-container .notice-dropdown-nav__item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelector('.profile-container .notice-dropdown-nav__item.active').classList.remove('active')
+      el.classList.add('active')
+      let notices = document.querySelector('.profile-container .notice-list')
+      notices.classList.remove('unread')
+      notices.classList.remove('read')
+      if (el.dataset.style != 'all') {notices.classList.add(el.dataset.style)}  
+    })
+  })
+}
+
 const footerDropdownElements = document.querySelectorAll('.footer-list__item.header')
 if (footerDropdownElements.length) {
   for (let item of footerDropdownElements) {
@@ -370,10 +383,13 @@ if (selectElements.length) {
         if (document.querySelector('.select-primary.active')) {document.querySelector('.select-primary.active').classList.remove('active')}
         item.classList.add('active')
       }
+      if (window.matchMedia("(max-width: 767.98px)")) {document.body.classList.toggle('no-scroll')}
     })
     item.querySelectorAll('.select-primary-dropdown__item').forEach((el)=>{
       el.addEventListener('click', function() {
         item.querySelector('.value').innerHTML = this.innerHTML
+        if (item.querySelector('.select-primary-dropdown__item.active')) {item.querySelector('.select-primary-dropdown__item.active').classList.remove('active')}        
+        el.classList.add('active')
       })
     })
   }
@@ -527,4 +543,72 @@ if (document.querySelector('.brand-swiper')){
       prevEl: '.swiper-button-prev.js-brand',
     },
   })
+}
+if (document.querySelector('.main-swiper-product')){
+  var mainSwiperProduct = new Swiper('.main-swiper-product', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next.js-main',
+      prevEl: '.swiper-button-prev.js-main',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+  })
+}
+
+const profileInfoNavElements = document.querySelectorAll('.profile-info-list__item')
+if (profileInfoNavElements.length) {
+  for (let item of profileInfoNavElements) {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('active')) {
+        document.querySelector('.profile-info-list__item.active').classList.remove('active')
+        item.classList.add('active')
+        document.querySelector('.profile-info-block.active').classList.remove('active')
+        document.querySelectorAll('.profile-info-block')[item.dataset.block].classList.add('active')
+      }
+    })
+  }
+}
+const informationListDropdownElements = document.querySelectorAll('.information-list__item')
+if (informationListDropdownElements.length) {
+  for (let item of informationListDropdownElements) {
+    if (item.firstElementChild) {
+      item.addEventListener('click', (event) => {
+        if (event.target.classList.contains('information-list__item-head')) {item.classList.toggle('active')}
+      })
+    }
+  }
+  document.querySelectorAll('.information-list-dropdown__item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelector('.information-list').classList.add('hide')
+      document.querySelector('.information-container').classList.add('active')
+    })
+  })
+}
+if (document.querySelector('.vacancy-list__item')) {
+  document.querySelectorAll('.vacancy-list__item').forEach(el => {
+    el.addEventListener('click', (event) => {
+      if (!event.currentTarget.classList.contains('active')) {
+        document.querySelector('.vacancy-list__item.active').classList.remove('active')
+        el.classList.add('active')
+      }
+    })
+  }) 
+}
+
+
+if (document.getElementById('various-buttons')) {
+    Array.from(document.getElementById('various-buttons').children).forEach((el)=>{
+      el.addEventListener('click', function() {
+        el.parentElement.previousElementSibling.classList.toggle('active')
+        if (el.parentElement.previousElementSibling.classList.contains('active')) {
+          document.getElementById('various-buttons').children[0].style.display = 'none'
+          document.getElementById('various-buttons').children[1].style.display = 'block'
+        } else {
+          document.getElementById('various-buttons').children[0].style.display = 'block'
+          document.getElementById('various-buttons').children[1].style.display = 'none'
+        }
+      })
+    })
 }

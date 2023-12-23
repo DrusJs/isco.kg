@@ -666,12 +666,12 @@
                       </a>
                 </div>
                 <div class="profile-container">
-                  <div class="profile-info-list d-none">
-                    <div class="profile-info-list__item">Информация</div>
-                    <div class="profile-info-list__item">Адресс</div>
-                    <div class="profile-info-list__item">Паспорт</div>
+                  <div class="profile-info-list scroll-hide d-md-none d-flex gap-3">
+                    <div class="profile-info-list__item active" data-block="0">Информация</div>
+                    <div class="profile-info-list__item" data-block="1">Адресс</div>
+                    <div class="profile-info-list__item" data-block="2">Паспорт</div>
                   </div>
-                  <div class="profile-info-block">                    
+                  <div class="profile-info-block active">                    
                     <h3 class="title">Личная информация</h3>
                     <div class="grid">
                       <div class="input">
@@ -732,6 +732,7 @@
                         </div>
                       </div>
                     </div>
+                    <button class="primary-button text fit d-md-none d-block mb-4">Удалить аккаунт</button>
                   </div>
                   <div class="profile-info-block">                    
                     <h3 class="title">Личный адрес</h3>
@@ -788,46 +789,45 @@
                         </div>
                       </div>
                     </div>
-                    <div class="profile-info-block">
-                      <h3 class="title">Паспорт</h3>
-                      <div class="grid">
-                        <div class="profile-info-document">
-                          <div class="mediumL">Лицевая сторона</div>
-                          <div class="drop-area">
-                            <div class="text mediumL">Выберите файл или перетяните сюда</div>
-                            <div class="text regularS">Загрузите файл в формате png, jpg<br>Размер файла не более 30 мб</div>
-                            <input type="file" name="" id="">
-                          </div>
-                          <div class="drop-files">
-                            <div class="drop-files__item">
-                              <img src="images/drop-file.svg" alt="Файл">
-                              <div class="name mediumL">FileName.jpg</div>
-                              <img src="images/delete-basket.svg" alt="Удалить" class="delete">
-                            </div>
+                  </div>
+                  <div class="profile-info-block">
+                    <h3 class="title">Паспорт</h3>
+                    <div class="grid">
+                      <div class="profile-info-document">
+                        <div class="mediumL">Лицевая сторона</div>
+                        <div class="drop-area">
+                          <div class="text mediumL">Выберите файл или перетяните сюда</div>
+                          <div class="text regularS">Загрузите файл в формате png, jpg<br>Размер файла не более 30 мб</div>
+                          <input type="file" name="" id="">
+                        </div>
+                        <div class="drop-files">
+                          <div class="drop-files__item">
+                            <img src="images/drop-file.svg" alt="Файл">
+                            <div class="name mediumL">FileName.jpg</div>
+                            <img src="images/delete-basket.svg" alt="Удалить" class="delete">
                           </div>
                         </div>
-                        <div class="profile-info-document">
-                          <div class="mediumL">Обратная сторона</div>
-                          <div class="drop-area">
-                            <div class="text mediumL">Выберите файл или перетяните сюда</div>
-                            <div class="text regularS">Загрузите файл в формате png, jpg<br>Размер файла не более 30 мб</div>
-                            <input type="file" name="" id="">
-                          </div>
-                          <div class="drop-files">
-                            <div class="drop-files__item">
-                              <img src="images/drop-file.svg" alt="Файл">
-                              <div class="name">FileName.jpg</div>
-                              <img src="images/delete-basket.svg" alt="Удалить" class="delete">
-                            </div>
+                      </div>
+                      <div class="profile-info-document">
+                        <div class="mediumL">Обратная сторона</div>
+                        <div class="drop-area">
+                          <div class="text mediumL">Выберите файл или перетяните сюда</div>
+                          <div class="text regularS">Загрузите файл в формате png, jpg<br>Размер файла не более 30 мб</div>
+                          <input type="file" name="" id="">
+                        </div>
+                        <div class="drop-files">
+                          <div class="drop-files__item">
+                            <img src="images/drop-file.svg" alt="Файл">
+                            <div class="name">FileName.jpg</div>
+                            <img src="images/delete-basket.svg" alt="Удалить" class="delete">
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                      <button class="primary-button text fit">Удалить аккаунт</button>
-                      <button class="primary-button fill fit" onclick="showNotification()">Сохранить</button>
-                    </div>
-
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <button class="primary-button text fit d-md-block d-none">Удалить аккаунт</button>
+                    <button class="primary-button fill fit fit-m" onclick="showNotification()">Сохранить</button>
                   </div>
                 </div>
             </div>
