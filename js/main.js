@@ -109,9 +109,9 @@ if (catalogElement) {
 
 //input search action
 const inputElement = document.querySelector('#search-input')
+const inputResultElement = document.querySelector('#search-input-result')
 if (inputElement) {
   const clearInputElement = document.querySelector('#clear-search')
-  const inputResultElement = document.querySelector('#search-input-result')
 
   inputElement.addEventListener('focus', function(event) {
     this.parentElement.classList.add('focus')
@@ -126,11 +126,6 @@ if (inputElement) {
     inputElement.value = ''
     inputElement.parentElement.classList.remove('focus')
     this.style.display = 'none'
-  })
-
-  inputElement.addEventListener('blur', function() {
-    this.parentElement.classList.remove('focus')
-    inputResultElement.classList.remove('active')
   })
 
   inputElement.addEventListener('input', function(event) {
@@ -372,6 +367,7 @@ if (inputTextElements.length) {
     }
   }
 }
+
 //select input
 const selectElements =  document.querySelectorAll('.select-primary')
 if (selectElements.length) {
@@ -612,3 +608,10 @@ if (document.getElementById('various-buttons')) {
       })
     })
 }
+
+window.addEventListener('click', (event)=> {
+  if (!event.target.classList.contains('search-main-result__item') && !inputElement.contains(event.target)) {
+    inputElement.parentElement.classList.remove('focus')
+    inputResultElement.classList.remove('active')
+  }
+})

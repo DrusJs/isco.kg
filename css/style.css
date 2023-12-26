@@ -3881,6 +3881,8 @@ a.back {
     .search-main__select-dropdown {
         display: flex;
         right: auto;
+        position: fixed;
+        z-index: 80;
         top: auto;
         padding: 16px 16px 32px;
         border-radius: 0;
