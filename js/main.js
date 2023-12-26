@@ -610,7 +610,7 @@ if (document.getElementById('various-buttons')) {
 }
 
 window.addEventListener('click', (event)=> {
-  if (!event.target.classList.contains('search-main-result__item') && !inputElement.contains(event.target)) {
+  if (!event.target.classList.contains('search-main-result__item') && !inputElement .contains(event.target)) {
     inputElement.parentElement.classList.remove('focus')
     inputResultElement.classList.remove('active')
   }
