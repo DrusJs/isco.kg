@@ -61,7 +61,7 @@ function changeOrderStep(now, isNext) {
 const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
   const catalogOpenElement = document.querySelector('#catalog-open')
-  const catalogCloseElement = document.querySelector('#catalog-close')
+  const catalogCloseElement = document.querySelectorAll('.catalog-close')
   const catalogSelectElements = document.querySelectorAll('.catalog-nav-select')
 //const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
   const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
@@ -71,10 +71,12 @@ if (catalogElement) {
     document.body.classList.add('no-scroll')
   })
 
-  catalogCloseElement.addEventListener('click', function() {
-    catalogElement.classList.remove('active')
-    catalogElement.classList.remove('js-subcatalog')
-    document.body.classList.remove('no-scroll')
+  catalogCloseElements.forEach(el=>{
+    el.addEventListener('click', function() {
+      catalogElement.classList.remove('active')
+      catalogElement.classList.remove('js-subcatalog')
+      document.body.classList.remove('no-scroll')
+    })
   })
 
   catalogElement.addEventListener('click', function(event) {
