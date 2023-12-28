@@ -61,7 +61,7 @@ function changeOrderStep(now, isNext) {
 const catalogElement = document.querySelector('#catalog')
 if (catalogElement) {
   const catalogOpenElement = document.querySelector('#catalog-open')
-  const catalogCloseElement = document.querySelectorAll('.catalog-close')
+  const catalogCloseElements = document.querySelectorAll('.catalog-close')
   const catalogSelectElements = document.querySelectorAll('.catalog-nav-select')
 //const catalogListElements = document.querySelectorAll('.catalog-nav-list__item')
   const catalogLinkListElements = document.querySelectorAll('.catalog-grid__item .link')
