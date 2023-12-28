@@ -77,6 +77,14 @@ if (catalogElement) {
     document.body.classList.remove('no-scroll')
   })
 
+  catalogElement.addEventListener('click', function(event) {
+    if (event.target.classList.contains('container') || event.target.classList.contains('catalog')) {
+      catalogElement.classList.remove('active')
+      catalogElement.classList.remove('js-subcatalog')
+      document.body.classList.remove('no-scroll')
+    }
+  })
+
   for (let item of catalogSelectElements) {
     item.querySelectorAll('.catalog-nav-select__item').forEach((el)=>{
       el.addEventListener('click', function() {
