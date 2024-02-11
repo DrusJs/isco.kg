@@ -705,7 +705,7 @@
             </div>
             <div class="order-block" data-ordstep="2">
                 <h4 class="title">Получатель</h4>
-                <div class="primary-button fill fit mt-3 d-none">Добавить</div>
+                <div class="primary-button fill fit mt-3" onclick="openModal('#modal-add-recipient')">Добавить</div>
                 <div class="delivery-info">
                   <div class="title">Личные данные</div>
                   <div class="text">Асанов Нурбек Азатович</div>
@@ -1166,6 +1166,132 @@
             </div>
             <input class="primary-button fill" type="button" value="Продолжить">
           </form>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="modal-add-recipient">
+        <div class="modal w-100" style="max-width: 1084px;">
+          <h2 class="title d-flex align-items-center justify-content-between">
+            Добавление получателя
+            <div class="close-modal" onclick="closeModal(this)"></div>
+          </h2>
+          <div class="profile-info-block active">                    
+            <h3 class="title">Личная информация</h3>
+            <div class="grid">
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Фамилия</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="select-primary  w-100">
+                <div class="title">Пол</div>
+                <div class="value">Мужской</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">Мужской</div>
+                  <div class="select-primary-dropdown__item mediumM">Женский</div>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Имя</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="select-primary w-100">
+                <div class="title">Дата рождения</div>
+                <div class="value">01.01.1991</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">01.01.1991</div>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Отчество</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Телефон</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">ИНН</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">E-mail</div>
+                  <input type="email" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-info-block active">                    
+            <h3 class="title">Личный адрес</h3>
+            <div class="grid">
+              <div class="select-primary w-100">
+                <div class="title">Страна</div>
+                <div class="value">Кыргызстан</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                  <div class="select-primary-dropdown__item mediumM">Кыргызстан</div>
+                </div>
+              </div>
+              <div class="select-primary w-100">
+                <div class="title">Обслуживающий филиал</div>
+                <div class="value">Обслуживающий филиал</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">Обслуживающий филиал</div>
+                  <div class="select-primary-dropdown__item mediumM">Обслуживающий филиал</div>
+                </div>
+              </div>
+              <div class="select-primary w-100">
+                <div class="title">Город</div>
+                <div class="value">Бишкек</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">Бишкек</div>
+                  <div class="select-primary-dropdown__item mediumM">Бишкек</div>
+                </div>
+              </div>
+              <div class="select-primary w-100">
+                <div class="title">Город Бишкек</div>
+                <div class="value">Город</div>
+                <div class="select-primary-dropdown">
+                  <div class="select-primary-dropdown__item mediumM">Город</div>
+                  <div class="select-primary-dropdown__item mediumM">Город</div>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Адрес</div>
+                  <input type="text" required>
+                </div>
+              </div>
+              <div class="input w-100">
+                <div class="field">
+                  <div class="title">Индекс</div>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
