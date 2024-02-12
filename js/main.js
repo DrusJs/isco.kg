@@ -618,6 +618,14 @@ if (document.getElementById('various-buttons')) {
       })
     })
 }
+if (document.querySelector('.order-accordion .order-accordion-head')) {
+  document.querySelectorAll('.order-accordion .order-accordion-head').forEach(el=>{
+    el.addEventListener('click', function() {
+      this.parentElement.classList.toggle('active')
+    })
+  })
+}
+
 
 window.addEventListener('click', (event)=> {
   if (!event.target.classList.contains('search-main-result__item') && !inputElement .contains(event.target)) {
