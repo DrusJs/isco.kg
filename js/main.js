@@ -626,6 +626,10 @@ if (document.querySelector('.order-accordion .order-accordion-head')) {
   })
 }
 
+function addMailInput(el) {
+    el.closest('.add-mail-container').querySelector('.text .price').innerHTML = el.value==''?0:el.value
+}
+
 
 window.addEventListener('click', (event)=> {
   if (!event.target.classList.contains('search-main-result__item') && !inputElement .contains(event.target)) {

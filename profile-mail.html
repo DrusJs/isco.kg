@@ -667,7 +667,7 @@
                 </div>
                 <div class="profile-container">
                   <div class="d-flex justify-content-between flex-sm-row flex-column gap-2">
-                    <button class="primary-button fill fit d-lg-block d-none">Добавить посылку</button>
+                    <button class="primary-button fill fit d-lg-block d-none" onclick="openModal('#modal-add-mail')">Добавить посылку</button>
                     <div class="select-primary profile-status">
                       <div class="title">Статус</div>
                       <div class="value">Все</div>
@@ -773,7 +773,7 @@
                       <td class="payment-history-cell mediumM"></td>
                     </tr>
                   </table>
-                  <div class="mail-container">
+                  <div class="mail-container d-block d-xl-none">
                     <div class="mail-block" onclick="openModal('#modal-current-mail')">
                       <div class="titleS">034231241432</div>
                       <div class="date mediumM">2023-10-04 18:48:14</div>
@@ -1200,11 +1200,70 @@
             Добавить посылку
             <div class="close-modal" onclick="closeModal(this)"></div>
           </h2>
+          <div class="select-primary w-100">
+            <div class="title">Страна</div>
+            <div class="value">Россия</div>
+            <div class="select-primary-dropdown">
+              <div class="select-primary-dropdown__item mediumM">Россия</div>
+              <div class="select-primary-dropdown__item mediumM">Китай</div>
+            </div>
+          </div>
+          <div class="select-primary tall w-100">
+            <div class="title">Филиал получения заказа</div>
+            <div class="value">
+              Филиал №1. Головной офис
+              Город Бишкек
+              Адрес улица Орозбекова 2/3, перес. ул. Линейная. Головной офис
+              Номер телефона 996990009933</div>
+            <div class="select-primary-dropdown">
+              <div class="select-primary-dropdown__item mediumM">
+                Филиал №1. Головной офис
+                Город Бишкек
+                Адрес улица Орозбекова 2/3, перес. ул. Линейная. Головной офис
+                Номер телефона 996990009933
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <div class="required regularS">Обязательное поле</div>
+            <div class="field">
+              <div class="title">Трек-код</div>
+              <input type="text" required>
+            </div>
+          </div>
           <h4 class="title">Декларация</h4>
           <div class="modal-warning">
             <img src="images/modal-warning.svg" alt="">
             Во избежание проблем при таможенной очистке, просим вводить детальное описание наименования товара на русском.
           </div>
+          <div class="add-mail-container">
+            <div class="input">
+              <div class="required regularS">Обязательное поле</div>
+              <div class="field">
+                <div class="title">Наименование</div>
+                <input type="text" required>
+              </div>
+            </div>
+            <div class="d-flex flex-lg-row flex-column gap-4 my-3">
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Цена за шт. ($)</div>
+                  <input type="text" class="js-price-mail" oninput="addMailInput(this)" required>
+                </div>
+              </div>            
+              <div class="input w-100">
+                <div class="required regularS">Обязательное поле</div>
+                <div class="field">
+                  <div class="title">Количество</div>
+                  <input type="text" required>
+                </div>
+              </div>
+            </div>
+            <textarea class="comment w-100" cols="20" rows="5" maxlength="100" placeholder="Комментарий для оператора"></textarea>
+            <div class="text boldL mt-4">Итого: <span class="price">0</span>$</div>
+          </div>
+          <button class="primary-button fit pol js-add-mail">Добавить еще</button>
           <button class="primary-button fill fit" style="margin-left: auto;" onclick="closeModal(this), showNotification('Посылка добавлена')">Добавить</button>
         </div>
       </div>

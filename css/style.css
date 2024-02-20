@@ -1998,6 +1998,13 @@ h2.title.price .subprice {
 .fit {
     width: fit-content;
 }
+.primary-button.pol {
+    border: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var(--color-primary);
+}
 .primary-button.auto {
     margin: 0 auto;
 }
@@ -2025,6 +2032,12 @@ h2.title.price .subprice {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: 1px solid var(--color-primary);
+}
+
+.add-mail-container {
+    border: 1px solid var(--color-gray);
+    padding: 12px;
+    border-radius: 8px;
 }
 
 
@@ -2316,6 +2329,13 @@ h2.title.price .subprice {
     background-position: right 12px top 11px;
     background-size: 28px;
     position: relative;
+}
+.select-primary.tall {
+    height: auto;
+}
+.select-primary.tall .value {
+    white-space: normal;
+    overflow: visible;
 }
 .select-primary .value {
     white-space: nowrap;
