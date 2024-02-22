@@ -632,8 +632,17 @@ function addMailInput(el) {
 
 
 window.addEventListener('click', (event)=> {
-  if (!event.target.classList.contains('search-main-result__item') && !inputElement .contains(event.target)) {
+  if (!event.target.classList.contains('search-main-result__item') && !inputElement.contains(event.target)) {
     inputElement.parentElement.classList.remove('focus')
     inputResultElement.classList.remove('active')
+  }
+
+  let select = document.querySelector('.select-primary.active')
+  let menu = document.querySelector('.header-buttons__item.active')
+  if (select && !event.target.classList.contains('select-primary') && !event.target.classList.contains('title') && !event.target.classList.contains('value')) {
+    select.classList.remove('active')
+  }
+  if (menu && !event.target.classList.contains('js-dropdown-element') && !event.target.classList.contains('header-buttons__item-head') && !event.target.classList.contains('title')) {
+    menu.classList.remove('active')
   }
 })

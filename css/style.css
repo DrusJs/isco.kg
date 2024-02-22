@@ -675,6 +675,9 @@ a.search-main-result__item.memory {
     position: relative;
     color: var(--color-dark);
 }
+.header-buttons__item img {
+    pointer-events: none;
+}
 .header-buttons__item.js-dropdown-element .title::after {
     content: 'Вход';
 }
